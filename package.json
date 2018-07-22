@@ -15,5 +15,11 @@
   "homepage": "https://bitbucket.org/allandantas/boilerplate-front-end-wp#readme",
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
   }
 }
