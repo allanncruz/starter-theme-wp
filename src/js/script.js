@@ -1,6 +1,4 @@
-var $=jQuery;
 
-(function( window, document, undefined ){
 
     $('.owl-carousel.banner').owlCarousel({
         nav: true,
@@ -13,6 +11,3 @@ var $=jQuery;
 
     $(".gallery-icon a").attr("rel", "galeria");
     $(".gallery-icon a").fancybox();
-
-
-})( window, document );
