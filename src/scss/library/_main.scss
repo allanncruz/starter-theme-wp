@@ -1,0 +1,111 @@
+body {
+  font-family: Roboto-Regular,sans-serif;
+}
+
+a {
+  color: $secondary-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+p{
+  color: #222;
+  text-align: justify;
+}
+
+//Slide
+
+.area-banner{
+  .item {
+    height: 500px;
+    .container{
+      height: 100%;
+      .legenda {
+        position: absolute;
+        bottom: 3rem;
+        width: 50%;
+        .title{
+          color: $white;
+          font-size: 2.5rem;
+        }
+        p{
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+//company
+
+.company{
+  padding: 2rem 0;
+  .foto-destaque{
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+
+//Footer
+
+.footer {
+  padding: 1rem 0;
+  color: $white;
+  h6 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .assinatura{
+    float: right;
+  }
+}
+
+@media all and (max-width: $break-lg){
+  .sitio, .company{
+    .cont{
+      p{
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media all and (max-width: $break-md){
+  .area-banner{
+    .banner{
+      .item{
+        height: 400px;
+        .legenda{
+          width: 100%!important;
+          text-align: center;
+          left: 0;
+          padding: 0 .2rem;
+          bottom: 1rem !important;
+          .title{
+            font-size: 2rem !important;
+          }
+          p{
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    text-align: center;
+    margin-top: 0;
+    h6{
+      margin: 0.3rem 0;
+    }
+    .assinatura{
+      float: inherit;
+      padding-top: 1rem;
+      display: inherit;
+    }
+  }
+}

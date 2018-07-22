@@ -1,0 +1,63 @@
+//box Cont
+.page-interna{
+  .featurette{
+    margin: 2rem auto;
+    .title{
+      margin-bottom: 2rem;
+    }
+    ul{
+      list-style: none;
+      li{
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          left: -16px;
+          top: 7px;
+          border-radius: 8px;
+          background: $secondary-color;
+        }
+      }
+    }
+    .form-control, .wpcf7-form-control{
+      background: $white;
+      border: solid 1px #c3baa9;
+    }
+  }
+  #map{
+    height: 341px;
+    border: solid 3px #88684d;
+    border-radius: .3rem;
+  }
+}
+
+//Itens default
+.area-itens{
+  .item{
+    display: inline-table;
+    width: 100%;
+    height: 220px;
+    position: relative;
+    span{
+      background: rgba(0,0,0,.4);
+      color: $white;
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      padding: 0 1rem;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      transition: 0.3s;
+    }
+    &:hover{
+      span{
+        background: rgba(0,0,0,.6);
+        height: 105px;
+      }
+    }
+  }
+}
