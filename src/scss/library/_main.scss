@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto-Regular,sans-serif;
+  font-family: Roboto-Light;
 }
 
 a {
@@ -12,25 +12,21 @@ p{
   color: #222;
   text-align: justify;
 }
+//
+//h1,h2,h3,h4,h5{
+//  font-family: Roboto-Light, sans-serif;
+//}
 
 //Slide
 
 .area-banner{
+  border-bottom: solid 3px #b9b9b9;
   .item {
     height: 500px;
-    .container{
-      height: 100%;
-      .legenda {
-        position: absolute;
-        bottom: 3rem;
-        width: 50%;
-        .title{
-          color: $white;
-          font-size: 2.5rem;
-        }
-        p{
-          color: $white;
-        }
+    .legenda {
+      p{
+        font-size: 2rem;
+        text-align: left;
       }
     }
   }

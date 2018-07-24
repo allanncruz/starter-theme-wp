@@ -26,7 +26,7 @@
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sub Menu
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu text-center p-0">
                             <li class="cat-item cat-item-3"><a href="#">Sub Item </a></li>
                         </ul>
                     </li>
