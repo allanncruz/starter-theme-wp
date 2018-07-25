@@ -5,18 +5,13 @@
     .nav-link{
       color: $white;
       &:hover, &:focus, &:active{
-        color: $secondary-color;
+        color: $primary-color;
       }
     }
     .dropdown-menu{
-      width: 200px;
-      margin: 0 0 0 -1.5rem;
-      .cat-item{
-        padding: 0.4rem 0;
+      a{
         &:hover{
-        }
-        a{
-          color: #543f12;
+          color: $color-dark;
         }
       }
     }
@@ -30,15 +25,11 @@
   }
 
   .navbar-toggler{
-    border: none;
     outline: none;
   }
 
   .navbar-brand {
-    img{
-      position: absolute;
-      left: 0;
-    }
+    color: $primary-color;
   }
   @media all and (max-width: $break-xl){
     .navbar-nav, .navbar-nav .nav-link{

@@ -24,12 +24,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <?php $args = [ "post_type" => "page", "pagename" => "docs" ];
-                    $docs = new WP_Query($args);if($docs->have_posts()):
-                        while($docs->have_posts()): $docs->the_post(); ?>
+                    <?php $args = [ "post_type" => "page", "pagename" => "projeto" ];
+                    $projeto = new WP_Query($args);if($projeto->have_posts()):
+                        while($projeto->have_posts()): $projeto->the_post(); ?>
                             <h1 class="title"><?php the_title(); ?></h1>
                             <?php the_field('chamada_da_home'); ?>
-                            <a href="<?php bloginfo("url") ?>/index.php/docs/" class="btn btn-default">Saiba Mais</a>
+                            <a href="<?php bloginfo("url") ?>/projeto" class="btn btn-default">Saiba Mais</a>
                         <?php endwhile; endif; ?>
                 </div>
                 <div class="col-md-5">

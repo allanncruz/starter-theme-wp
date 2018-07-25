@@ -1,4 +1,23 @@
-@import "library/_variables";
+// import Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$color-dark: #222;
+$primary-color: #e7be37;
+$secondary-color: #0f2240;
+$color-white: #fff;
+
+$theme-colors:(
+  "color-dark": $color-dark,
+  "primary-color": $primary-color,
+  "secondary-color": $secondary-color,
+  "color-white": $color-white
+);
+
+//Media Directive
+$break-xl: 1199px;
+$break-lg: 991px;
+$break-md: 767px;
+
 @import "library/_main";
 @import "library/_nav";
 @import "library/_components";

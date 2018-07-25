@@ -3,13 +3,13 @@ body {
 }
 
 a {
-  color: $secondary-color;
+  color: $primary-color;
   &:hover {
     text-decoration: none;
   }
 }
 p{
-  color: #222;
+  color: $color-dark;
   text-align: justify;
 }
 
@@ -43,8 +43,6 @@ p{
 //Footer
 
 .footer {
-  padding: 1rem 0;
-  color: $white;
   h6 {
     margin: 0;
     text-transform: uppercase;
