@@ -6,13 +6,31 @@
     <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="bg-light">
 
 <header class="sticky-top">
+    <div class="upnavbar py-0 py-lg-1">
+        <div class="container">
+            <div class="d-flex justify-content-end align-items-center flex-wrap">
+                <ul class="upnav-items upnavbar-itenslist-unstyled m-0 py-1">
+                    <li class="tel d-none d-lg-inline px-2">
+                        <i class="fas fa-phone fa-flip-horizontal"></i>
+                        <small>(84)</small> <b>00000-0000</b>
+                    </li>
+                    <li class="tel d-none d-lg-inline px-2">
+                        <small>(84)</small> <b>00000-0000</b></li>
+                    <li class="d-inline px-2">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter-square"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark ">
         <div class="container">
             <a class="navbar-brand position-relative" href="<?php bloginfo("url") ?>">Logo</a>
-            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar"
+            <button class="navbar-toggler outline border-0" type="button" data-toggle="collapse" data-target="#navbar"
                     aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,10 +48,12 @@
                             <li class="cat-item cat-item-3 py-1 "><a href="#">Sub Item </a></li>
                         </ul>
                     </li>
-                    <li class="d-block d-lg-none nav-fone">
-                        <i class="fas fa-phone fa-flip-horizontal"></i><span class="prefixo">(84)</span> <b>00000-0000</b>
+                    <li class="d-block d-md-none nav-fone text-white mt-1">
+                        <i class="fas fa-phone fa-flip-horizontal"></i>
+                        <small>(84)</small> <b>00000-0000</b>
                     </li>
-                    <li class="d-block d-lg-none nav-fone"><span class="prefixo">(84)</span> <b>00000-0000</b></li>
+                    <li class="d-block d-md-none nav-fone text-white mt-1">
+                        <small>(84)</small> <b>00000-0000</b></li>
                 </ul>
             </div>
         </div>

@@ -10,8 +10,10 @@
                     <a href="<?php the_field('link') ?>">
                         <div class=" bg-default item" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
                             <div class="container h-100 d-flex align-items-center position-relative">
-                                <div class="legenda w-50 p-3">
-                                    <p><?php the_title(); ?></p>
+                                <div class="row w-100">
+                                    <div class="legenda col-md-4 text-center text-md-left">
+                                        <p><?php the_title(); ?></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -20,7 +22,7 @@
         </div>
     </section>
 
-    <section class="company">
+    <section class="company py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
@@ -28,12 +30,12 @@
                     $projeto = new WP_Query($args);if($projeto->have_posts()):
                         while($projeto->have_posts()): $projeto->the_post(); ?>
                             <h1 class="title"><?php the_title(); ?></h1>
-                            <?php the_field('chamada_da_home'); ?>
+                            <?php the_field('chamada'); ?>
                             <a href="<?php bloginfo("url") ?>/projeto" class="btn btn-default">Saiba Mais</a>
                         <?php endwhile; endif; ?>
                 </div>
                 <div class="col-md-5">
-                    <img class="foto-destaque" src="<?php the_post_thumbnail_url(); ?>">
+                    <img class="photo-highlight w-100 mt-2" src="<?php the_post_thumbnail_url(); ?>">
                 </div>
             </div>
         </div>
