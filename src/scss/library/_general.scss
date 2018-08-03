@@ -20,7 +20,7 @@ p{
   border: 0;
 }
 .btn-default, .wpcf7-submit {
-  background: $primary-color;
+  background: $primary-color !important;
   color: $white;
   &:hover, &:active, &:focus {
   }
@@ -84,16 +84,24 @@ p{
 }
 
 //Contact Form 7 / Form bootstrap
+
+.wpcf7-form{
+  label{
+    width: 100%;
+  }
+}
+
 .form-control, .wpcf7-form-control{
-  height: 58px;
+  height: 50px;
   background: $white;
   margin: .4rem 0;
-  border-radius: .3rem;
   font-size: 1.2rem;
+  padding-left: 1rem;
+  border: none;
+  width: 100%;
   &:focus{
-    -webkit-box-shadow: 0 0 8px rgba(142,100,62,.6)!important;
-    box-shadow: 0 0 8px rgba(142,100,62,.6)!important;
-    border: 1px solid rgb(142, 100, 62);
+    box-shadow: none;
+    border: 1px solid $color-dark;
     outline: 0;
   }
 }

@@ -48,6 +48,7 @@
                             <li class="cat-item cat-item-3 py-1 "><a href="#">Sub Item </a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a class="nav-link" href="<?php bloginfo("url") ?>/?page_id=21">Localização e Contato</a></li>
                     <li class="d-block d-md-none nav-fone text-white mt-1">
                         <i class="fas fa-phone fa-flip-horizontal"></i>
                         <small>(84)</small> <b>00000-0000</b>

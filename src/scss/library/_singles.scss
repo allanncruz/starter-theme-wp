@@ -1,5 +1,10 @@
 //box Cont
 .internal-page{
+
+  .box-container{
+    position: relative;
+    z-index: 2;
+  }
   .featurette{
     ul{
       list-style: none;
@@ -21,5 +26,6 @@
   #map{
     height: 341px;
     border-top: solid 3px #ccc;
+    margin-top: -5rem;
   }
 }
