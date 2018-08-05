@@ -27,12 +27,12 @@
             <div class="box-container bg-white p-5 shadow-sm">
                 <div class="row">
                     <div class="col-md-7">
-                        <?php $args = [ "post_type" => "page", "pagename" => "projeto" ];
+                        <?php $args = [ "post_type" => "page", "pagename" => "about" ];
                         $projeto = new WP_Query($args);if($projeto->have_posts()):
                             while($projeto->have_posts()): $projeto->the_post(); ?>
                                 <h1 class="title"><?php the_title(); ?></h1>
                                 <?php the_field('chamada'); ?>
-                                <a href="<?php bloginfo("url") ?>/projeto" class="btn btn-default">Saiba Mais</a>
+                                <a href="<?php bloginfo("url") ?>/about" class="btn btn-default">Read More</a>
                             <?php endwhile; endif; ?>
                     </div>
                     <div class="col-md-5">

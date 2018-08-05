@@ -1,19 +1,15 @@
-<footer class="footer bg-dark py-2 m-0 text-white d-in">
+<footer class="footer bg-dark py-5 m-0 text-white">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-3">
-                <h6 class="text-center text-md-left m-2 m-md-0">Title</h6>
+                <a class="navbar-brand position-relative" href="<?php bloginfo("url") ?>">
+                    <img src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
+                </a>
             </div>
 
             <div class="col-md-6 text-center">
-                Endereço
-            </div>
-
-            <div class="col-md-3">
-                <a class="assinatura float-none float-md-right text-center text-md-left m-2 m-md-0" href="http://www.interativadigital.com.br" target="_blank"
-                   title="Interativa Digital - Desde 1998 desenvolvendo os melhores projetos para Internet.">
-                    <img src="<?php bloginfo("template_url") ?>/dist/img/image/assinatura.png"
-                         alt="Site desenvolvido pela Interativa Digital"></a>
+                <p class="m-0 h-100 text-white flex-item">
+                    Conta Github.</p>
             </div>
 
         </div>

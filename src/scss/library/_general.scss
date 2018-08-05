@@ -12,6 +12,13 @@ p{
   color: $color-dark;
 }
 
+.flex-item{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
 //Propriedades Bootstrap
 .btn, .wpcf7-submit{
 

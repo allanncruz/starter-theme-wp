@@ -29,13 +29,14 @@
       }
     }
   }
-
   .navbar-toggler{
     outline: none;
   }
 
   .navbar-brand {
-    color: $primary-color;
+    img{
+      width: 140px;
+    }
   }
   @media all and (max-width: $break-xl){
     .navbar-nav .nav-link{
