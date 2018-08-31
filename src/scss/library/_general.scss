@@ -1,0 +1,200 @@
+body {
+  font-family: Roboto-Light;
+}
+
+a {
+  color: $primary-color;
+  &:hover {
+    text-decoration: none;
+  }
+}
+p{
+  color: $color-dark;
+}
+
+.flex-item{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+}
+
+//Propriedades Bootstrap
+.btn, .wpcf7-submit{
+
+}
+.btn-sm{
+  border: 0;
+}
+.btn-default, .wpcf7-submit {
+  background: $primary-color !important;
+  color: $white;
+  &:hover, &:active, &:focus {
+  }
+}
+.bg-default{
+  background-size: cover!important;
+  background-position: center!important;
+}
+
+.photo-highlight{
+  border: solid 5px $white;
+  max-width: 500px;
+}
+
+//Properties Wordpress
+
+.gallery{
+  clear: both;
+  .gallery-item{
+    width: 15.4% !important;
+    margin: 0.5% 0.63%;
+    float: inherit !important;
+    display: inline-table;
+    img{
+      width: 100%;
+      box-shadow: 0 0 7px rgba(0,0,0,.4);
+      border-radius: .3rem;
+    }
+    .gallery-caption{
+      margin-left: 0;
+      font-size: .8rem;
+      margin-top: .5rem;
+    }
+  }
+  @media all and (max-width: $break-md){
+    .gallery-item{
+      width: 48%!important;
+      img{
+        height: auto !important;
+      }
+    }
+  }
+}
+
+.alignright, .alignleft{
+  border: solid 5px #fff;
+  max-width: 400px;
+  width: 100%;
+  padding: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 0;
+}
+
+.alignright{
+  float: right;
+  margin: 1rem 0 1rem 2rem;
+}
+.alignleft{
+  float: left;
+  margin: 1rem 2rem  1rem 0;
+}
+
+//Contact Form 7 / Form bootstrap
+
+.wpcf7-form{
+  label{
+    width: 100%;
+  }
+}
+
+.form-control, .wpcf7-form-control{
+  height: 50px;
+  background: $white;
+  margin: .4rem 0;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  border: none;
+  width: 100%;
+  &:focus{
+    box-shadow: none;
+    border: 1px solid $color-dark;
+    outline: 0;
+  }
+}
+textarea.form-control, textarea.wpcf7-form-control{
+  height: 110px;
+}
+textarea.wpcf7-form-control{
+  position: relative;
+  padding: .5rem 0 0 1rem;
+}
+.wpcf7-submit{
+  border: 0;
+  width: 265px;
+  margin: 0 auto;
+  display: inherit;
+}
+
+//Messages Contact form 7
+div.wpcf7-mail-sent-ok{
+  background: #84e7e7 !important;
+  border: none !important;
+  padding: 1rem !important;
+  border-radius: 1rem !important;
+  text-align: center !important;
+}
+div.wpcf7-validation-errors{
+  border: none !important;
+  padding: 1rem !important;
+  border-radius: 1rem;
+  text-align: center;
+  background: #faf5b4;
+}
+
+//Owl Carousel
+.owl-carousel {
+  .owl-nav {
+    display: block !important;
+    top: -4rem;
+    right: 0;
+  }
+  &.store .owl-nav {
+    position: absolute;
+    top: auto;
+    bottom: -30px;
+    right: 2px;
+  }
+  .owl-nav {
+    .owl-next.disabled, .owl-prev.disabled {
+      opacity: 0.5;
+    }
+    .owl-next, .owl-prev {
+      float: left;
+      width: 50px;
+      height: 50px;
+      span{
+        display: none;
+      }
+    }
+  }
+}
+//Owl anima
+.owl-anima{
+  .owl-nav{
+    top: 13rem !important;
+    width: 100%;
+    position: absolute;
+    button{
+      position: absolute;
+      i{
+        color: $white;
+        font-size: 2rem;
+      }
+    }
+    .owl-prev{
+      left: 7%;
+    }
+    .owl-next{
+      right: 7%;
+    }
+  }
+  .owl-dots{
+    display: none;
+  }
+  @media all and (max-width: $break-lg) {
+    .owl-nav{
+      top: 7rem!important;
+    }
+  }
+}

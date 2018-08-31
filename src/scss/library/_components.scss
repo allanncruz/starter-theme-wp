@@ -1,0 +1,62 @@
+
+
+//Slide
+
+.area-banner{
+  border-bottom: solid 3px #b9b9b9;
+  .item {
+    height: 500px;
+    .legenda {
+      p{
+        font-size: 2rem;
+        text-align: left;
+      }
+    }
+  }
+}
+
+
+//Services
+
+.services{
+  figure{
+    height: 200px;
+  }
+}
+
+
+
+//Footer
+
+.footer {
+  h6 {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+@media all and (max-width: $break-md){
+  .area-banner{
+    .banner{
+      .item{
+        height: 400px;
+        .legenda{
+          left: 0;
+          padding: 0 .2rem;
+          bottom: 1rem !important;
+          p{
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer{
+    .assinatura{
+      display: inherit;
+    }
+  }
+}
