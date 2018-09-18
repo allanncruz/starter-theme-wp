@@ -111,6 +111,16 @@ p{
     border: 1px solid $color-dark;
     outline: 0;
   }
+
+  &.g-recaptcha{
+    background: no-repeat !important;
+    border: none !important;
+    padding: 0;
+    margin: 0;
+    height: 83px;
+    justify-content: center;
+    display: flex;
+  }
 }
 textarea.form-control, textarea.wpcf7-form-control{
   height: 110px;
