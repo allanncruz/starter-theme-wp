@@ -2,25 +2,31 @@
 //Template Name: Home
     get_header(); ?>
 
-    <section class="area-banner">
-        <div class="carousel-inner owl-carousel banner owl-anima">
-            <?php $args = [ "post_type" => "animacao" ];
-            $Animacao = new WP_Query($args);if($Animacao->have_posts()):
-                while($Animacao->have_posts()): $Animacao->the_post(); ?>
+    <?php
+    $anima = new WP_Query(array(
+        'post_type' => '$animacao'
+    ));
+
+    if($anima->have_posts()):
+        ?>
+        <section class="area-banner">
+            <div class="carousel-inner owl-carousel banner owl-anima">
+                <?php while($anima->have_posts()): $anima->the_post(); ?>
+
                     <a href="<?php the_field('link') ?>">
-                        <div class=" bg-default item" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
-                            <div class="container h-100 d-flex align-items-center position-relative">
-                                <div class="row w-100">
-                                    <div class="legenda col-md-4 text-center text-md-left">
-                                        <p><?php the_title(); ?></p>
-                                    </div>
-                                </div>
+                        <img class="post_thumbnail" alt="<?php the_title(); ?>" src="<?php the_post_thumbnail_url(); ?>">
+                        <div class="container position-relative">
+                            <div class="legenda text-center w-100 position-absolute">
+                                <h3 class="text-uppercase"><?php the_title(); ?></h3>
+                                <?php the_content(); ?>
                             </div>
                         </div>
                     </a>
-                <?php endwhile; endif; ?>
-        </div>
-    </section>
+
+                <?php endwhile; ?>
+            </div>
+        </section>
+    <?php endif; ?>
 
     <section class="company py-5">
         <div class="container">
