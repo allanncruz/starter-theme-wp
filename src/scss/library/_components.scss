@@ -3,14 +3,30 @@
 //Slide
 
 .area-banner{
-  border-bottom: solid 3px #b9b9b9;
-  .item {
-    height: 500px;
-    .legenda {
-      p{
-        font-size: 2rem;
-        text-align: left;
+  .post_thumbnail{
+    height: 640px;
+    object-fit: cover;
+    @media all and (max-width: $break-md){
+      height: 490px;
+    }
+  }
+  .legenda {
+    bottom: 6rem;
+    left: 0;
+    p{
+      color: $white;
+    }
+  }
+
+  .owl-nav {
+    button{
+      top: 6rem;
+      i{
+        font-size: 3rem !important;
       }
+    }
+    .owl-prev, .owl-next{
+      background: none !important;
     }
   }
 }

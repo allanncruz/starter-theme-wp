@@ -26,37 +26,35 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top">
+
+
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top" role="navigation">
         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <button class="navbar-toggler outline border-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"
+                    aria-controls="bs-example-navbar-collapse-1"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <a class="navbar-brand position-relative" href="<?php bloginfo("url") ?>">
                 <img src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
             </a>
-            <button class="navbar-toggler outline border-0" type="button" data-toggle="collapse" data-target="#navbar"
-                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="<?php bloginfo("url") ?>/?page_id=11">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu text-center p-0">
-                            <li class="cat-item cat-item-3 py-1 "><a href="#">Item</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="<?php bloginfo("url") ?>/?page_id=21/">Contact and Location</a></li>
-                    <li class="d-block d-md-none nav-fone text-white mt-1">
-                        <i class="fas fa-phone fa-flip-horizontal"></i>
-                        <small>(84)</small> <b>00000-0000</b>
-                    </li>
-                    <li class="d-block d-md-none nav-fone text-white mt-1">
-                        <small>(84)</small> <b>00000-0000</b></li>
-                </ul>
-            </div>
+            <?php
+            wp_nav_menu( array(
+                'theme_location'    => 'principal',
+                'depth'             => 2,
+                'container'         => 'div',
+                'container_class'   => 'collapse navbar-collapse',
+                'container_id'      => 'bs-example-navbar-collapse-1',
+                'menu_class'        => 'nav navbar-nav',
+                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'            => new WP_Bootstrap_Navwalker(),
+            ) );
+            ?>
         </div>
     </nav>

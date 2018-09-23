@@ -5,6 +5,7 @@
         return false;
     }
 
+
     add_theme_support( 'post-thumbnails' );
     add_action('wp_enqueue_scripts', 'theme_scripts', 'favicon');
     function theme_scripts()
@@ -103,7 +104,14 @@
         flush_rewrite_rules();
     }
     add_action('init', 'animacaoType');
+    
+    
+    
 
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 
+    register_nav_menus( array(
+       'principal' => __('Menu Principal', 'bstwp')
+    ));
 
 ?>
