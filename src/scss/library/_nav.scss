@@ -22,12 +22,18 @@
       }
     }
     .dropdown-menu{
+      right: 0;
+      left: inherit;
       a{
         &:hover{
           color: $color-dark;
         }
       }
     }
+  }
+
+  .navbar-collapse{
+    justify-content: flex-end;
   }
   .navbar-toggler{
     outline: none;
