@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 
-gulp.task('default',['sass','js','copyfonts','copy-img','watch']);
+gulp.task('default',['sass','js','copyfonts','copy-img','fancy-img','watch']);
 
 gulp.task('sass', function() {
     return gulp.src([
@@ -21,6 +21,7 @@ gulp.task('js', function() {
             'node_modules/popper.js/dist/umd/popper.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/owl.carousel/dist/owl.carousel.js',
+        'node_modules/fancybox/dist/js/jquery.fancybox.js',
             'src/js/*.js'])
         .pipe(concat('all.js'))
         .pipe(uglify())
@@ -33,6 +34,10 @@ gulp.task('copyfonts', function() {
 });
 gulp.task('copy-img', function() {
     gulp.src('src/img/**/*')
+        .pipe(gulp.dest('dist/img'));
+});
+gulp.task('fancy-img', function() {
+    gulp.src('node_modules/fancybox/dist/img/**/*')
         .pipe(gulp.dest('dist/img'));
 });
 
