@@ -9,9 +9,12 @@
 <body class="bg-light">
 
 
-
+<header class="header sticky-top">
     <div class="upnavbar py-0 py-lg-1">
         <div class="container">
+            <a class="navbar-brand position-absolute" href="<?php bloginfo("url") ?>">
+                <img src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
+            </a>
             <div class="d-flex justify-content-end align-items-center flex-wrap">
                 <ul class="upnav-items upnavbar-itenslist-unstyled m-0 py-1">
                     <li class="tel d-none d-lg-inline px-2">
@@ -28,7 +31,7 @@
     </div>
 
 
-    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top" role="navigation">
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler outline border-0"
@@ -41,9 +44,6 @@
 
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand position-relative" href="<?php bloginfo("url") ?>">
-                <img src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
-            </a>
             <?php
             wp_nav_menu( array(
                 'theme_location'    => 'principal',
