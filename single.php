@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-    <section class="page-interna">
-        <div class="container featurette">
+    <section class="internal-page">
+        <div class="container featurette mt-5">
 
-            <div class="row">
+            <div class="box-container bg-white p-5 mb-5 shadow-sm">
                 <div class="col-12 col-md-12">
                     <?php if(have_posts()): while(have_posts()): the_post(); ?>
                         <h1 class="title title-default"><?php the_title(); ?></h1>
