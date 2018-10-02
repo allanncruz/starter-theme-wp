@@ -50,7 +50,7 @@
 
                             <?php endwhile; ?>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-5 order-first order-md-2">
                             <img class="photo-highlight w-100" src="<?php the_post_thumbnail_url(); ?>">
                         </div>
 
