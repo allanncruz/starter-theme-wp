@@ -34,7 +34,7 @@
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <button class="navbar-toggler outline border-0"
+            <button class="navbar-toggler text-right w-100 outline border-0"
                     type="button"
                     data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1"
