@@ -1,7 +1,25 @@
 # Boilerplate Front-End Wp #
 
-É uma estrutura pronta com automatização pré-configurada, utilizando recursos de processamentos já definidos.
+It is a ready structure with preconfigured automation, using already defined processing resources.
 
-A interface conta com uma base Wordpress estruturada com Bootstrap 4, tendo objetivo padronizar os modos de produção institucionais.
+The interface has a Wordpress theme structured with Bootstrap 4, aiming to standardize the institutional production modes.
 
-O código mais recente em desenvolvimento se encontra no branch develop.
+You need to download wordpress from https://br.wordpress.org/download/. Then clone this project in the "wordpress/wp-content/themes"
+
+### Global Dependencies
+
+* NodeJS - (https://nodejs.org/en/)
+* gulp - (https://gulpjs.com/)
+* Sass install - (https://sass-lang.com/guide)
+
+
+### Install Dependencies
+```
+npm install
+```
+### Compile and activate watch
+```
+gulp
+```
+
+*Developed by Allan Cruz - (https://github.com/allanncruz)*
