@@ -14,10 +14,6 @@ $theme-colors:(
   "color-white": $color-white
 );
 
-//Media Directive
-$break-xl: 1199px;
-$break-lg: 991px;
-$break-md: 767px;
 
 @import "library/_general";
 @import "library/_nav";

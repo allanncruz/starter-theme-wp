@@ -41,18 +41,19 @@
                     if($about->have_posts()):
                         ?>
 
+                        <?php while($about->have_posts()): $about->the_post(); ?>
                         <div class="col-md-7">
-                            <?php while($about->have_posts()): $about->the_post(); ?>
 
-                                <h1 class="display-4"><?php the_title(); ?></h1>
-                                <?php the_field('chamada_da_home'); ?>
-                                <a href="<?php bloginfo("url") ?>/about" class="btn btn-default">Read More</a>
+                            <h1 class="display-4"><?php the_title(); ?></h1>
+                            <?php the_field('chamada_da_home'); ?>
+                            <a href="<?php bloginfo("url") ?>/about" class="btn btn-default">Read More</a>
 
-                            <?php endwhile; ?>
                         </div>
                         <div class="col-md-5 order-first order-md-2">
                             <img class="photo-highlight w-100" src="<?php the_post_thumbnail_url(); ?>">
                         </div>
+
+                    <?php endwhile; ?>
 
                     <?php endif; ?>
                 </div>

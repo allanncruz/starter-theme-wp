@@ -13,7 +13,7 @@
     <div class="upnavbar py-0 py-lg-1">
         <div class="container">
             <a class="navbar-brand position-absolute" href="<?php bloginfo("url") ?>">
-                <img src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
+                <img class="position-relative" src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
             </a>
             <div class="d-flex justify-content-end align-items-center flex-wrap">
                 <ul class="upnav-items upnavbar-itenslist-unstyled m-0 py-1">

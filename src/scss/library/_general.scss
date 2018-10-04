@@ -62,7 +62,7 @@ p{
       margin-top: .5rem;
     }
   }
-  @media all and (max-width: $break-md){
+  @include media-breakpoint-down(sm) {
     .gallery-item{
       width: 48%!important;
       img{
@@ -205,7 +205,7 @@ div.wpcf7-validation-errors{
   .owl-dots{
     display: none;
   }
-  @media all and (max-width: $break-lg) {
+  @include media-breakpoint-down(md) {
     .owl-nav{
       top: 7rem!important;
     }

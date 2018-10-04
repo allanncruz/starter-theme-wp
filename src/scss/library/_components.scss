@@ -9,7 +9,7 @@
   .post_thumbnail{
     height: 640px;
     object-fit: cover;
-    @media all and (max-width: $break-md){
+    @include media-breakpoint-down(sm) {
       height: 490px;
     }
   }
@@ -54,7 +54,7 @@
     font-weight: 900;
   }
 }
-@media all and (max-width: $break-md){
+@include media-breakpoint-down(sm) {
   .area-banner{
     .banner{
       .item{
