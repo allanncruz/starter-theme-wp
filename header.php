@@ -32,7 +32,7 @@
 
 
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark" role="navigation">
-        <div class="container">
+        <div class="container justify-content-end">
             <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler text-right w-100 outline border-0"
                     type="button"
