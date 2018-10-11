@@ -12,6 +12,27 @@ p{
   color: $color-dark;
 }
 
+.color-icons{
+  i{
+    font-weight: 600;
+  }
+  .fa-facebook-square{
+    color: #5494e4;
+  }
+  .fa-twitter{
+    color: #42cbfe;
+  }
+  .fa-instagram{
+    color: #e270ff;
+  }
+  .fa-whatsapp{
+    color: #bbff6a;
+  }
+  .fa-phone{
+    color: #24aabe;
+  }
+}
+
 .flex-item{
   align-items: center;
   justify-content: center;
