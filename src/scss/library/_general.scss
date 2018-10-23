@@ -160,6 +160,13 @@ textarea.wpcf7-form-control{
   display: inherit;
 }
 
+div.wpcf7{
+  input[type=file]{
+    font-size: 1rem;
+    padding: .7rem;
+  }
+}
+
 //Messages Contact form 7
 div.wpcf7-mail-sent-ok{
   background: #84e7e7 !important;
