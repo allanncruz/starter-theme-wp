@@ -8,6 +8,7 @@
 </head>
 <body class="bg-light">
 
+<!--Header with upnave-->
 
 <header class="header sticky-top">
     <div class="upnavbar py-0 py-lg-1">
@@ -33,7 +34,6 @@
 
     <nav class="navbar navbar-expand-xl navbar-dark bg-dark" role="navigation">
         <div class="container justify-content-end">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler text-right w-100 outline border-0"
                     type="button"
                     data-toggle="collapse"
@@ -59,3 +59,39 @@
         </div>
     </nav>
 </header>
+
+<!--Header without upnave-->
+
+<!--<header class="header sticky-top">-->
+<!--        <nav class="navbar navbar-expand-xl navbar-dark bg-dark" role="navigation">-->
+<!--        <div class="container">-->
+<!---->
+<!--            <a class="navbar-brand position-absolute" href="--><?php //bloginfo("url") ?><!--">-->
+<!--                <img class="position-relative w-75" src="--><?php //bloginfo("template_url") ?><!--/dist/img/image/logo.png">-->
+<!--            </a>-->
+<!---->
+<!--            <button class="navbar-toggler text-right w-100 outline border-0"-->
+<!--                    type="button"-->
+<!--                    data-toggle="collapse"-->
+<!--                    data-target="#bs-example-navbar-collapse-1"-->
+<!--                    aria-controls="bs-example-navbar-collapse-1"-->
+<!--                    aria-expanded="false"-->
+<!--                    aria-label="Toggle navigation">-->
+<!---->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+<!--            --><?php
+//            wp_nav_menu( array(
+//                'theme_location'    => 'principal',
+//                'depth'             => 2,
+//                'container'         => 'div',
+//                'container_class'   => 'collapse navbar-collapse',
+//                'container_id'      => 'bs-example-navbar-collapse-1',
+//                'menu_class'        => 'nav navbar-nav',
+//                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+//                'walker'            => new WP_Bootstrap_Navwalker(),
+//            ) );
+//            ?>
+<!--        </div>-->
+<!--    </nav>-->
+<!--</header>-->
