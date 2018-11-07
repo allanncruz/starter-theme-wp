@@ -184,30 +184,41 @@ div.wpcf7-validation-errors{
 }
 
 //Owl Carousel
+ .carousel-inner{
+   overflow: initial;
+ }
 .owl-carousel {
-  .owl-nav {
-    display: block !important;
-    top: -4rem;
-    right: 0;
-  }
-  &.store .owl-nav {
+  .owl-nav{
+    width: 100%;
+    top: 0 !important;
     position: absolute;
-    top: auto;
-    bottom: -30px;
-    right: 2px;
-  }
-  .owl-nav {
-    .owl-next.disabled, .owl-prev.disabled {
-      opacity: 0.5;
-    }
-    .owl-next, .owl-prev {
-      float: left;
-      width: 50px;
-      height: 50px;
-      span{
-        display: none;
+    bottom: inherit;
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+    height: 100%;
+    button{
+      position: absolute;
+      outline: none;
+      i{
+        color: #c8c8c3;
+        font-size: 1.8rem;
+      }
+      &:hover, &:active, &:visited{
+        i{
+          color: #50504f;
+        }
       }
     }
+    .owl-prev{
+      left: -1rem;
+    }
+    .owl-next{
+      right: -1rem;
+    }
+  }
+  .owl-dots{
+    display: none;
   }
 }
 //Owl anima
