@@ -187,6 +187,9 @@ div.wpcf7-validation-errors{
  .carousel-inner{
    overflow: initial;
  }
+.owl-stage-outer{
+  z-index: 99;
+}
 .owl-carousel {
   .owl-nav{
     width: 100%;
