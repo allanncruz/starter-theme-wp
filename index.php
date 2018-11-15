@@ -4,7 +4,7 @@
 
     <?php
     $anima = new WP_Query(array(
-        'post_type' => 'animacao'
+        'post_type' => '$animacao'
     ));
 
     if($anima->have_posts()):
