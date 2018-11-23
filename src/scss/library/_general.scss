@@ -40,6 +40,12 @@ p{
   display: flex;
 }
 
+.sticky-top{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
 //Propriedades Bootstrap
 .btn, .wpcf7-submit{
 
