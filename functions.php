@@ -63,7 +63,7 @@
         $labels = array(
             'name'               => 'Animação',
             'singular_name'      => 'Animação',
-            'menu_name'          => 'Animaçoes',
+            'menu_name'          => 'Animações',
             'name_admin_bar'     => 'Animação',
             'add_new'            => 'Adicionar Novo',
             'add_new_item'       => 'Adicionar novo item',
