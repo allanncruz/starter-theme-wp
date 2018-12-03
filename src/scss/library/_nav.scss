@@ -20,6 +20,13 @@
 
 //Nav Bar
 .navbar {
+  .navbar-nav{
+    .active>{
+      .nav-link{
+        color: $primary-color;
+      }
+    }
+  }
   .nav-item{
     .nav-link{
       color: $white;
