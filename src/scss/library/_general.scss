@@ -70,11 +70,6 @@ p{
   background-position: center!important;
 }
 
-.photo-highlight{
-  border: solid 5px $white;
-  max-width: 500px;
-}
-
 //Properties Wordpress
 
 .gallery{
@@ -105,7 +100,7 @@ p{
   }
 }
 
-.alignright, .alignleft{
+.alignright, .alignleft, .single-thumbnail{
   border: solid 5px #fff;
   max-width: 530px;
   height: 350px;
