@@ -1,24 +1,6 @@
 
-//Up Navbar
-.upnavbar {
-  background: $gray-400;
-  font-size: 1.3rem;
-  .navbar-brand {
-    img{
-      width: 140px;
-      z-index: 10;
-    }
-  }
-  .upnav-items {
-    li {
-      .fas {
-        font-size: 1.5rem;
-      }
-    }
-  }
-}
-
-//Nav Bar
+//NavBar Elements
+//
 .navbar {
   .navbar-nav{
     .active>{
