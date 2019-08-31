@@ -27,6 +27,13 @@
     }
   }
 
+  .navbar-toggler{
+    cursor: pointer;
+    background: $primary-color;
+    border-radius: 0;
+    padding: .3rem;
+  }
+
   .navbar-collapse{
     justify-content: flex-end;
   }
