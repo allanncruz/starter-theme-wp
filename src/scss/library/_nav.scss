@@ -30,8 +30,6 @@
   .navbar-toggler{
     cursor: pointer;
     background: $primary-color;
-    border-radius: 0;
-    padding: .3rem;
   }
 
   .navbar-collapse{
@@ -44,6 +42,11 @@
     .navbar-nav .nav-link{
       justify-content: center;
       padding: 1rem 0;
+    }
+    .navbar-brand{
+      .navbar-brand--img{
+        width: 100px;
+      }
     }
     .dropdown-menu{
       width: 100%;

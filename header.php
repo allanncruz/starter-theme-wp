@@ -12,9 +12,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
             <a class="navbar-brand" href="<?php bloginfo("url") ?>">
-                <img class="position-relative" src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
+                <img class="navbar-brand--img" src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
             </a>
-            <button class="navbar-toggler border-0"
+            <button class="navbar-toggler border-0 rounded-0 p-1"
                     type="button"
                     data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1"
