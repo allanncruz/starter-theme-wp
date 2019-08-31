@@ -12,11 +12,44 @@ p{
   color: $color-dark;
 }
 
+.color-icons{
+  i{
+    font-weight: 600;
+  }
+  .fa-facebook-square{
+    color: #5494e4;
+  }
+  .fa-facebook{
+    color: #5494e4;
+  }
+  .fa-twitter{
+    color: #42cbfe;
+  }
+  .fa-instagram{
+    color: #e270ff;
+  }
+  .fa-whatsapp{
+    color: #bbff6a;
+  }
+  .fa-phone{
+    color: #24aabe;
+  }
+  .fa-youtube{
+    color: #e04749;
+  }
+}
+
 .flex-item{
   align-items: center;
   justify-content: center;
   text-align: center;
   display: flex;
+}
+
+.sticky-top{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 //Propriedades Bootstrap
@@ -35,11 +68,6 @@ p{
 .bg-default{
   background-size: cover!important;
   background-position: center!important;
-}
-
-.photo-highlight{
-  border: solid 5px $white;
-  max-width: 500px;
 }
 
 //Properties Wordpress
@@ -62,7 +90,7 @@ p{
       margin-top: .5rem;
     }
   }
-  @media all and (max-width: $break-md){
+  @include media-breakpoint-down(sm) {
     .gallery-item{
       width: 48%!important;
       img{
@@ -72,13 +100,16 @@ p{
   }
 }
 
-.alignright, .alignleft{
+.alignright, .alignleft, .single-thumbnail{
   border: solid 5px #fff;
-  max-width: 400px;
+  max-width: 530px;
+  height: 350px;
   width: 100%;
   padding: 0;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
   border-radius: 0;
+  object-fit: cover;
+
 }
 
 .alignright{
@@ -136,6 +167,13 @@ textarea.wpcf7-form-control{
   display: inherit;
 }
 
+div.wpcf7{
+  input[type=file]{
+    font-size: 1rem;
+    padding: .7rem;
+  }
+}
+
 //Messages Contact form 7
 div.wpcf7-mail-sent-ok{
   background: #84e7e7 !important;
@@ -153,30 +191,44 @@ div.wpcf7-validation-errors{
 }
 
 //Owl Carousel
+ .carousel-inner{
+   overflow: initial;
+ }
+.owl-stage-outer{
+  z-index: 99;
+}
 .owl-carousel {
-  .owl-nav {
-    display: block !important;
-    top: -4rem;
-    right: 0;
-  }
-  &.store .owl-nav {
+  .owl-nav{
+    width: 100%;
+    top: 0 !important;
     position: absolute;
-    top: auto;
-    bottom: -30px;
-    right: 2px;
-  }
-  .owl-nav {
-    .owl-next.disabled, .owl-prev.disabled {
-      opacity: 0.5;
-    }
-    .owl-next, .owl-prev {
-      float: left;
-      width: 50px;
-      height: 50px;
-      span{
-        display: none;
+    bottom: inherit;
+    align-items: center;
+    justify-content: center;
+    display: flex !important;
+    height: 100%;
+    button{
+      position: absolute;
+      outline: none;
+      i{
+        color: #c8c8c3;
+        font-size: 1.8rem;
+      }
+      &:hover, &:active, &:visited{
+        i{
+          color: #50504f;
+        }
       }
     }
+    .owl-prev{
+      left: -1rem;
+    }
+    .owl-next{
+      right: -1rem;
+    }
+  }
+  .owl-dots{
+    display: none;
   }
 }
 //Owl anima
@@ -202,9 +254,57 @@ div.wpcf7-validation-errors{
   .owl-dots{
     display: none;
   }
-  @media all and (max-width: $break-lg) {
+  @include media-breakpoint-down(md) {
     .owl-nav{
       top: 7rem!important;
     }
   }
+}
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css);
+
+/*** basic styles ***/
+
+
+input[type=radio].with-font,
+input[type=checkbox].with-font {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+input[type=radio].with-font ~ label:before,
+input[type=checkbox].with-font ~ label:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f1db";
+  letter-spacing: 10px;
+  color: #535353;
+  width: 1.4em;
+}
+
+input[type=radio].with-font:checked ~ label:before,
+input[type=checkbox].with-font:checked ~ label:before  {
+  content: "\f00c";
+  color: darkgreen;
+  letter-spacing: 5px;
+}
+input[type=checkbox].with-font ~ label:before {
+  content: "\f096";
+}
+input[type=checkbox].with-font:checked ~ label:before {
+  content: "\f046";
+  color: darkgreen;
+}
+input[type=radio].with-font:focus ~ label:before,
+input[type=checkbox].with-font:focus ~ label:before,
+input[type=radio].with-font:focus ~ label,
+input[type=checkbox].with-font:focus ~ label
+{
+  color: green;
 }

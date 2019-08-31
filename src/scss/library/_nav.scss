@@ -3,6 +3,12 @@
 .upnavbar {
   background: $gray-400;
   font-size: 1.3rem;
+  .navbar-brand {
+    img{
+      width: 140px;
+      z-index: 10;
+    }
+  }
   .upnav-items {
     li {
       .fas {
@@ -14,6 +20,13 @@
 
 //Nav Bar
 .navbar {
+  .navbar-nav{
+    .active>{
+      .nav-link{
+        color: $primary-color;
+      }
+    }
+  }
   .nav-item{
     .nav-link{
       color: $white;
@@ -38,13 +51,7 @@
   .navbar-toggler{
     outline: none;
   }
-
-  .navbar-brand {
-    img{
-      width: 140px;
-    }
-  }
-  @media all and (max-width: $break-xl){
+  @include media-breakpoint-down(lg) {
     .navbar-nav .nav-link{
       justify-content: center;
       padding: 1rem 0;

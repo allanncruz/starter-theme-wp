@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-    <section class="internal-page">
-        <div class="container featurette mt-5">
+    <section class="wrap">
+        <div class="container content-area mt-5">
 
-            <div class="box-container bg-white p-5 mb-5 shadow-sm">
+            <div class="content-box bg-white p-md-5 p-3  shadow-sm">
                 <div class="row">
                     <div class="col-12 col-md-12">
                         <?php if(have_posts()): while(have_posts()): the_post(); ?>

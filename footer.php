@@ -8,8 +8,9 @@
             </div>
 
             <div class="col-md-6 text-center">
-                <p class="m-0 h-100 text-white flex-item">
-                    Conta Github.</p>
+                <a href="https://github.com/allanncruz/boilerplate-front-end-wp" class="m-0 h-100 text-white flex-item"
+                   target="_blank">
+                    Github</a>
             </div>
 
         </div>

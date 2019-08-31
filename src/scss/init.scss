@@ -1,5 +1,6 @@
 // import Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/fancybox/dist/scss/jquery.fancybox";
 
 $color-dark: #222;
 $primary-color: #e7be37;
@@ -13,10 +14,6 @@ $theme-colors:(
   "color-white": $color-white
 );
 
-//Media Directive
-$break-xl: 1199px;
-$break-lg: 991px;
-$break-md: 767px;
 
 @import "library/_general";
 @import "library/_nav";

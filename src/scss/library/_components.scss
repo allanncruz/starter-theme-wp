@@ -1,16 +1,19 @@
 
+.header{
+  z-index: 999;
+}
 
 //Slide
 
-.area-banner{
-  .post_thumbnail{
+.carousel{
+  .carousel-thumbnail{
     height: 640px;
     object-fit: cover;
-    @media all and (max-width: $break-md){
+    @include media-breakpoint-down(sm) {
       height: 490px;
     }
   }
-  .legenda {
+  .carousel-legend {
     bottom: 6rem;
     left: 0;
     p{
@@ -51,7 +54,7 @@
     font-weight: 900;
   }
 }
-@media all and (max-width: $break-md){
+@include media-breakpoint-down(sm) {
   .area-banner{
     .banner{
       .item{
