@@ -6,7 +6,7 @@
     <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body class="bg-light">
 
 <header class="header position-fixed w-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
