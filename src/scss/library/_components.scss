@@ -7,10 +7,11 @@
 
 .carousel{
   .carousel-thumbnail{
-    height: 640px;
+    height: 750px;
+    max-height: 100vh;
     object-fit: cover;
     @include media-breakpoint-down(sm) {
-      height: 490px;
+      height: 100vh;
     }
   }
   .carousel-legend {
