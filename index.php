@@ -2,31 +2,31 @@
 //Template Name: Home
     get_header(); ?>
 
-    <?php
-    $anima = new WP_Query(array(
-        'post_type' => 'animacao'
-    ));
-
-    if($anima->have_posts()):
-        ?>
-        <section class="carousel">
-            <div class="carousel-inner owl-carousel banner owl-anima">
-                <?php while($anima->have_posts()): $anima->the_post(); ?>
-
-                    <a href="<?php the_field('link') ?>">
-                        <img class="carousel-thumbnail" alt="<?php the_title(); ?>" src="<?php the_post_thumbnail_url(); ?>">
+    <section class="carousel">
+        <div class="carousel-inner owl-carousel banner owl-anima">
+            <!-- Starting the custom carousel loop post-->
+            <?php
+            $anima = new WP_Query(array( 'post_type' => 'animacao' ));
+            if ($anima->have_posts()):
+                while ($anima->have_posts()): $anima->the_post(); ?>
+                    <div>
+                        <img class="carousel-thumbnail"
+                             alt="<?php the_title();?>"
+                             src="<?php the_post_thumbnail_url(); ?>">
                         <div class="container position-relative">
-                            <div class="carousel-legend text-center w-100 position-absolute">
-                                <h3 class="text-uppercase"><?php the_title(); ?></h3>
+                            <div class="carousel-legend position-absolute">
+                                <h1 class="title"><?php the_title(); ?></h1>
                                 <?php the_content(); ?>
+                                <div class="btns">
+                                    <a href="#" class="btn btn-primary">Saiba mais</a>
+                                </div>
                             </div>
                         </div>
-                    </a>
-
-                <?php endwhile; ?>
-            </div>
-        </section>
-    <?php endif; ?>
+                    </div>
+                <?php endwhile; endif; ?>
+            <!-- Finish carousel loop-->
+        </div>
+    </section>
 
     <section class="company py-5">
         <div class="container">
