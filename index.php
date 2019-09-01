@@ -2,7 +2,7 @@
 //Template Name: Home
     get_header(); ?>
 
-    <section class="carousel">
+    <div class="carousel">
         <div class="carousel-inner owl-carousel banner owl-anima">
             <!-- Starting the custom carousel loop post-->
             <?php
@@ -26,9 +26,9 @@
                 <?php endwhile; endif; ?>
             <!-- Finish carousel loop-->
         </div>
-    </section>
+    </div>
 
-    <section class="company py-5">
+    <section class="company">
         <div class="container">
             <div class="content-box bg-white p-5 shadow-sm">
                 <div class="row">
@@ -61,11 +61,9 @@
         </div>
     </section>
 
-    <section class="cards py-5">
+    <section class="cards">
         <div class="container">
-
             <h1 class="text-center">Cards Examples</h1>
-
             <div class="carousel-inner owl-carousel owl-cards">
                 <?php
                 if ( have_posts() ) {
@@ -93,10 +91,6 @@
                 ?>
             </div>
             <a href=<?php bloginfo("url") ?>/?page_id=12" class="btn btn-outline-primary m-auto">Mais notícias</a>
-
         </div>
     </section>
-
-
-
 <?php get_footer(); ?>

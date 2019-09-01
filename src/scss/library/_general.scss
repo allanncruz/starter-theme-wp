@@ -9,7 +9,7 @@ a {
   }
 }
 p{
-  color: $color-dark;
+  color: $dark;
 }
 
 .color-icons{
@@ -139,7 +139,7 @@ p{
   width: 100%;
   &:focus{
     box-shadow: none;
-    border: 1px solid $color-dark;
+    border: 1px solid $dark;
     outline: 0;
   }
 
