@@ -35,7 +35,7 @@
                     <?php
                     $about = new WP_Query(array(
                         'post_type' => 'page',
-                        'pagename' => 'about'
+                        'pagename' => 'pagina-exemplo'
                     ));
 
                     if($about->have_posts()):
@@ -45,8 +45,8 @@
                         <div class="col-md-7">
 
                             <h1 class="display-4"><?php the_title(); ?></h1>
-                            <?php the_field('chamada_da_home'); ?>
-                            <a href="<?php bloginfo("url") ?>/about" class="btn btn-default">Read More</a>
+                            <?php the_content(); ?>
+                            <a href="<?php bloginfo("url") ?>/about" class="btn btn-primary">Read More</a>
 
                         </div>
                         <div class="col-md-5 order-first order-md-2">
