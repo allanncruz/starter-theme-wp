@@ -1,24 +1,6 @@
 
-//Up Navbar
-.upnavbar {
-  background: $gray-400;
-  font-size: 1.3rem;
-  .navbar-brand {
-    img{
-      width: 140px;
-      z-index: 10;
-    }
-  }
-  .upnav-items {
-    li {
-      .fas {
-        font-size: 1.5rem;
-      }
-    }
-  }
-}
-
-//Nav Bar
+//NavBar Elements
+//
 .navbar {
   .navbar-nav{
     .active>{
@@ -39,10 +21,15 @@
       left: inherit;
       a{
         &:hover{
-          color: $color-dark;
+          color: $dark;
         }
       }
     }
+  }
+
+  .navbar-toggler{
+    cursor: pointer;
+    background: $primary-color;
   }
 
   .navbar-collapse{
@@ -55,6 +42,11 @@
     .navbar-nav .nav-link{
       justify-content: center;
       padding: 1rem 0;
+    }
+    .navbar-brand{
+      .navbar-brand--img{
+        width: 100px;
+      }
     }
     .dropdown-menu{
       width: 100%;

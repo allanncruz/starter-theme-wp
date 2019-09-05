@@ -61,18 +61,18 @@
     function animacaoType()
     {
         $labels = array(
-            'name'               => 'Animação',
+            'name'               => 'Animações',
             'singular_name'      => 'Animação',
             'menu_name'          => 'Animações',
-            'name_admin_bar'     => 'Animação',
+            'name_admin_bar'     => 'Animações',
             'add_new'            => 'Adicionar Novo',
             'add_new_item'       => 'Adicionar novo item',
             'new_item'           => 'Novo Item',
             'edit_item'          => 'Editar Item',
             'view_item'          => 'Ver Item',
             'all_items'          => 'Todos os Itens',
-            'search_items'       => 'Procurar Animação',
-            'parent_item_colon'  => 'Parent Animação',
+            'search_items'       => 'Procurar Animações',
+            'parent_item_colon'  => 'Parent Animações',
             'not_found'          => 'Nenhum item encontrado',
             'not_found_in_trash' => 'Nenhum item encontrado na lixeira'
         );
@@ -85,7 +85,7 @@
             'publicly_queryable' => true,
             'show_ui'            => true,
             'show_in_menu'       => true,
-            'menu_icon'          => 'dashicons-slides',
+            'menu_icon'          => 'dashicons-format-image',
             'query_var'          => true,
             'rewrite'            => array( 'slug' => 'animacoes' ),
             'capability_type'    => 'post',

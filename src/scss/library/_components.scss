@@ -7,16 +7,28 @@
 
 .carousel{
   .carousel-thumbnail{
-    height: 640px;
+    height: 750px;
+    max-height: 100vh;
     object-fit: cover;
     @include media-breakpoint-down(sm) {
-      height: 490px;
+      height: 100vh;
     }
   }
   .carousel-legend {
-    bottom: 6rem;
-    left: 0;
-    p{
+    width: 460px;
+    max-width: 100%;
+    bottom: 0;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title {
+      line-height: 120%;
+      text-transform: uppercase;
+      color: $white;
+      font-family: latoregular, sans-serif;
+    }
+    p {
       color: $white;
     }
   }
@@ -33,16 +45,6 @@
     }
   }
 }
-
-
-//Services
-
-.services{
-  figure{
-    height: 200px;
-  }
-}
-
 
 
 //Footer
