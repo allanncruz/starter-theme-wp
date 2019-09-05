@@ -12,6 +12,8 @@
   .nav-item{
     .nav-link{
       color: $white;
+      text-transform: uppercase;
+      font-size: 13px;
       &:hover, &:focus, &:active{
         color: $primary-color;
       }
@@ -19,9 +21,18 @@
     .dropdown-menu{
       right: 0;
       left: inherit;
+      padding: 0;
+      border-radius: 0;
+      li{
+        width: 218px;
+      }
       a{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: .7rem;
         &:hover{
-          color: $dark;
+          background: $primary-color;
         }
       }
     }
