@@ -11,8 +11,8 @@
 <header class="header position-fixed w-100 shadow">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="<?php bloginfo("url") ?>">
-                <img class="navbar-brand--img" src="<?php bloginfo("template_url") ?>/dist/img/image/logo.png">
+            <a class="navbar-brand text-white" href="<?php bloginfo("url") ?>">
+                Boilerplate wp
             </a>
             <button class="navbar-toggler border-0 rounded-0 p-1"
                     type="button"
