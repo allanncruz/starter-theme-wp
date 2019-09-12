@@ -3,19 +3,19 @@
     get_header(); ?>
 
     <div class="carousel">
-        <div class="carousel-inner owl-carousel banner owl-anima">
+        <div class="carousel--anima carousel-inner owl-carousel owl-anima">
             <!-- Starting the custom carousel loop post-->
             <?php
             $anima = new WP_Query(array( 'post_type' => 'animacao' ));
             if ($anima->have_posts()):
                 while ($anima->have_posts()): $anima->the_post(); ?>
                     <div>
-                        <img class="carousel-thumbnail"
+                        <img class="carousel--thumbnail"
                              alt="<?php the_title();?>"
                              src="<?php the_post_thumbnail_url(); ?>">
                         <div class="container position-relative">
-                            <div class="carousel-legend position-absolute">
-                                <h1 class="title"><?php the_title(); ?></h1>
+                            <div class="carousel--legend">
+                                <h1 class="carousel--legend__title"><?php the_title(); ?></h1>
                                 <?php the_content(); ?>
                                 <div class="btns">
                                     <a href="#" class="btn btn-primary">Saiba mais</a>
