@@ -52,11 +52,8 @@
 //Footer
 
 .footer {
-  h6 {
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
+  background: $dark;
+  color: $white;
 }
 @include media-breakpoint-down(sm) {
   .area-banner{
