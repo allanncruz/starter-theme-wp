@@ -38,16 +38,26 @@
     }
   }
 
+  .navbar-toggler>.close {
+    display:inline;
+    height: 22px;
+  }
+  .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
+  }
+
+  .collapse.navbar-collapse{
+    justify-content: flex-end;
+  }
+
   .navbar-toggler{
     cursor: pointer;
     background: $primary-color;
-  }
-
-  .navbar-collapse{
-    justify-content: flex-end;
-  }
-  .navbar-toggler{
     outline: none;
+    width: 38px;
+    .navbar-toggler-icon{
+      width: 1.2em;
+    }
   }
   @include media-breakpoint-down(lg) {
     .navbar-collapse{
