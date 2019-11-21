@@ -33,13 +33,15 @@ define('FS_METHOD', 'direct');
 
 ## Execute na pasta raíz do seu wordpress os comandos (pode selecionar as 3 linhas, colar e dar ENTER):
 ```
-sudo chown www-data:www-data -R *  
-sudo find . -type d -exec chmod 755 {} \;  
-sudo find . -type f -exec chmod 644 {} \; 
+# permissões em arquivos
+find . -type f -exec chmod 644 {} \;
+
+# permissoes em diretórios
+find . -type d -exec chmod 755 {} \;
 ``` 
 A primeira linha dará permissão de dono para usuário e grupo www-data. A segunda linha vai dar permissão 755 para todas as pastas, e a terceira dará permissão 644 para todos os arquivos.
 
-Jamais, em hipótese alguma dê permissão 777, mas isso você já sabe...
+Jamais, em hipótese alguma dê permissão 777
 
 
 
