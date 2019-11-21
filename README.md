@@ -31,8 +31,10 @@ Insira a constante:
 define('FS_METHOD', 'direct');
 ```
 
-## Execute na pasta raíz do seu wordpress os comandos (pode selecionar as 3 linhas, colar e dar ENTER):
+## Execute na pasta raíz do seu Wordpress:
 ```
+chown -R www-data:www-data
+
 # permissões em arquivos
 find . -type f -exec chmod 644 {} \;
 
