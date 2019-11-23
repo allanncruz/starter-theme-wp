@@ -15,13 +15,6 @@
         wp_enqueue_script('scripts-theme', get_template_directory_uri() . '/dist/js/all.js', ['jquery'], '1.0.0', true);
     }
 
-    function my_acf_google_map_api( $api ){
-        $api['key'] = 'AIzaSyDNj--p0jczavWMrCOqsw_GBNF29EH8MsQ';
-        return $api;
-    }
-    add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-
-
     function menu_icons($icon){
 
         // Store your SVGs in an associative array
