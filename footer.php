@@ -11,6 +11,7 @@
                 <a href="https://github.com/allanncruz/boilerplate-front-end-wp" class="m-0 h-100 text-white flex-item"
                    target="_blank">
                     Github</a>
+                <?php echo get_theme_mod('whatsapp_number') ?>
             </div>
 
         </div>
