@@ -15,7 +15,17 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
             <a class="navbar-brand text-white" href="<?php bloginfo("url") ?>">
-                <?php the_custom_logo() ?>
+            <?php 
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+
+                    if(has_custom_logo()) {
+                        echo '<img src="'. esc_url($logo[0]). '" class="img-fluid">';
+                    }else {
+                        echo '<h3>'. get_bloginfo('name'). '</h3>';
+                    } 
+                ?>
             </a>
             <button class="navbar-toggler border-0 collapsed rounded-0 p-1"
                     type="button"
