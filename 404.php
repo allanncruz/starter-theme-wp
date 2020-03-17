@@ -1,13 +1,18 @@
 <?php get_header(); ?>
 
+<?php the_post() ?>
+
     <section class="wrap">
         <div class="container content-area mt-5">
-            <div class="content-box bg-white p-md-5 p-3  shadow-sm">
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <h1 class="display-4 text-center">Página não encontrada!</h1>
-                        <p>O caminho para o conteúdo que você deseja aessar está errado ou a página podeter sido exluída</p>
-                    </div>
+            <div class="text-center">
+                <h1 class="title">Página não encontrada!</h1>
+            </div>  
+            
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <article class="px-md-5 px-2">
+                    <p>O caminho para o conteúdo que você deseja aessar está errado ou a página podeter sido exluída</p>
+                    </article>
                 </div>
             </div>
         </div>
