@@ -42,3 +42,16 @@
      flush_rewrite_rules();
  }
  add_action('init', 'blogType');
+
+ add_action( 'init', 'blog_taxonomy' );
+function blog_taxonomy() {
+    register_taxonomy(
+        'blog_taxonomy',
+        'blog',
+        array(
+            'label' => __( 'Categoria' ),
+            'rewrite' => array( 'slug' => 'blog' ),
+            'hierarchical' => true,
+        )
+    );
+}
