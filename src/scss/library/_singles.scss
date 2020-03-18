@@ -72,3 +72,35 @@
     height: 300px;
   }
 }
+
+
+.category-carte{
+
+  &__category{
+    color: $primary-color;
+    font-family: barlowextrabold;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__post{
+    .post_thumbnail{
+      width: 175px;
+      height: 110px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+
+    h6,
+    .price{
+      font-family: latoregular;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 17px;
+    }
+  }
+}
+
+.hr-carte{
+  margin: 50px 0 100px 0;
+}
