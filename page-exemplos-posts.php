@@ -15,8 +15,8 @@
                     <article class="px-md-5 px-2">
                         <?php the_content(); ?>
 
-                        <h2 class="my-5">Lista de categorias seguido de postagens </h2>
-                        <div id="accordion" class="imoveis-accordion">
+                        <h2 class="my-5">Loop de postagem com Accordion</h2>
+                        <div id="accordion" class="post-accordion">
                             <?php
 
                             $exams = new WP_Query([

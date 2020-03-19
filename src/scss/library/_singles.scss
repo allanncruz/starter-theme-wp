@@ -140,7 +140,7 @@
   .card-tag a {
     position: absolute;
     height: 20px;
-    background: var(--primary-color);
+    background: $primary-color;
     border-radius: 2px;
     font-size: 12px;
     color: #fff;
@@ -174,4 +174,69 @@
         filter: grayscale(1);
         opacity: .1;
     }
+}
+
+
+// Accordion post type
+
+.post-accordion {
+  .card {
+    cursor: pointer;
+    border: 0;
+  }
+
+  .card-header {
+    padding: 0;
+    border: 0;
+
+    a {
+      display: inherit;
+      padding: 1rem 30px;
+      text-transform: uppercase;
+      height: 50px;
+      color: $primary-color;
+      display: flex;
+      justify-content: space-between;
+
+      i {
+        color: $primary-color;
+        transition: .3s;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .card-body {
+    padding: 45px;
+    border: solid 1px $primary-color;
+
+    ul li {
+      list-style: none;
+      line-height: 22px;
+      border-bottom: solid 1px #E8E8E8;
+      padding: 15px 0 15px 45px;
+      font-size: 14px;
+    }
+  }
+
+  .card-header a[aria-expanded="true"] {
+    background-color: $primary-color;
+    border: solid 1px $primary-color;
+    color: #fff;
+
+    i {
+      color: #fff;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media all and (max-width: 768px) {
+  .post-accordion .card-body {
+    padding: 15px;
+
+    ul li {
+      padding: 13px;
+    }
+  }
 }
