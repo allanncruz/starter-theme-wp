@@ -34,8 +34,8 @@
                 </button>
 
                 <div class="modal fade" id="navModal" tabindex="-1" role="dialog" aria-labelledby="navModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
+                    <div class="modal-dialog h-100 m-0" role="document">
+                        <div class="modal-content h-100">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="navModalLabel">Menu</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
