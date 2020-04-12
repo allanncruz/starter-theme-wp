@@ -19,8 +19,9 @@
         }
     });
 
-    $('.owl-carousel.carousel--anima').owlCarousel({
+    $('.owl-carousel.banner').owlCarousel({
         nav: true,
+        dots: true,
         loop: true,
         navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
         items:1,
