@@ -188,6 +188,7 @@
                                         </div>
                                     <?php }  ?>
                                 </div>
+                            </div>
                     </article>
                 </div>
             </div>
