@@ -45,6 +45,42 @@ A primeira linha dará permissão de dono para usuário e grupo www-data. A segu
 
 Jamais, em hipótese alguma dê permissão 777
 
+## Modelo contact form 7
+```
+<div class="row">
 
+    <div class="col-md-12">
+        <label>
+            Digite seu nome:
+            [text* nome ]
+        </label>
+    </div>
 
+    <div class="col-md-12">
+        <label>
+            E-mail:
+            [email* email ]
+        </label>
+    </div>
+
+    <div class="col-md-12">
+        <label>
+            Telefone:
+            [text telefone ]
+        </label>
+    </div>
+
+    <div class="col-md-12">
+                  <label>
+		    Deixe sua mensagem
+		    [textarea mensagem]
+                 </label>
+
+[submit "Enviar"] 
+		</div>
+
+</div>
+<label>
+</label>
+```
 *Developed by Allan Cruz - (https://github.com/allanncruz)*
