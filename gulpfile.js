@@ -20,6 +20,7 @@ gulp.task('js', function() {
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/owl.carousel/dist/owl.carousel.min.js',
         'node_modules/fancybox/dist/js/jquery.fancybox.pack.js',
+        'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
             'src/js/*.js'])
         .pipe(concat('all.js'))
         .pipe(uglify())
