@@ -14,6 +14,18 @@
                     <img onerror="this.style.display='none'" src="<?php the_post_thumbnail_url(); ?>" class="single-thumbnail my-4">
                     <article class="px-md-5 px-2">
                         <?php the_content(); ?>
+
+                        <hr>
+                        <small>Post relacionado</small>
+                        <?php
+                        $relationship = get_field('showcase-relationship');
+                        if( $relationship ): ?>
+                            <?php foreach( $relationship as $post): ?>
+                                <?php get_template_part( 'partials/section', 'news' ); ?>
+                            <?php endforeach;
+                            wp_reset_postdata();
+                        endif; ?>
+
                         <div class="row w-100">
                             <div class="col-md-6">
                                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="<?php the_permalink(); ?>" data-a2a-title="<?php the_title(); ?>">
