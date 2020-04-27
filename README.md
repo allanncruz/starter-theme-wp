@@ -1,7 +1,7 @@
-# Boilerplate Front-End Wp #
-It is a ready-made structure with pre-configured automation, using defined processing resources.
+# Wp Theme Skeleton
+It is a Wordpress theme with pre-configured automation, using defined processing resources.
 
-The interface has a Wordpress theme structured with Bootstrap 4, in order to standardize institutional production modes.
+The interface has a structured with Bootstrap 4, in order to standardize the institutional production modes.
 
 ##### Global Dependencies
 
