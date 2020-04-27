@@ -19,7 +19,7 @@
                                 <?php the_content(); ?>
                                 <div class="w-100 d-block d-md-flex justify-content-center mt-0 mt-md-5">
                                     <?php
-                                    $link2 = get_field('botao_secundario');
+                                    $link2 = get_field('vitrine-btn-primary');
                                     if( $link2 ):
                                         $link2_url = $link2['url'];
                                         $link2_title = $link2['title'];
@@ -30,7 +30,7 @@
                                         </a>
                                     <?php endif; ?>
                                     <?php
-                                    $link = get_field('botao_primario');
+                                    $link = get_field('vitrine-btn-secondary');
                                     if( $link ):
                                         $link_url = $link['url'];
                                         $link_title = $link['title'];

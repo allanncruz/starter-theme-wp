@@ -4,13 +4,13 @@ if (function_exists('acf_add_local_field_group')) :
 
     acf_add_local_field_group(array(
         'key' => 'group_5dcdd01e7c3f6',
-        'title' => '[Especialidades] Imagens',
+        'title' => 'Botões',
         'fields' => array(
             array(
-                'key' => 'field_5dcdd039f3ba5',
-                'label' => 'Imagem de destaque',
-                'name' => 'specialty-thumbnail',
-                'type' => 'image',
+                'key' => 'field_5dd3355607954',
+                'label' => 'Botão Primário',
+                'name' => 'vitrine-btn-primary',
+                'type' => 'link',
                 'instructions' => '',
                 'required' => 0,
                 'conditional_logic' => 0,
@@ -19,16 +19,30 @@ if (function_exists('acf_add_local_field_group')) :
                     'class' => '',
                     'id' => '',
                 ),
-                'return_format' => 'url',
-                'preview_size' => 'medium',
-                'library' => 'all',
-                'min_width' => '',
-                'min_height' => '',
-                'min_size' => '',
-                'max_width' => '',
-                'max_height' => '',
-                'max_size' => '',
-                'mime_types' => '',
+                'message' => '',
+                'default_value' => '',
+                'ui' => 0,
+                'ui_on_text' => '',
+                'ui_off_text' => '',
+            ),
+            array(
+                'key' => 'field_5dd3355607854',
+                'label' => 'Botão Secundário',
+                'name' => 'vitrine-btn-secondary',
+                'type' => 'link',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => '',
+                'ui' => 0,
+                'ui_on_text' => '',
+                'ui_off_text' => '',
             ),
         ),
         'location' => array(
@@ -36,7 +50,7 @@ if (function_exists('acf_add_local_field_group')) :
                 array(
                     'param' => 'post_type',
                     'operator' => '==',
-                    'value' => 'specialty',
+                    'value' => 'animacao',
                 ),
             ),
         ),
@@ -49,7 +63,5 @@ if (function_exists('acf_add_local_field_group')) :
         'active' => true,
         'description' => '',
     ));
-
-
 
 endif;
