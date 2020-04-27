@@ -49,7 +49,7 @@ npm install
 gulp
 ```
 
-## Resolvendo problemas de permissão do Wordpress no localhost/
+## Solving Wordpress permission issues on localhost/
   
 Edit the wp-config.php file:
 
@@ -58,7 +58,7 @@ Enter the constant:
 define('FS_METHOD', 'direct');
 ```
 
-##### Execute na pasta raíz do seu Wordpress:
+##### Run in your Wordpress root folder:
 ```
 # Permissions on files
 sudo find . -type f -exec chmod 644 {} \;
