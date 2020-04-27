@@ -39,12 +39,12 @@
                                 );
                             ?>
 
-                                <div class="category-carte">
-                                    <h3 class="category-carte__category text-center mb-3"><?php echo $category->name; ?></h3>
+                                <div class="categories-carte">
+                                    <h3 class="categories-carte__category text-center mb-3"><?php echo $category->name; ?></h3>
                                     
                                     
                                     <?php while ($cartes->have_posts()) : $cartes->the_post(); ?>
-                                        <div class="category-carte__post d-block d-md-flex text-center text-md-left mb-4">
+                                        <div class="categories-carte__post d-block d-md-flex text-center text-md-left mb-4">
                                             <img class="post_thumbnail" onerror="this.style.display='none'" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                                             <div class="content">
                                                 <h6 class="my-1"><?php the_title(); ?></h6>
