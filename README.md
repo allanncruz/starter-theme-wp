@@ -12,40 +12,33 @@ The interface has a Wordpress theme structured with Bootstrap 4, aiming to stand
 ## Install Project
 Open terminal and navigate to your localhost / directory
 
-##### Download CMS
+
 ```
+# Download CMS
 curl -O https://wordpress.org/latest.zip
-```
-##### Unzip CMS
-```
+
+# Unzip CMS
 unzip latest.zip
-```
-##### Remove zipped file
-```
+
+# Remove zipped file
 rm latest.zip
-```
-##### Rename unzipped folder
-```
+
+# Rename unzipped folder
 mv wordpress/ name-of-your-project
-```
-##### Navigate to the themes folder
-```
+
+# Navigate to the themes folder
 cd name-of-your-project/wp-content/themes/
-```
-##### Clone boilerplate-front-end-wp
-```
+
+# Clone boilerplate-front-end-wp
 git clone https://github.com/allanncruz/boilerplate-front-end-wp.git
-```
-##### Access boilerplate-front-end-wp folder
-```
+
+# Access boilerplate-front-end-wp folder
 cd boilerplate-front-end-wp
-```
-##### Install dependencies
-```
+
+# Install dependencies
 npm install
-```
-##### Compile assets
-```
+
+# Compile assets
 gulp
 ```
 
