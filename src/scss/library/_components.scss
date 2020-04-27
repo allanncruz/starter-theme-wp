@@ -100,14 +100,18 @@
 //Footer
 
 .footer {
-  background: #3D3835;
+  &-brand{
+    &__img{
+      width: 155px;
+    }
+  }
 
   i{
     opacity: .2;
     font-size: 23px;
     position: relative;
     top: 5px;
-    margin-right: 10px; 
+    margin-right: 10px;
   }
   
   .phone{
@@ -143,14 +147,12 @@
     }
   }
 
-  .footer--brand__img{
-    width: 155px;
-  }
-
   @include media-breakpoint-down(sm) {
     text-align: center;
-    .footer--brand{
-      margin: 20px auto ;
+    .footer{
+      &-brand{
+        margin: 20px auto ;
+      }
     }
 
     i{
