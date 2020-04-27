@@ -21,7 +21,7 @@
 
 
                     if(has_custom_logo()) {
-                        echo '<img src="'. esc_url($logo[0]). '" class="img-fluid">';
+                        echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__">';
                     }else {
                         echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
                     } 
@@ -29,13 +29,25 @@
             </a>
 
             <div class="d-blok d-lg-none">
-                <button type="button" class="modal-button border-0" data-toggle="modal" data-target="#navModal">
-                <i class="fas fa-bars"></i>
+                <button
+                        type="button"
+                        class="modal-button border-0 bg-transparent"
+                        data-toggle="modal"
+                        data-target="#navModal"
+                >
+                <i class="fas fa-bars text-white"></i>
                 </button>
 
-                <div class="modal fade" id="navModal" tabindex="-1" role="dialog" aria-labelledby="navModalLabel" aria-hidden="true">
+                <div
+                        class="modal fade"
+                        id="navModal"
+                        tabindex="-1"
+                        role="dialog"
+                        aria-labelledby="navModalLabel"
+                        aria-hidden="true"
+                >
                     <div class="modal-dialog h-100 m-0" role="document">
-                        <div class="modal-content h-100">
+                        <div class="modal-content h-100 bg-dark text-white">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="navModalLabel">Menu</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">

@@ -43,7 +43,7 @@
 
 
 .alignright, .alignleft{
-  border: solid 5px #fff;
+  border: solid 5px $white;
   max-width: 430px;
   height: 350px;
   width: 100%;
@@ -131,7 +131,7 @@
         background: #EDEDED;
 
         &.active {
-          background: #fff;
+          background: $white;
         }
       }
     }
@@ -143,7 +143,7 @@
     background: $primary-color;
     border-radius: 2px;
     font-size: 12px;
-    color: #fff;
+    color: $white;
     text-align: center;
     line-height: 20px;
     top: 15px;
@@ -222,10 +222,10 @@
   .card-header a[aria-expanded="true"] {
     background-color: $primary-color;
     border: solid 1px $primary-color;
-    color: #fff;
+    color: $white;
 
     i {
-      color: #fff;
+      color: $white;
       transform: rotate(180deg);
     }
   }
