@@ -30,10 +30,10 @@ mv wordpress/ name-of-your-project
 cd name-of-your-project/wp-content/themes/
 
 # Clone boilerplate-front-end-wp
-git clone https://github.com/allanncruz/boilerplate-front-end-wp.git
+git clone https://github.com/allanncruz/wp-theme-skeleton.git
 
-# Access boilerplate-front-end-wp folder
-cd boilerplate-front-end-wp
+# Access wp-theme-skeleton folder
+cd wp-theme-skeleton
 
 # Install dependencies
 npm install
