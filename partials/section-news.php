@@ -1,8 +1,5 @@
-<?php
-    $blog = new WP_Query(array( 'post_type' => 'blog' ));
-    if ($blog->have_posts()):
-        while ($blog->have_posts()): $blog->the_post(); ?>
-        <div>
+
+        <div class="<?php if ( is_page('blog')) echo "col-md-4"; ?>">
             <a href="<?php the_permalink(); ?>">
                 <div class="cards-item mx-1">
                     <div class="">
@@ -20,4 +17,3 @@
                 </div>
             </a>
         </div>
-    <?php endwhile; endif; ?>

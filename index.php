@@ -82,7 +82,12 @@
 
                 <!-- News -->
                 <div class="carousel-inner owl-carousel owl-cards">
-                    <?php get_template_part( 'partials/section', 'news' ); ?>
+                <?php
+                    $blog = new WP_Query(array( 'post_type' => 'blog' ));
+                    if ($blog->have_posts()):
+                    while ($blog->have_posts()): $blog->the_post(); ?>
+                        <?php get_template_part( 'partials/section', 'news' ); ?>
+                    <?php endwhile; endif; ?>
                 </div>
                 <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary m-auto">Mais notícias</a>
             </div>
