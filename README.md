@@ -12,38 +12,63 @@ You need to download wordpress from https://br.wordpress.org/download/. Then clo
 * gulp - (https://gulpjs.com/)
 * Sass install - (https://sass-lang.com/guide)
 
+## Install Project
+Open terminal and navigate to your localhost / directory
 
-### Install Dependencies
+### Download CMS
+```
+curl -O https://wordpress.org/latest.zip
+```
+### Unzip CMS
+```
+unzip latest.zip
+```
+### Remove zipped file
+```
+rm latest.zip
+```
+### Rename unzipped folder
+```
+mv wordpress/ name-of-your-project
+```
+### Navigate to the themes folder
+```
+cd name-of-your-project/wp-content/themes/
+```
+### Clone boilerplate-front-end-wp
+```
+git clone https://github.com/allanncruz/boilerplate-front-end-wp.git
+```
+### Access boilerplate-front-end-wp folder
+```
+cd boilerplate-front-end-wp
+```
+### Install dependencies
 ```
 npm install
 ```
-### Compile and activate watch
+### Compile assets
 ```
 gulp
 ```
 
-# Resolvendo problemas de permissão do Wordpress no localhost/
+## Resolvendo problemas de permissão do Wordpress no localhost/
+  
+Edit the wp-config.php file:
 
-Edite o arquivo wp-config.php: vim wp-config.php
-
-Insira a constante:
+Enter the constant:
 ```
 define('FS_METHOD', 'direct');
 ```
 
 ## Execute na pasta raíz do seu Wordpress:
 ```
-chown -R www-data:www-data
+# Permissions on files
+sudo find . -type f -exec chmod 644 {} \;
 
-# permissões em arquivos
-find . -type f -exec chmod 644 {} \;
-
-# permissoes em diretórios
-find . -type d -exec chmod 755 {} \;
+# Permissions on directories
+sudo find . -type d -exec chmod 755 {} \;
 ``` 
-A primeira linha dará permissão de dono para usuário e grupo www-data. A segunda linha vai dar permissão 755 para todas as pastas, e a terceira dará permissão 644 para todos os arquivos.
-
-Jamais, em hipótese alguma dê permissão 777
 
 ## Modelo contact form 7
 ```
