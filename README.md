@@ -1,8 +1,8 @@
 # Boilerplate Front-End Wp #
+It is a ready-made structure with pre-configured automation, using defined processing resources.
 
-It is a ready structure with preconfigured automation, using already defined processing resources.
+The interface has a Wordpress theme structured with Bootstrap 4, in order to standardize institutional production modes.
 
-The interface has a Wordpress theme structured with Bootstrap 4, aiming to standardize the institutional production modes.
 ##### Global Dependencies
 
 * NodeJS - (https://nodejs.org/en/)
