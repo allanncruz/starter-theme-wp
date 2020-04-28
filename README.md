@@ -1,4 +1,4 @@
-# Wp Theme Skeleton
+# Starter Theme for WordPress
 It is a Wordpress theme with pre-configured automation, using defined processing resources.
 
 The interface has a structured with Bootstrap 4, in order to standardize the institutional production modes.
@@ -30,10 +30,10 @@ mv wordpress/ name-of-your-project
 cd name-of-your-project/wp-content/themes/
 
 # Clone boilerplate-front-end-wp
-git clone https://github.com/allanncruz/wp-theme-skeleton.git
+git clone https://github.com/allanncruz/starter-theme-wp.git
 
-# Access wp-theme-skeleton folder
-cd wp-theme-skeleton
+# Access starter-theme-wp folder
+cd starter-theme-wp
 
 # Install dependencies
 npm install
