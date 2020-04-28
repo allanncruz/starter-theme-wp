@@ -44,13 +44,19 @@
                             </div>
                         </div>
                     </div>
-                <?php endwhile; endif; ?>
+                <?php endwhile; else : { ?>
+                <div class="carousel-none">
+                    <h2>Nenhuma vitrine Adicionada</h2>
+                </div>
+                <?php }
+            endif;
+            ?>
             <!-- Finish carousel loop-->
         </div>
     </div>
 
     <main>
-        <section class="company">
+        <section class="company py-5">
             <div class="container">
                 <div class="row">
                     <?php
@@ -76,7 +82,7 @@
             </div>
         </section>
 
-        <section class="cards">
+        <section class="cards py-5">
             <div class="container">
                 <h1 class="text-center">Blog</h1>
 

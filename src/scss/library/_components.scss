@@ -72,6 +72,17 @@
     }
   }
 
+  &-none{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gray-200;
+    h2{
+      color: $gray-400;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     .carousel{
       &-legend{
