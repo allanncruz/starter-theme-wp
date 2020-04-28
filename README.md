@@ -29,7 +29,7 @@ mv wordpress/ name-of-your-project
 # Navigate to the themes folder
 cd name-of-your-project/wp-content/themes/
 
-# Clone boilerplate-front-end-wp
+# Clone starter-theme-wp
 git clone https://github.com/allanncruz/starter-theme-wp.git
 
 # Access starter-theme-wp folder
@@ -41,6 +41,9 @@ npm install
 # Compile assets
 gulp
 ```
+
+### Required plugins
+*Advanced Custom Dields - (https://www.advancedcustomfields.com/)*
 
 ## Solving Wordpress permission issues on localhost/
   
