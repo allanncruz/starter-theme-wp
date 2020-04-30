@@ -43,7 +43,7 @@ gulp
 ```
 
 ### Required plugins
-*Advanced Custom Dields - (https://www.advancedcustomfields.com/)*
+*Advanced Custom Fields - (https://www.advancedcustomfields.com/)*
 
 ## Solving Wordpress permission issues on localhost/
   
@@ -63,7 +63,7 @@ sudo find . -type f -exec chmod 644 {} \;
 sudo find . -type d -exec chmod 755 {} \;
 ``` 
 
-## Modelo contact form 7
+## Model contact form 7
 ```
 <div class="row">
 
