@@ -49,6 +49,11 @@ h2{
   font-family: damionregular;
 }
 
+.img-none{
+  filter: saturate(0);
+  opacity: .5;
+}
+
 //Wordpress Elemtns
 //
 .gallery{

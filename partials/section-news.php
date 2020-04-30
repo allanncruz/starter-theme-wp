@@ -3,11 +3,19 @@
 
                 <div class="cards-item p-3 mx-1 bg-white">
                     <a href="<?php the_permalink(); ?>">
+
+                        <?php if(get_the_post_thumbnail_url()) { ?>
                         <img
                             class="cards-item__image"
-                            onerror="this.style.display='none'"
                             src="<?php the_post_thumbnail_url(); ?>"
                         />
+                        <?php } else { ?>
+                        <img
+                                class="cards-item__image img-none"
+                                src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg"
+                        />
+                        <?php } ?>
+
                     </a>
                     <div class="cards-item__legend px-4 py-3">
                         <div class="cards-item__data text-white">
