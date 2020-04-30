@@ -21,7 +21,7 @@
 
 
                     if(has_custom_logo()) {
-                        echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__">';
+                        echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img">';
                     }else {
                         echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
                     } 

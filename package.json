@@ -1,14 +1,14 @@
 {
   "name": "starter-theme-wp",
   "version": "1.0.0",
-  "description": "É uma estrutura pronta com automatização pré-configurada, utilizando recursos de processamentos já definidos.",
+  "description": "It is a Wordpress theme with pre-configured automation, using defined processing resources.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allanncruz/boilerplate-front-end-wp.git"
+    "url": "git+https://github.com/allanncruz/starter-theme-wp.git"
   },
   "author": "",
   "license": "ISC",

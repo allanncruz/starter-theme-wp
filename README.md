@@ -84,7 +84,7 @@ sudo find . -type d -exec chmod 755 {} \;
     <div class="col-md-12">
         <label>
             Telefone:
-            [text telefone ]
+            [text Telefone class:telefone ]
         </label>
     </div>
 
