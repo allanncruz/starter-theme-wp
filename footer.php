@@ -52,16 +52,18 @@
             </div>
 
             <div class="col-md-2 social">
-                <?php if(get_theme_mod('instagram_username')) { ?>
-                    <a href="<?php echo get_theme_mod('instagram_username') ?>" target="_blank">
-                        <i class="fab fa-instagram ml-3"></i>
-                    </a>
-                <?php } ?>
-                <?php if(get_theme_mod('facebook_username')) { ?>
-                    <a href="<?php echo get_theme_mod('facebook_username') ?>"  target="_blank">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                <?php } ?>
+                <?php if(get_theme_mod('instagram_username')) {
+                        echo '<a href="'. get_theme_mod('instagram_username') . '"  target="_blank">';
+                        echo '<i class="fab fa-instagram ml-3"></i>';
+                        echo '</a>';
+                    }
+                ?>
+                <?php if(get_theme_mod('facebook_username')) {
+                        echo '<a href="' . get_theme_mod('facebook_username') . '"  target="_blank">';
+                        echo '<i class="fab fa-facebook-square"></i>';
+                        echo '</a>';
+                    }
+                ?>
             </div>
 
         </div>
