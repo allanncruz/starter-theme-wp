@@ -44,12 +44,14 @@
                 <?php } ?>
             </div>
 
-            <div class="col-md-4 pl-0 address">
-                <div class="d-flex">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <?php echo get_theme_mod('address') ?>
+            <?php if(get_theme_mod('address')) { ?>
+                <div class="col-md-4 pl-0 address">
+                    <div class="d-flex">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <?php echo get_theme_mod('address') ?>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
 
             <div class="col-md-2 social">
                 <?php if(get_theme_mod('instagram_username')) {
