@@ -25,27 +25,28 @@
 
                                 while ($exams->have_posts()) : $exams->the_post(); ?>
                                     <div class="card py-3">
-                                    <div class="card-header" id="<?php the_ID(); ?>">
-                                        <a data-toggle="collapse"
-                                        data-target="#collapse<?php the_ID(); ?>"
-                                        aria-expanded="false"
-                                        aria-controls="collapseOne">
+                                        <div class="card-header" id="<?php the_ID(); ?>">
+                                            <a data-toggle="collapse"
+                                            data-target="#collapse<?php the_ID(); ?>"
+                                            aria-expanded="false"
+                                            aria-controls="collapseOne">
 
-                                            <?php the_Title(); ?><i class="fas fa-chevron-down"></i>
-                                        </a>
-                                    </div>
-                                    <div  class="collapse"
-                                        id="collapse<?php the_ID(); ?>"
-                                        role="tabpanel"
-                                        aria-labelledby="heading<?php the_ID(); ?>"
-                                        data-parent="#accordion" >
+                                                <?php the_Title(); ?><i class="fas fa-chevron-down"></i>
+                                            </a>
+                                        </div>
+                                        <div  class="collapse"
+                                            id="collapse<?php the_ID(); ?>"
+                                            role="tabpanel"
+                                            aria-labelledby="heading<?php the_ID(); ?>"
+                                            data-parent="#accordion" >
 
-                                        <div class="card-body">
-                                            <?php the_Content(); ?>
+                                            <div class="card-body">
+                                                <?php the_Content(); ?>
+                                            </div>
                                         </div>
                                     </div>
+
                                 <?php endwhile; wp_reset_query(); ?>
-                                </div>
                             <?php endif; ?>
                         </div>
                     </article>

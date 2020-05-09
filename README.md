@@ -3,6 +3,7 @@ It is a Wordpress theme with pre-configured automation, using defined processing
 
 The interface has a structured with Bootstrap 4, in order to standardize the institutional production modes.
 
+
 ##### Global Dependencies
 
 * NodeJS - (https://nodejs.org/en/)
@@ -48,7 +49,8 @@ gulp
 3. Rename the copy to wp-config.php
 4. Then open that file and enter the database information.
 
-### Required plugins
+
+## Required plugins
 *Advanced Custom Fields - (https://www.advancedcustomfields.com/)*
 
 ## Solving Wordpress permission issues on localhost/
