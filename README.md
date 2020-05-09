@@ -24,7 +24,7 @@ unzip latest.zip
 rm latest.zip
 
 # Rename unzipped folder
-mv wordpress/ name-of-your-project
+mv wordpress/name-of-your-project
 
 # Navigate to the themes folder
 cd name-of-your-project/wp-content/themes/
@@ -41,6 +41,12 @@ npm install
 # Compile assets
 gulp
 ```
+
+## Configure database
+1. Access the root folder of your Wordpress project. localhost/name-of-your-project
+2. Duplicate the wp-config-sample.php file
+3. Rename the copy to wp-config.php
+4. Then open that file and enter the database information.
 
 ### Required plugins
 *Advanced Custom Fields - (https://www.advancedcustomfields.com/)*
