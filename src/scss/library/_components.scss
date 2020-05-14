@@ -33,7 +33,7 @@
       z-index: 999;
       strong{
         font-family: MuliBlack;
-        color: $secondary-color;
+        color: $secondary;
       }
     }
     > div{
@@ -67,7 +67,7 @@
       transition: .3s;
     }
     button.active{
-      background: $secondary-color;
+      background: $secondary;
       height: 4px;
     }
   }
@@ -153,7 +153,7 @@
   .social{
     i{
       font-size: 32px;
-      color: $secondary-color;
+      color: $secondary;
       opacity: 1;
     }
   }

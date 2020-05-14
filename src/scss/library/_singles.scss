@@ -18,7 +18,7 @@
           left: -16px;
           top: 7px;
           border-radius: 8px;
-          background: $secondary-color;
+          background: $secondary;
         }
       }
     }
@@ -64,7 +64,7 @@
 .categories-carte{
 
   &__category{
-    color: $primary-color;
+    color: $primary;
     font-family: barlowextrabold;
     font-size: 18px;
     text-transform: uppercase;
@@ -127,7 +127,7 @@
   .card-tag a {
     position: absolute;
     height: 20px;
-    background: $primary-color;
+    background: $primary;
     border-radius: 2px;
     font-size: 12px;
     color: $white;
@@ -179,20 +179,20 @@
         padding: 1rem 30px;
         text-transform: uppercase;
         height: 50px;
-        color: $primary-color;
+        color: $primary;
         display: flex;
         justify-content: space-between;
 
         i {
-          color: $primary-color;
+          color: $primary;
           transition: .3s;
           font-size: 20px;
         }
       }
 
       a[aria-expanded="true"] {
-        background-color: $primary-color;
-        border: solid 1px $primary-color;
+        background-color: $primary;
+        border: solid 1px $primary;
         color: $white;
 
         i {
@@ -203,7 +203,7 @@
     }
     &-body {
       padding: 45px;
-      border: solid 1px $primary-color;
+      border: solid 1px $primary;
 
       ul li {
         list-style: none;
