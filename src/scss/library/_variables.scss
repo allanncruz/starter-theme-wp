@@ -12,5 +12,24 @@ $theme-colors:(
 );
 
 
-//Customizar spacing
-$spacing-section: 100px 0;
+//Navbar
+//
+//Items
+$navbar-light-color: $color-white;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
+$navbar-light-font-size: 16px;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+$dropdown-link-color: $color-title;
+$dropdown-link-hover-color: $color-white;
+$dropdown-link-hover-bg: $primary;
+$dropdown-border-radius: 0;
+$dropdown-font-size: 13px;
+
+  // Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+

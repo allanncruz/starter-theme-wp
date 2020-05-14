@@ -1,6 +1,8 @@
 //NavBar Elements
 //
 
+
+
 //Nav Modal
 .modal-backdrop{
   display: none;
@@ -37,7 +39,6 @@
     }
     .nav-item{
       .nav-link{
-        color: White;
         width: 100%;
         line-height: 25px;
         margin: 10px 0;
@@ -46,38 +47,21 @@
     }
   }
 
+
   //Menu
-  .navbar-nav{
-    .active>{
-      .nav-link{
-        color: $primary-color;
-      }
+  //
+  .nav{
+    &-link{
+      font-size: $navbar-light-font-size;
     }
-  }
-  .nav-item{
-    .nav-link{
-      color: $white;
-      text-transform: uppercase;
-      font-size: 13px;
-      &:hover, &:focus, &:active{
-        color: $primary-color;
-      }
-    }
-    .dropdown-menu{
-      right: 0;
-      left: inherit;
-      padding: 0;
-      border-radius: 0;
-      li{
-        width: 218px;
-      }
-      a{
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 13px;
-        padding: .7rem;
-        &:hover{
-          background: $primary-color;
+
+    &-item{
+      .dropdown-menu{
+        padding: 0;
+        a{
+          text-align: center;
+          text-transform: uppercase;
+          padding: .7rem;
         }
       }
     }
@@ -90,7 +74,7 @@
         &-link{
           padding: 1rem 0;
           &:hover{
-            background: $primary-color;
+            background: $primary;
             color: $white;
           }
         }
