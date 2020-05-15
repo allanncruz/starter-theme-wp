@@ -97,7 +97,7 @@
                         <?php get_template_part( 'partials/section', 'news' ); ?>
                     <?php endwhile; endif; ?>
                 </div>
-                <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary m-auto">Mais notícias</a>
+                <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary d-block m-auto">Mais notícias</a>
             </div>
         </section>
     </main>
