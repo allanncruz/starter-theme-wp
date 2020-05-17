@@ -76,31 +76,48 @@ sudo find . -type d -exec chmod 755 {} \;
 <div class="row">
 
     <div class="col-md-12">
-        <label>
-            Digite seu nome:
-            [text* nome ]
-        </label>
+        <div class="form-group">
+            <label>
+                Digite seu nome:
+                [text* nome class:form-control]
+            </label>
+        </div>
     </div>
 
     <div class="col-md-12">
-        <label>
-            E-mail:
-            [email* email ]
-        </label>
+        <div class="form-group">
+            <label>
+                E-mail: 
+               [email* email class:form-control]
+            </label>
+        </div>
     </div>
 
     <div class="col-md-12">
-        <label>
-            Telefone:
-            [text Telefone class:telefone ]
-        </label>
+        <div class="form-group">
+            <label>
+                Telefone:
+                [text telefone class:form-control id:telefone]
+            </label>
+        </div>
     </div>
 
     <div class="col-md-12">
-                  <label>
-		    Deixe sua mensagem
-		    [textarea mensagem]
-                 </label>
+        <div class="form-group">
+            <label>
+                Anexo:
+                [file file-932]
+            </label>
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="form-group">
+                    <label>
+                Deixe sua mensagem:
+                [textarea mensagem class:form-control]
+                    </label>
+                    </div>
 
 [submit "Enviar"] 
 		</div>
