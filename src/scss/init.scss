@@ -2,6 +2,11 @@
 //
 
 
+// Bootstrap Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
 
 // fancybox
 @import "node_modules/fancybox/dist/scss/jquery.fancybox";
@@ -22,3 +27,7 @@
 @import "library/fonts";
 @import "library/sections";
 @import "library/cards";
+@import "library/form";
+
+// Generald Required
+@import "node_modules/bootstrap/scss/bootstrap";
