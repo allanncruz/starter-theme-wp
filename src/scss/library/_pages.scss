@@ -1,9 +1,9 @@
 //Single pages
 //
 
-.wrap{
+.page{
   padding: 70px 0;
-  .content-area{
+  &-area{
     ul{
       list-style: none;
       li{
@@ -55,7 +55,7 @@
 
 
 @include media-breakpoint-down(sm) {
-  .wrap{
+  .page{
     padding-top: 70px;
   }
 }

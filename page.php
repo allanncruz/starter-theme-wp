@@ -2,8 +2,8 @@
     get_header();
     the_post() ?>
 
-    <section class="wrap">
-        <div class="container content-area mt-5">
+    <section class="page">
+        <div class="container page-area mt-5">
             <div class="text-center">
                 <h3 class="sub-title m-0">Subtitle</h3>
                 <h1 class="title"><?php the_title(); ?></h1>

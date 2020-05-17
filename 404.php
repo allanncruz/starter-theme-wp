@@ -2,8 +2,8 @@
     get_header();
     the_post() ?>
 
-    <section class="wrap">
-        <div class="container content-area mt-5">
+    <section class="page">
+        <div class="container page-area mt-5">
             <div class="text-center">
                 <h1 class="title">Página não encontrada!</h1>
             </div>  
