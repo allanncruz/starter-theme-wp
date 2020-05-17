@@ -16,6 +16,9 @@ $dropdown-border-radius:    0;
 $dropdown-font-size:        13px;
 $dropdown-padding-y:        0;
 
+//Nav Modal
+$modal-header-border-color:  $gray-600;
+
 
 //Navbar
 .navbar {
@@ -45,49 +48,46 @@ $dropdown-padding-y:        0;
     }
     .dropdown-menu{
       width: 100%;
-      margin: -.6rem 0 0 0 !important;
       text-align: center;
     }
     text-align: center;
   }
+
+  //corrent Nav Modal
+  .modal{
+    button.close{
+      opacity: 1;
+      padding: 6px 28px 0 0;
+      span{
+        @include font-size (45px);
+        color: $white;
+        opacity: 1;
+      }
+    }
+
+    &-body{
+      ul{
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        font-size: 20px;
+        font-family: barlowextrabold, sans-serif;
+      }
+      .nav-item{
+        .nav-link{
+          width: 100%;
+          line-height: 25px;
+          margin: 10px 0;
+          font-size: 17px;
+          color: $color-white;
+        }
+      }
+    }
+  }
 }
 
-
-//corrent Nav Modal
 .modal{
   &-backdrop{
     display: none;
-  }
-  &-header{
-    border-bottom: 2px solid #1b1210;
-  }
-
-  button.close{
-    opacity: 1;
-    padding: 6px 28px 0 0;
-    span{
-      font-size: 45px;
-      color: $color-white;
-      opacity: 1;
-    }
-  }
-
-  &-body{
-    ul{
-      list-style: none;
-      padding: 0;
-      text-align: center;
-      font-size: 20px;
-      font-family: barlowextrabold, sans-serif;
-    }
-    .nav-item{
-      .nav-link{
-        width: 100%;
-        line-height: 25px;
-        margin: 10px 0;
-        font-size: 17px;
-        color: $color-white;
-      }
-    }
   }
 }
