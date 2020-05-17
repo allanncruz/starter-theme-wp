@@ -37,7 +37,7 @@
     $(".blocks-gallery-item figure a").attr("rel", "galeria");
     $(".blocks-gallery-item figure  a").fancybox();
 
-    jQuery("input.telefone")
+    jQuery("#telefone")
         .mask("(99) 9999-99999")
         .focusout(function (event) {  
             var target, phone, element;  

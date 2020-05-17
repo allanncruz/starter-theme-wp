@@ -1,0 +1,36 @@
+//Contact Form 7 / Form bootstrap
+//
+
+
+// Variables
+$input-font-size: 14px;
+$input-bg:  $light;
+$input-color: $dark;
+$input-border-radius: 0 ;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $dark;
+$input-height: 45px;
+$input-padding-x: 15px;
+
+.form{
+    &-group{
+        label{
+            width: 100%;
+            text-transform: uppercase;
+            @include font-size(10px);
+        }
+        br{
+            display: none;
+        }
+    }
+}
+
+div.wpcf7{
+    input[type=file]{
+      height: 40px;
+      width: 100%;
+      background: $gray-200;
+      padding: .6rem;
+      font-size: 10px;
+    }
+  }
