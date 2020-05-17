@@ -1,51 +1,17 @@
+//Variables
+// 
+
 //Customizar cores
 $primary: #1CCAF4;
 $secondary: #1BDC68;
 $color-white: #fff;
 $color-green: #1BDC68;
 $color-title: #585A5B !default;
+$color-light: #f8f9fa;
+$color-dark: #343a40;
 
 //ootstrap colors
 $theme-colors:(
         "primary-color": $primary,
         "secondary-color": $secondary,
 );
-
-
-//Navbar
-//
-//Items
-$navbar-light-color:        $color-white;
-$navbar-light-hover-color:  $primary;
-$navbar-light-active-color: $primary;
-$navbar-light-font-size:    16px;
-
-
-// Dropdowns
-//
-$dropdown-link-color:       $color-title;
-$dropdown-link-hover-color: $color-white;
-$dropdown-link-hover-bg:    $primary;
-$dropdown-border-radius:    0;
-$dropdown-font-size:        13px;
-$dropdown-padding-y:        0;
-
-// Buttons
-//
-$btn-padding-y:         15px;
-$btn-padding-x:         30px;
-$btn-font-size:         16px;
-$btn-border-radius:     0;
-$btn-font-family:       barlowbold, uppercase;
-
-// Cards
-//
-$card-bg: $color-white;
-$card-inner-border-radius: 0;
-$card-border-radius: 0;
-
-
-  // Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
-
-

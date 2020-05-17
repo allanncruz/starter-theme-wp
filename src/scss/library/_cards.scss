@@ -1,5 +1,12 @@
 // Cards elements
 //
+
+// Variables
+$card-bg: $color-white;
+$card-inner-border-radius: 0;
+$card-border-radius: 0;
+
+
 .card {
   &-img-top{
     height: 190px;

@@ -1,6 +1,21 @@
 //NavBar Elements
 //
 
+// Variables
+// Navbar
+$navbar-light-color:        $color-white;
+$navbar-light-hover-color:  $primary;
+$navbar-light-active-color: $primary;
+$navbar-light-font-size:    16px;
+
+// Nav Dropdowns
+$dropdown-link-color:       $color-title;
+$dropdown-link-hover-color: $color-white;
+$dropdown-link-hover-bg:    $primary;
+$dropdown-border-radius:    0;
+$dropdown-font-size:        13px;
+$dropdown-padding-y:        0;
+
 
 //Navbar
 .navbar {

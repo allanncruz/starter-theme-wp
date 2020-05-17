@@ -1,5 +1,12 @@
 //Customize btns
 
+// Variables
+$btn-padding-y:         15px;
+$btn-padding-x:         30px;
+$btn-font-size:         16px;
+$btn-border-radius:     0;
+$btn-font-family:       barlowbold, uppercase;
+
 //Propriedades do CMS
 .btn, .wpcf7-submit{
   text-transform: uppercase;
