@@ -220,6 +220,23 @@
                                     <?php }  ?>
                                 </div>
                             </div>
+
+                            <h2 class="mt-5">Retornar posts de uma específica categoria</h2>
+                            <?php
+                                $team = new WP_Query(array( 
+                                    'post_type' => 'blog','tax_query' => array(
+                                        array(
+                                        'taxonomy' => 'blog_taxonomy',
+                                        'field'    => 'slug',
+                                        'terms'    => 'categoria-1',
+                                        )
+                                        ))  );
+                                if ($team->have_posts()):
+                                    while ($team->have_posts()): $team->the_post(); 
+                                        get_template_part( 'partials/section', 'news' );
+                                    endwhile; 
+                                endif; 
+                                ?>
                     </article>
                 </div>
             </div>
