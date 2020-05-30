@@ -50,7 +50,21 @@
                                     
                                     <?php while ($cartes->have_posts()) : $cartes->the_post(); ?>
                                         <div class="categories-carte__post d-block d-md-flex text-center text-md-left mb-4">
-                                            <img class="post_thumbnail" onerror="this.style.display='none'" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+
+                                            <?php if(get_the_post_thumbnail_url()) { ?>
+                                                <img
+                                                    class="post_thumbnail"
+                                                    src="<?php the_post_thumbnail_url(); ?>"
+                                                    alt="<?php the_title(); ?>"
+                                                />
+                                                <?php } else { ?>
+                                                <img
+                                                    class="post_thumbnail img-off"
+                                                    src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg"
+                                                    alt="<?php the_title(); ?>"
+                                                />
+                                                <?php } ?>
+                                                
                                             <div class="content">
                                                 <h6 class="my-1"><?php the_title(); ?></h6>
                                                 <p class="m-1"><?php the_field('descricao'); ?></p>
@@ -111,13 +125,19 @@
                                                             </div>
                                                             <a href="<?php the_permalink(); ?>">
                                                             <?php if(get_the_post_thumbnail_url()) { ?>
-                                                                    <img class="blog-img"
+                                                                    <img 
+                                                                        class="blog-img"
                                                                         src="<?php the_post_thumbnail_url(); ?>" 
-                                                                        alt="<?php the_title(); ?>">
+                                                                        alt="<?php the_title(); ?>" 
+                                                                        />
 
                                                                         <?php } else { ?>
 
-                                                                            <img class="blog-img blog-img-box" src="<?php bloginfo('template_url'); ?>/assets/images/0.jpeg" alt="teste" >
+                                                                            <img 
+                                                                                class="blog-img blog-img-box" 
+                                                                                src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg" 
+                                                                                alt="teste" 
+                                                                                />
 
                                                                 <?php } ?>
                                                             </a>
@@ -166,13 +186,19 @@
                                                             </div>
                                                             <a href="<?php the_permalink(); ?>">
                                                                 <?php if(get_the_post_thumbnail_url()) { ?>
-                                                                    <img class="blog-img"
+                                                                    <img 
+                                                                        class="blog-img"
                                                                         src="<?php the_post_thumbnail_url(); ?>" 
-                                                                        alt="<?php the_title(); ?>">
+                                                                        alt="<?php the_title(); ?>" 
+                                                                        />
 
                                                                         <?php } else { ?>
 
-                                                                            <img class="blog-img blog-img-box" src="<?php bloginfo('template_url'); ?>/assets/images/0.jpeg" alt="teste" >
+                                                                            <img 
+                                                                                class="blog-img blog-img-box" 
+                                                                                src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg" 
+                                                                                alt="teste" 
+                                                                                />
 
                                                                 <?php } ?>
                                                             </a>
