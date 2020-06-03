@@ -4,7 +4,6 @@
 
     <div class="carousel overflow-hidden">
         <div class="carousel-inner owl-carousel banner owl-anima">
-            <!-- Starting the custom carousel loop post-->
             <?php
             $anima = new WP_Query(array( 'post_type' => 'animacao' ));
             if ($anima->have_posts()):
@@ -51,7 +50,6 @@
                 <?php }
             endif;
             ?>
-            <!-- Finish carousel loop-->
         </div>
     </div>
 

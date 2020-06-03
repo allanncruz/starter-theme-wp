@@ -21,7 +21,19 @@
                                 <a href="<?php the_permalink(); ?>">
                                     <div class="cards-item mx-1">
                                         <div class="">
-                                            <img class="cards-item__image" onerror="this.style.display='none'" src="<?php the_post_thumbnail_url(); ?>" />
+                                            <?php if(get_the_post_thumbnail_url()) { ?>
+                                                <img
+                                                    class="cards-item__image w-100"
+                                                    src="<?php the_post_thumbnail_url(); ?>"
+                                                    alt="<?php the_title(); ?>"
+                                                />
+                                                <?php } else { ?>
+                                                <img
+                                                    class="cards-item__image w-100 img-off"
+                                                    src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg"
+                                                    alt="<?php the_title(); ?>"
+                                                />
+                                            <?php } ?>
                                         </div>
                                         <div class="cards-item__legend px-4 py-3">
                                             <div class="cards-item__data text-white">
