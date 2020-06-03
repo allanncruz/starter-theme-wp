@@ -11,7 +11,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <article class="px-md-5 px-2">
-                    <p>O caminho para o conteúdo que você deseja aessar está errado ou a página podeter sido exluída</p>
+                    <p class="text-center">O caminho para o conteúdo que você deseja acessar está errado ou a página pode ter sido excluída
+.</p>
                     </article>
                 </div>
             </div>
