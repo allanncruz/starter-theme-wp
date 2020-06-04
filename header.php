@@ -7,7 +7,6 @@
     <meta charset="<?php bloginfo('charset'); ?>" >
     <meta name="description" content="<?php bloginfo('description '); ?>">
 
-    <title><?php bloginfo('name '); wp_title(); ?></title>
     <?php wp_head(); ?>
 </head>
 <body>

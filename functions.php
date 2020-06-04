@@ -27,6 +27,7 @@ add_action('after_setup_theme', 'theme_setup');
 
 
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'title-tag' );
 
     add_action('wp_enqueue_scripts', 'theme_scripts', 'favicon');
     function theme_scripts()
