@@ -12,12 +12,12 @@ $navbar-light-font-size:    16px;
 $dropdown-link-color:       $color-title;
 $dropdown-link-hover-color: $color-white;
 $dropdown-link-hover-bg:    $primary;
-$dropdown-border-radius:    0;
 $dropdown-font-size:        13px;
 $dropdown-padding-y:        0;
+$dropdown-item-padding-y:   15px;
 
 //Nav Modal
-$modal-header-border-color:  $gray-600;
+$modal-header-border-color:  $dark;
 
 
 //Navbar
@@ -58,14 +58,29 @@ $modal-header-border-color:  $gray-600;
     button.close{
       opacity: 1;
       padding: 6px 28px 0 0;
+      z-index: 99;
+      
       span{
-        @include font-size (45px);
+        @include font-size (80px);
         color: $white;
         opacity: 1;
+        font-weight: 100;
       }
     }
 
+    &-header{
+      position: absolute;
+      right: 0;
+    }
+
     &-body{
+      .menu-menu-principal-container{
+        height: 100%;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+      }
       ul{
         list-style: none;
         padding: 0;
@@ -77,9 +92,19 @@ $modal-header-border-color:  $gray-600;
         .nav-link{
           width: 100%;
           line-height: 25px;
-          margin: 10px 0;
-          @include font-size (17px);
+          margin: 15% 0;
+          @include font-size (30px);
           color: $color-white;
+          text-transform: uppercase;
+          font-family: barlowextralight;
+
+          &.dropdown-toggle{
+            &:after{
+              position: absolute;
+              top: 15px;
+              opacity: .2;
+            }
+          }
         }
       }
     }

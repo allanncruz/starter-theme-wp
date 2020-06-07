@@ -11,3 +11,10 @@ $btn-font-family:       barlowbold, uppercase;
 .btn, .wpcf7-submit{
   text-transform: uppercase;
 }
+
+button:not(:disabled),
+[type="button"]:not(:disabled), 
+[type="reset"]:not(:disabled), 
+[type="submit"]:not(:disabled){
+  outline: none;
+}

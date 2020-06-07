@@ -35,7 +35,7 @@
                         data-toggle="modal"
                         data-target="#navModal"
                 >
-                <i class="fas fa-bars text-white"></i>
+                <i class="fas fa-bars text-white fa-lg"></i>
                 </button>
 
                 <div
@@ -49,7 +49,6 @@
                     <div class="modal-dialog h-100 m-0" role="document">
                         <div class="modal-content h-100 bg-dark text-white">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="navModalLabel">Menu</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
