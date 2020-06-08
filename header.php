@@ -7,6 +7,19 @@
     <meta charset="<?php bloginfo('charset'); ?>" >
     <meta name="description" content="<?php bloginfo('description '); ?>">
 
+    
+    <?php if(get_theme_mod('id_analytics')) { ?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo get_theme_mod('id_analytics') ?>"></script>    
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '<?php echo get_theme_mod('id_analytics') ?>');
+        </script>
+    <?php } ?>
+
     <?php wp_head(); ?>
 </head>
 <body>
