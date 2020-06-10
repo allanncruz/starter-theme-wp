@@ -18,7 +18,11 @@
                         alt="<?php the_title(); ?>"
                     >
                     <article class="px-md-5 px-2">
-                        <?php the_content(); ?>
+                        <?php 
+                        the_content();
+                        the_excerpt(); 
+
+                        ?>
 
                         <hr>
                         <small>Post relacionado</small>

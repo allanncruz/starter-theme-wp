@@ -61,3 +61,8 @@ require dirname(__FILE__) . '/functions/settings/contact_informations_settings.p
 require dirname(__FILE__) . '/functions/settings/custom_login_logo.php';
 require dirname(__FILE__) . '/functions/settings/custom_google_analytics.php';
 
+//Limited excerpt_length
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
