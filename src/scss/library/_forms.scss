@@ -25,6 +25,22 @@ $input-padding-x: 15px;
     }
 }
 
+.wpcf7-submit{
+    width: 272px;
+    height: 50px;
+    background: $primary;
+    color: $white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 120%;
+    border: 0;
+
+    &:hover{
+        color: $white;
+        filter: hue-rotate(-15deg);
+        }
+}
+
 div.wpcf7{
     input[type=file]{
       height: 40px;
