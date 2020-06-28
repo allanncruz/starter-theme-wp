@@ -16,6 +16,10 @@ $dropdown-font-size:        13px;
 $dropdown-padding-y:        0;
 $dropdown-item-padding-y:   15px;
 
+$navbar-toggler-border-radius: 0;
+$navbar-light-toggler-border-color: $dark;
+
+
 
 //Navbar
 .navbar {
@@ -29,6 +33,37 @@ $dropdown-item-padding-y:   15px;
         a{
           text-align: center;
           text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &-toggler{
+    @include flex-center;
+    flex-direction: column;
+    outline: none !important;
+
+    .navbar-icon{
+      width: 40px;
+      height: 3px;
+      background: $white;
+      margin: 3.5px 0;
+      transition: .3s;
+    }
+
+    &[aria-expanded="true"]{
+      .navbar-icon{
+        position: relative;
+        &:nth-child(1){
+          transform: 
+          rotate(45deg); top: 10px;
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          transform: rotate(-45deg);
+          top: -10px;
         }
       }
     }

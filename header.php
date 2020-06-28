@@ -50,11 +50,13 @@
                 aria-expanded="false" 
                 aria-label="Toggle navigation"
                 >
-                
-                <span class="navbar-toggler-icon"></span>
+
+                <i class="navbar-icon"></i>
+                <i class="navbar-icon"></i>
+                <i class="navbar-icon"></i>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbar-collapse">
+            <div class="collapse navbar-collapse py-5" id="navbar-collapse">
                 <?php
                 wp_nav_menu( array(
                     'theme_location'    => 'principal',
