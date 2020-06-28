@@ -25,31 +25,28 @@
                         ?>
 
                         <hr>
-                        <small>Post relacionado</small>
                         <?php
                         $relationship = get_field('showcase-relationship');
                         if( $relationship ): ?>
+                        <small>Post relacionado</small>
                             <?php foreach( $relationship as $post): ?>
                                 <?php get_template_part( 'partials/section', 'news' ); ?>
                             <?php endforeach;
                             wp_reset_postdata();
                         endif; ?>
 
-                        <div class="row w-100">
-                            <div class="col-md-6">
-                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="<?php the_permalink(); ?>" data-a2a-title="<?php the_title(); ?>">
-                                    <a class="a2a_button_facebook"></a>
-                                    <a class="a2a_button_twitter"></a>
-                                    <a class="a2a_button_whatsapp"></a>
-                                </div>
+                        <div class="d-flex flex-column justify-content-center align-items-center mt-5">
+                            <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="<?php the_permalink(); ?>" data-a2a-title="<?php the_title(); ?>">
+                                <a class="a2a_button_facebook"></a>
+                                <a class="a2a_button_twitter"></a>
+                                <a class="a2a_button_whatsapp"></a>
+                            </div>
 
-                                <script async src="//static.addtoany.com/menu/page.js"></script>
-                            </div>
-                            <div class="col-md-6">
-                                <a class="btn btn-primary btn-sm ml-md-auto mr-auto mt-4 mt-md-0" href="javascript:history.back()">
-                                    <i class="glyphicon glyphicon-chevron-left"></i> « Voltar
-                                </a>
-                            </div>
+                            <script async src="//static.addtoany.com/menu/page.js"></script>
+
+                            <a class="btn btn-primary mt-5" href="javascript:history.back()">
+                                <i class="glyphicon glyphicon-chevron-left"></i> « Voltar
+                            </a>
                         </div>
                     </article>
                 </div>

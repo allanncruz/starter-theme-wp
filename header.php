@@ -56,7 +56,7 @@
                 <i class="navbar-icon"></i>
             </button>
 
-            <div class="collapse navbar-collapse py-5" id="navbar-collapse">
+            <div class="collapse navbar-collapse justify-content-end py-md-0 py-5" id="navbar-collapse">
                 <?php
                 wp_nav_menu( array(
                     'theme_location'    => 'principal',
