@@ -16,9 +16,6 @@ $dropdown-font-size:        13px;
 $dropdown-padding-y:        0;
 $dropdown-item-padding-y:   15px;
 
-//Nav Modal
-$modal-header-border-color:  $dark;
-
 
 //Navbar
 .navbar {
@@ -51,68 +48,5 @@ $modal-header-border-color:  $dark;
       text-align: center;
     }
     text-align: center;
-  }
-
-  //corrent Nav Modal
-  .modal{
-    button.close{
-      opacity: 1;
-      padding: 6px 28px 0 0;
-      z-index: 99;
-      
-      span{
-        @include font-size (80px);
-        color: $white;
-        opacity: 1;
-        font-weight: 100;
-      }
-    }
-
-    &-header{
-      position: absolute;
-      right: 0;
-    }
-
-    &-body{
-      .menu-menu-principal-container{
-        height: 100%;
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-content: space-around;
-      }
-      ul{
-        list-style: none;
-        padding: 0;
-        text-align: center;
-        @include font-size (20px);
-        font-family: barlowextrabold, sans-serif;
-      }
-      .nav-item{
-        .nav-link{
-          width: 100%;
-          line-height: 25px;
-          margin: 15% 0;
-          @include font-size (30px);
-          color: $color-white;
-          text-transform: uppercase;
-          font-family: barlowextralight;
-
-          &.dropdown-toggle{
-            &:after{
-              position: absolute;
-              top: 15px;
-              opacity: .2;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.modal{
-  &-backdrop{
-    display: none;
   }
 }
