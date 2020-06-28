@@ -24,12 +24,28 @@
                 <div class="col-md-12">
                     <div class="row">
                         <?php
-                        $blog = new WP_Query(array( 'post_type' => 'blog' ));
-                        if ($blog->have_posts()):
-                            while ($blog->have_posts()): $blog->the_post(); ?>
-                                <?php get_template_part( 'partials/section', 'news' ); ?>
-                        <?php endwhile; endif; ?>
+                            $the_query = new WP_Query( array('posts_per_page'=>2,
+                                'post_type'=>'blog',
+                                'paged' => get_query_var('paged') ? get_query_var('paged') : 1) );  
+                                while ($the_query -> have_posts()) : $the_query -> the_post(); 
+                                    get_template_part( 'partials/section', 'news' ); 
+                                    
+                                endwhile;  
+                        ?>
                     </div>
+                        <div class="text-center mt-5">
+                            <?php
+                                $big = 999999999; // need an unlikely integer
+                                echo paginate_links( array(
+                                'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+                                'format' => '?paged=%#%',
+                                'current' => max( 1, get_query_var('paged') ),
+                                'total' => $the_query->max_num_pages
+                                ) );
+
+                                wp_reset_postdata();
+                            ?>
+                        </div>
                 </div>
             </div>
         </div>
