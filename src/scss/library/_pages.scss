@@ -23,6 +23,36 @@
       }
     }
   }
+
+  &-seach{
+    position: relative;
+    form{
+      > div{
+        display: flex;
+      }
+      .screen-reader-text{
+        display: none;
+      }
+      input{
+        width: 100%;
+        height: 49px;
+        border-radius: 5px;
+        background: $white;
+        padding-left: 24px;
+      }
+      #searchsubmit{
+        position: absolute;
+        right: 0;
+        width: 55px;
+        height: 50px;
+        background: transparent;
+        outline: none;
+        i{
+          color: #1D2C36;
+        }
+      }
+    }
+  }
 }
 
 //Thumb single page
