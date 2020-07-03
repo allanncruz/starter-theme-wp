@@ -78,7 +78,7 @@
                             <div class="row text-center">
 
                                 <div class="col-12 d-flex justify-content-center">
-                                    <div class="g-recaptcha" data-sitekey="6LeL7qwZAAAAAJApF_b4ioa1VQCMutOLvZcqy8wv"></div>
+                                    <div class="g-recaptcha" data-sitekey=""></div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
