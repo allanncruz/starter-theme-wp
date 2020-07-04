@@ -56,7 +56,7 @@
     <main>
         <section class="company py-5">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center text-center">
                     <?php
                     $about = new WP_Query(array(
                         'post_type' => 'page',
@@ -64,18 +64,18 @@
                     ));
                     if($about->have_posts()): ?>
                         <?php while($about->have_posts()): $about->the_post(); ?>
-                        <div class="col-md-7">
+                        <div class="col-md-10">
                             <h1 class="company--title title"><?php the_title(); ?></h1>
                             <?php the_content(); ?>
                             <a href="<?php bloginfo("url") ?>/index.php/pagina-exemplo" class="btn btn-primary">Read More</a>
                         </div>
-                        <div class="col-md-5 order-first order-md-2">
+                        <!-- <div class="col-md-5 order-first order-md-2">
                             <img
                                 class="img-thumbnail w-100 img-none"
-                                src="<?php the_post_thumbnail_url(); ?>"
-                                alt="<?php the_title(); ?>"
+                                src="<?php //the_post_thumbnail_url(); ?>"
+                                alt="<?php //the_title(); ?>"
                             />
-                        </div>
+                        </div> -->
                     <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
@@ -95,7 +95,7 @@
                         <?php get_template_part( 'partials/section', 'news' ); ?>
                     <?php endwhile; endif; ?>
                 </div>
-                <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary d-block m-auto">Mais notícias</a>
+                <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary d-table m-auto">Mais notícias</a>
             </div>
         </section>
     </main>
