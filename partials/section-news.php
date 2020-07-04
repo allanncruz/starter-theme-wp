@@ -30,6 +30,7 @@
                     <a href="<?php the_permalink(); ?>">
                         <h5 class="card-title"><?php the_title(); ?></h5>
                     </a>
+                    <?php the_excerpt();  ?>
                 </div>
             </div>
         </div>
