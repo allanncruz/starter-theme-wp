@@ -5,7 +5,6 @@
     <section class="page">
         <div class="container page-area mt-5">
             <div class="text-center">
-                <h3 class="sub-title m-0">Subtitle</h3>
                 <h1 class="title"><?php the_title(); ?></h1>
             </div>  
             
@@ -13,7 +12,14 @@
                 <div class="col-md-10">
                     <article class="px-md-5 px-2">
                         <?php the_content(); ?>
-                        <form action="<?php bloginfo("template_directory"); ?>/envio.php"  class="wpcf7-form" method="post" enctype="multipart/form-data">
+
+                        <form 
+                            action="<?php bloginfo("template_directory"); ?>/envio.php"  
+                            class="" 
+                            method="post" 
+                            enctype="multipart/form-data"
+                            >
+
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
@@ -84,7 +90,7 @@
                                     <div class="form-group">
                                         <input type="submit" value="Solicitar" class="btn btn-primary mt-4">
                                         <input type="hidden" name="recipient" value="contato@allancruz.com.br">
-                                        <input type="hidden" name="redirect" value="<?php bloginfo("url") ?>/?page_id=98">
+                                        <input type="hidden" name="redirect" value="<?php bloginfo("url") ?>/obrigado">
                                         <input type="hidden" name="subject" value="Contato - Engine FrontEnd Wordpress">
                                     </div>
                                 </div>
