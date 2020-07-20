@@ -22,7 +22,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 <header class="header position-fixed w-100 shadow">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
