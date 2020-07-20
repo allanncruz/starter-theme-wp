@@ -1,6 +1,19 @@
 <?php
-//Template Name: Home
-    get_header(); ?>
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Started theme wp
+ */
+
+get_header();
+?>
 
     <div class="carousel overflow-hidden">
         <div class="carousel-inner owl-carousel banner owl-anima">
@@ -84,7 +97,7 @@
 
         <section class="cards py-5">
             <div class="container">
-                <h1 class="text-center">Blog</h1>
+                <h1 class="text-center">Cards</h1>
 
                 <!-- News -->
                 <div class="carousel-inner owl-carousel owl-cards">
