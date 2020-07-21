@@ -28,9 +28,8 @@
 
         gtag('config', '<?php echo get_theme_mod('id_analytics') ?>');
         </script>
-    <?php } ?>
-
-    <?php wp_head(); ?>
+    <?php } 
+        wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
