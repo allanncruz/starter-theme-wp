@@ -34,6 +34,7 @@
 
     //Fancybox from gallery Wordpress version 5
 
+
     $(".blocks-gallery-item figure a").attr("rel", "galeria");
     $(".blocks-gallery-item figure  a").fancybox();
 
@@ -50,4 +51,8 @@
             } else {  
                 element.mask("(99) 9999-99999");  
             }  
+        });
+
+         $('.menu-item a').on('click', function(){
+            $('.navbar-collapse').collapse('hide');
         });
