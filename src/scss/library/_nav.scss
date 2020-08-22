@@ -3,10 +3,13 @@
 
 // Variables
 // Navbar
+$navbar-padding-y:          10px;
 $navbar-light-color:        $color-white;
 $navbar-light-hover-color:  $primary;
 $navbar-light-active-color: $primary;
+$navbar-light-toggler-border-color: $black;
 $navbar-light-font-size:    16px;
+$navbar-nav-link-padding-x: 10px;
 
 // Nav Dropdowns
 $dropdown-link-color:       $color-title;
