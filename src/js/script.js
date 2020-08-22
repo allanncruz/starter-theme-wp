@@ -29,15 +29,15 @@
         autoplayTimeout:7000
     });
 
+    //Fancybox from gallery Wordpress classic editor
     $(".gallery-icon a").attr("rel", "galeria");
     $(".gallery-icon a").fancybox();
 
-    //Fancybox from gallery Wordpress version 5
-
-
+    //Fancybox from gallery Wordpress gutenberg editor
     $(".blocks-gallery-item figure a").attr("rel", "galeria");
     $(".blocks-gallery-item figure  a").fancybox();
 
+    //Add mask in input phone 
     jQuery("#telefone")
         .mask("(99) 9999-99999")
         .focusout(function (event) {  
@@ -53,6 +53,7 @@
             }  
         });
 
-         $('.menu-item a').on('click', function(){
-            $('.navbar-collapse').collapse('hide');
-        });
+    //Hide collapsible navbar on click
+    $('.menu-item a').on('click', function(){
+        $('.navbar-collapse').collapse('hide');
+    });
