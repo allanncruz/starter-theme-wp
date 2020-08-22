@@ -233,7 +233,7 @@
                                         ))  );
                                 if ($team->have_posts()):
                                     while ($team->have_posts()): $team->the_post(); 
-                                        get_template_part( 'partials/section', 'news' );
+                                        get_template_part( 'template-parts/section', 'news' );
                                     endwhile; 
                                 endif; 
                                 ?>

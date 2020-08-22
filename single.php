@@ -30,7 +30,7 @@
                         if( $relationship ): ?>
                         <small>Post relacionado</small>
                             <?php foreach( $relationship as $post): ?>
-                                <?php get_template_part( 'partials/section', 'news' ); ?>
+                                <?php get_template_part( 'template-parts/section', 'news' ); ?>
                             <?php endforeach;
                             wp_reset_postdata();
                         endif; ?>

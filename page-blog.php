@@ -25,7 +25,7 @@
                         'post_type'=>'blog',
                         'paged' => get_query_var('paged') ? get_query_var('paged') : 1) );  
                         while ($the_query -> have_posts()) : $the_query -> the_post(); 
-                            get_template_part( 'partials/section', 'news' ); 
+                            get_template_part( 'template-parts/section', 'news' ); 
                             
                         endwhile;  
                 ?>
