@@ -3,14 +3,17 @@
 
 
 // Variables
-$input-font-size: 14px;
-$input-bg:  $light;
-$input-color: $dark;
-$input-border-radius: 0 ;
-$input-focus-box-shadow: none;
-$input-focus-border-color: $dark;
-$input-height: 45px;
-$input-padding-x: 15px;
+$input-font-size:           14px;
+$input-bg:                  $light;
+$input-focus-bg:            transparent;
+$input-color:               $black;
+$input-border-color:        $gray-400;
+$input-focus-border-color:  $dark;
+$input-focus-box-shadow:    none; 
+$input-border-radius:       0;
+$input-placeholder-color:   $black;
+$input-height:              42px;
+$input-padding-x:           15px;
 
 .form{
     &-group{
