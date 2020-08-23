@@ -3,7 +3,7 @@
 
 
     <section class="page">
-        <div class="container page-area mt-5">
+        <div class="container page-area">
             <div class="text-center">
                 <h1 class="title"><?php single_term_title(); ?></h1>
             </div>  

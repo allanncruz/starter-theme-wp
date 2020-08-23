@@ -3,6 +3,7 @@
 
 .page{
   &-area{
+    margin-top: 125px;
     ul{
       list-style: none;
       li{
@@ -54,6 +55,12 @@
   }
 }
 
+@include media-breakpoint-down(sm) {
+  &-area{
+    margin-top: 60px;
+  }
+}
+
 //Thumb single page
 .single-thumbnail{
   width: 100%;
@@ -80,13 +87,6 @@
 .alignleft{
   float: left;
   margin: 1rem 2rem  1rem 0;
-}
-
-
-@include media-breakpoint-down(sm) {
-  .page{
-    padding-top: 70px;
-  }
 }
 
 

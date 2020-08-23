@@ -14,7 +14,7 @@ Template Name: Search Page
     the_post() ?>
 
     <section class="page">
-        <div class="container page-area mt-5">
+        <div class="container page-area">
             <div class="text-center">
                 <h3 class="sub-title">Resultado da busca para: <b><?php echo isset($_GET['s']) ? $_GET['s'] : ''; ?></h3>
                 <div class="page-seach w-50 m-auto">
