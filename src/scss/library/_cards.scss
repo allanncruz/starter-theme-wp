@@ -2,13 +2,15 @@
 //
 
 // Variables
-$card-bg: $color-white;
+$card-bg: $white;
 $card-inner-border-radius: 0;
 $card-border-radius: 0;
+$card-border-width:  1px;
+$card-border-color: $gray-200;
 
 
 .card {
-  &-img-top{
+  &-img{
     height: 190px;
     object-fit: cover;
   }
@@ -22,6 +24,11 @@ $card-border-radius: 0;
       }
     }
   }
+
+  &-category{
+    color: $primary;
+  }
+
   &-title {
     @include font-size(18px);
     transition: .3s;
