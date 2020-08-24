@@ -42,33 +42,35 @@
     }
   }
 
-  .owl-nav {
-    button{
-      top: 6rem;
-      i{
-        font-size: 3rem !important;
+  .owl-carousel{
+    .owl-nav {
+      button{
+      }
+      .owl-prev{
+        left: 2rem;
+      }
+      .owl-next{
+        right: 2rem;
       }
     }
-    .owl-prev, .owl-next{
-      background: none !important;
-    }
-  }
-  .owl-dots{
-    position: relative;
-    bottom: 300px;
-    z-index: 99;
-    text-align: center;
-    button{
-      width: 45px;
-      height: 2px;
-      margin: 0 5px;
-      background: $white;
-      outline: none;
-      transition: .3s;
-    }
-    button.active{
-      background: $secondary;
-      height: 4px;
+
+    .owl-dots{
+      position: relative;
+      bottom: 100px;
+      z-index: 99;
+      text-align: center;
+      button{
+        width: 45px;
+        height: 2px;
+        margin: 0 5px;
+        background: $white;
+        outline: none;
+        transition: .3s;
+      }
+      button.active{
+        background: $secondary;
+        height: 4px;
+      }
     }
   }
 

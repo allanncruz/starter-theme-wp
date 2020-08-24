@@ -55,6 +55,7 @@
     button{
       position: absolute;
       outline: none;
+      z-index: 99;
       i{
         color: #c8c8c3;
         font-size: 1.8rem;
@@ -70,26 +71,6 @@
     }
     .owl-next{
       right: -1rem;
-    }
-  }
-}
-//Owl anima
-.owl-anima{
-  .owl-nav{
-    top: 0 !important;
-    width: 100%;
-    position: absolute;
-    button{
-      position: absolute;
-      i{
-        color: $white;
-        font-size: 2rem;
-      }
-    }
-  }
-  @include media-breakpoint-down(md) {
-    .owl-nav{
-      top: 7rem!important;
     }
   }
 }
