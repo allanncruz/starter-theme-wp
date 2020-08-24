@@ -67,7 +67,7 @@ get_header();
             </div>
         </section>
 
-        <section class="cards py-5">
+        <section id="cards" class="cards py-5">
             <div class="container">
                 <h1 class="text-center">Cards</h1>
 

@@ -57,3 +57,12 @@
     $('.menu-item a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
+
+
+    //Implement offset nav scroll
+    $(document).on('click', '.nav-link', function () {
+        $('html, body').animate({
+            scrollTop: $('section[id="' + this.hash.slice(1) + '"]').offset().top-60
+        }, 500);
+        return false;
+    });
