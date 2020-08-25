@@ -73,4 +73,31 @@ sudo find . -type f -exec chmod 644 {} \;
 sudo find . -type d -exec chmod 755 {} \;
 ``` 
 
+### Robots.txt for WordPress
+
+``` 
+Sitemap: https://wordpress.com/sitemap.xml
+User-agent: IRLbot
+Crawl-delay: 3600
+
+User-agent: *
+Disallow: /next/
+
+User-agent: *
+Disallow: /mshots/v1/
+
+# har har
+User-agent: *
+Disallow: /activate/
+
+User-agent: *
+Disallow: /public.api/
+
+# MT refugees
+User-agent: *
+Disallow: /cgi-bin/
+
+User-agent: *
+Disallow: /wp-admin/
+``` 
 *Developed by Allan Cruz - (https://github.com/allanncruz)*
