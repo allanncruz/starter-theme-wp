@@ -144,7 +144,7 @@
                                                                             <img 
                                                                                 class="blog-img blog-img-box" 
                                                                                 src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg" 
-                                                                                alt="teste" 
+                                                                                alt="<?php the_title(); ?>" 
                                                                                 />
 
                                                                 <?php } ?>
@@ -205,7 +205,7 @@
                                                                             <img 
                                                                                 class="blog-img blog-img-box" 
                                                                                 src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg" 
-                                                                                alt="teste" 
+                                                                                alt="<?php the_title(); ?>" 
                                                                                 />
 
                                                                 <?php } ?>
