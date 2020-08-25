@@ -72,6 +72,15 @@ $navbar-light-toggler-border-color: $dark;
     }
   }
 
+  .anchor{
+    a{
+      color: $white !important;
+      &:hover{
+        color: $primary !important;
+      }
+    }
+  }
+
   @include media-breakpoint-down(md) {
     .navbar{
       justify-content: center;
