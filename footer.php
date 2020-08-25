@@ -60,7 +60,9 @@
                 <div class="col-md-4 pl-0 address">
                     <div class="d-flex">
                         <i class="fas fa-map-marker-alt"></i>
-                        <?php echo get_theme_mod('address') ?>
+                        <address>
+                            <?php echo get_theme_mod('address') ?>
+                        </address>
                     </div>
                 </div>
             <?php } ?>
