@@ -76,9 +76,9 @@
         <div class="col-12">
             <div class="form-group">
                 <input type="submit" value="Solicitar" class="btn btn-primary mt-4">
-                <input type="hidden" name="recipient" value="contato@allancruz.com.br">
+                <input type="hidden" name="recipient" value="<?php echo get_theme_mod('recipient_contact') ?>">
                 <input type="hidden" name="redirect" value="<?php bloginfo("url") ?>/obrigado">
-                <input type="hidden" name="subject" value="Contato - Engine FrontEnd Wordpress">
+                <input type="hidden" name="subject" value="Contato - <?php bloginfo('name'); ?>">
             </div>
         </div>
     </div>
