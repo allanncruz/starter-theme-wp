@@ -5,6 +5,7 @@
         loop: true,
         navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
         autoplay:true,
+        autoplayHoverPause:true,
         autoplayTimeout:7000,
         responsive:{
             0:{
@@ -26,6 +27,7 @@
         navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
         items:1,
         autoplay:true,
+        autoplayHoverPause:true,
         autoplayTimeout:7000
     });
 
