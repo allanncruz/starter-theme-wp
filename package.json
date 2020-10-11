@@ -14,8 +14,13 @@
   "license": "ISC",
   "homepage": "",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "autoprefixer": "^9.8.5",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-uglify": "^3.0.0"
   },
   "dependencies": {
