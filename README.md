@@ -8,40 +8,50 @@ The interface has a structured with Bootstrap 4, in order to standardize the ins
 
 ##### Global Dependencies
 
-* NodeJS - (https://nodejs.org/en/)
-* gulp - (https://gulpjs.com/)
+* NodeJS v12 - (https://nodejs.org/en/)
+* gulp v4 - (https://gulpjs.com/)
 * Sass install - (https://sass-lang.com/guide)
+* Yarn - (https://classic.yarnpkg.com/pt-BR/docs/install#debian-stable)
 
 ## Install Project
 Open terminal and navigate to your localhost / directory
 
 
+
+##### Download CMS]
 ```
-# Download CMS
 curl -O https://wordpress.org/latest.zip
-
-# Unzip CMS
+```
+##### Unzip CMS
+```
 unzip latest.zip
-
-# Remove zipped file
+```
+##### Remove zipped file
+```
 rm latest.zip
-
-# Rename unzipped folder
+```
+##### Rename unzipped folder
+```
 mv wordpress/name-of-your-project
-
-# Navigate to the themes folder
+```
+##### Navigate to the themes folder
+```
 cd name-of-your-project/wp-content/themes/
-
-# Clone starter-theme-wp
+```
+##### Clone starter-theme-wp
+```
 git clone https://github.com/allanncruz/starter-theme-wp.git
-
-# Access starter-theme-wp folder
+```
+##### Access starter-theme-wp folder
+```
 cd starter-theme-wp
-
-# Install dependencies
-npm install
-
-# Compile assets
+```
+##### Install dependencies
+```
+yarn install
+```
+##### Compile assets
+```
 gulp
 ```
 
@@ -64,12 +74,13 @@ Enter the constant:
 define('FS_METHOD', 'direct');
 ```
 
-##### Run in your Wordpress root folder:
-```
-# Permissions on files
+#### Run in your Wordpress root folder:
+##### Permissions on files
+``` 
 sudo find . -type f -exec chmod 644 {} \;
-
-# Permissions on directories
+``` 
+##### Permissions on directories
+``` 
 sudo find . -type d -exec chmod 755 {} \;
 ``` 
 
