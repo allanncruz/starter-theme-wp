@@ -10,45 +10,44 @@
  */
 
 ?>
-<footer class="footer bg-dark text-white py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-2 p-0">
-                <a class="footer-brand text-center text-md-right" href="<?php bloginfo("url") ?>">
-                    <?php 
-                        $custom_logo_id = get_theme_mod('custom_logo');
-                        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+<footer class="page-footer bg-dark text-white pt-5 pb-4">
+    <div class="container text-center text-md-left">
+        <div class="row">
+
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <a class="footer-brand" href="<?php bloginfo("url") ?>">
+                    <?php
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
 
 
-                        if(has_custom_logo()) {
-                            echo '<img src="'. esc_url($logo[0]). '" class="footer-brand__img">';
-                        }else {
-                            echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
-                        } 
+                    if(has_custom_logo()) {
+                        echo '<img src="'. esc_url($logo[0]). '" class="">';
+                    }else {
+                        echo '<h5 class="text-uppercase">'. get_bloginfo('name'). '</h5>';
+                    }
                     ?>
                 </a>
-            </div>
 
-            <div class="col-md-4 pl-5 pr-0 phone">
 
-                <?php if(get_theme_mod('phone_number')) { ?>
-                    <div class="d-flex">
-                        <i class="fas fa-phone"></i>
-                        <?php echo get_theme_mod('phone_number') ?>
-                    </div>
-                <?php } ?>
+                <?php
+                if(get_theme_mod('address')) { ?>
+                    <address>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <?php echo get_theme_mod('address') ?>
+                    </address>
+                    <?php
+                }if(get_theme_mod('phone_number')) { ?>
+                    <i class="fas fa-phone"></i>
+                    <?php echo get_theme_mod('phone_number') ?>
+                    <?php
+                }if(get_theme_mod('whatsapp_number')) { ?>
 
-                <?php if(get_theme_mod('whatsapp_number')) { ?>
-                    
                     <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('whatsapp_number') ?>&text="
-                        class="d-flex d-md-none"
-                        target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                    <?php echo get_theme_mod('whatsapp_number') ?>
-                    </a>
-                    <a href="https://web.whatsapp.com/send?phone=<?php echo get_theme_mod('whatsapp_number') ?>&text="
-                        class="d-none d-md-flex"
-                        target="_blank">
+                       target="_blank"
+                       class="d-block"
+                    >
                         <i class="fab fa-whatsapp"></i>
                         <?php echo get_theme_mod('whatsapp_number') ?>
                     </a>
@@ -56,34 +55,44 @@
                 <?php } ?>
             </div>
 
-            <?php if(get_theme_mod('address')) { ?>
-                <div class="col-md-4 pl-0 address">
-                    <div class="d-flex">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <address>
-                            <?php echo get_theme_mod('address') ?>
-                        </address>
-                    </div>
-                </div>
-            <?php } ?>
 
-            <div class="col-md-2 social">
-                <?php if(get_theme_mod('instagram_username')) {
-                        echo '<a href="'. get_theme_mod('instagram_username') . '"  target="_blank">';
-                        echo '<i class="fab fa-instagram ml-3"></i>';
-                        echo '</a>';
-                    }
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase">Menu</h5>
+
+                <?php
+                wp_nav_menu( array(
+                    'theme_location'    => 'principal',
+                    'depth'             => 2,
+                    'menu_class'        => 'nav navbar-nav ml-auto',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker(),
+                ) );
                 ?>
-                <?php if(get_theme_mod('facebook_username')) {
-                        echo '<a href="' . get_theme_mod('facebook_username') . '"  target="_blank">';
-                        echo '<i class="fab fa-facebook-square"></i>';
-                        echo '</a>';
-                    }
-                ?>
+
             </div>
 
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <h5 class="text-uppercase">Social</h5>
+
+                <?php if(get_theme_mod('instagram_username')) {
+                    echo '<a href="'. get_theme_mod('instagram_username') . '"  target="_blank"> <i class="fab fa-instagram mr-2 fa-2x"></i> </a>';
+                }
+                ?>
+                <?php if(get_theme_mod('facebook_username')) {
+                    echo '<a href="' . get_theme_mod('facebook_username') . '"  target="_blank"> <i class="fab fa-facebook-square fa-2x"></i> </a>';
+                }
+                ?>
+            </div>
         </div>
     </div>
+
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="#"> starter-woocommerce-wp</a>
+    </div>
+
 </footer>
 <?php wp_footer(); ?>
 
