@@ -12,7 +12,7 @@ $link-hover-decoration:     none;
 *{font-family: latoregular, sans-serif;}
 
   p{
-    font-size: 17px;
+    @include font-size(17px);
     line-height: 150%;
   }
 
@@ -22,7 +22,7 @@ $link-hover-decoration:     none;
   h2{
     color: $primary;
   }
-  
+
   .title{
     color: $color-title;
     font-size: 48px;
@@ -30,20 +30,20 @@ $link-hover-decoration:     none;
     text-transform: uppercase;
     font-family: barlowextrabold;
     margin-bottom: 30px;
-  
+
     @include media-breakpoint-down(sm) {
       font-size: 38px;
       line-height: 43px;
     }
   }
-  
+
   .sub-title{
     font-size: 32px;
     line-height: 44px;
     color: $primary;
     font-family: damionregular;
   }
-  
+
   .img-off{
     filter: saturate(0);
     opacity: .5;
