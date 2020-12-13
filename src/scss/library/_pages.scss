@@ -109,7 +109,7 @@
 
     h6,
     .price{
-      font-family: latoregular;
+      font-family: barlowregular, sans-serif;
       font-weight: 900;
       text-transform: uppercase;
       font-size: 17px;
@@ -138,7 +138,7 @@
         color: #343434;
         font-size: 18px;
         text-transform: uppercase;
-        font-family: Gotham-Light;
+        font-family: barlowlight, sans-serif;
         padding: 0 15px;
         height: 50px;
         display: inline-block;
@@ -163,7 +163,7 @@
     text-align: center;
     line-height: 20px;
     top: 15px;
-    font-family: Gotham-Bold;
+    font-family: barlowbold, sans-serif;
     text-transform: uppercase;
     padding: 0 8px;
   }

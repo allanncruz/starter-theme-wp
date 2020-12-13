@@ -9,7 +9,7 @@ $link-color:                $primary;
 $link-hover-color:          $secondary;
 $link-hover-decoration:     none;
 
-*{font-family: latoregular, sans-serif;}
+*{font-family: barlowregular, sans-serif;}
 
   p{
     @include font-size(17px);
@@ -17,7 +17,7 @@ $link-hover-decoration:     none;
   }
 
   h1, h2, h3, h4, h5, h6{
-    font-family: barlowextrabold;
+    font-family: barlowbold, sans-serif;
   }
   h2{
     color: $primary;
@@ -28,7 +28,6 @@ $link-hover-decoration:     none;
     font-size: 48px;
     line-height: 58px;
     text-transform: uppercase;
-    font-family: barlowextrabold;
     margin-bottom: 30px;
 
     @include media-breakpoint-down(sm) {
@@ -41,7 +40,6 @@ $link-hover-decoration:     none;
     font-size: 32px;
     line-height: 44px;
     color: $primary;
-    font-family: damionregular;
   }
 
   .img-off{
