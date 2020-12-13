@@ -5,7 +5,7 @@ function send_curl($g_response, $ip)
 {
     $url = 'https://www.google.com/recaptcha/api/siteverify';
     $fields = array(
-        'secret' => urlencode(''),
+        'secret' => urlencode('6LeL7qwZAAAAALyE7f8TnPU6pHMokVoXFomZcCzN'),
         'remoteip' => urlencode($ip),
         'response' => urlencode($g_response),
     );
