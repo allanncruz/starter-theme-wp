@@ -4,7 +4,7 @@
 // Variables
 // Navbar
 $navbar-padding-y:          10px;
-$navbar-light-color:        $color-white;
+$navbar-light-color:        $white;
 $navbar-light-hover-color:  $primary;
 $navbar-light-active-color: $primary;
 $navbar-light-toggler-border-color: $black;
@@ -13,7 +13,7 @@ $navbar-nav-link-padding-x: 10px;
 
 // Nav Dropdowns
 $dropdown-link-color:       $color-title;
-$dropdown-link-hover-color: $color-white;
+$dropdown-link-hover-color: $white;
 $dropdown-link-hover-bg:    $primary;
 $dropdown-font-size:        13px;
 $dropdown-padding-y:        0;
@@ -23,8 +23,12 @@ $navbar-toggler-border-radius: 0;
 $navbar-light-toggler-border-color: $dark;
 
 
+.header{
+  z-index: 999;
+  top: 0;
+}
 
-//Navbar
+
 .navbar {
   .nav{
     &-link{
@@ -58,7 +62,7 @@ $navbar-light-toggler-border-color: $dark;
       .navbar-icon{
         position: relative;
         &:nth-child(1){
-          transform: 
+          transform:
           rotate(45deg); top: 10px;
         }
         &:nth-child(2){

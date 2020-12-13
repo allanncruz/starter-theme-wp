@@ -1,10 +1,9 @@
 //Variables
-// 
+//
 
 //Customizar cores
 $primary: #1CCAF4;
 $secondary: #1BDC68;
-$color-white: #fff;
 $color-green: #1BDC68;
 $color-title: #585A5B;
 
@@ -13,3 +12,6 @@ $theme-colors:(
         "primary-color": $primary,
         "secondary-color": $secondary,
 );
+
+//Urls Assets
+$fonts-path: "../fonts/" !default;

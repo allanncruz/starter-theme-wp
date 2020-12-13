@@ -1,8 +1,6 @@
+//Home
+//
 
-.header{
-  z-index: 999;
-  top: 0;
-}
 
 .carousel{
   &-thumbnail{
@@ -15,6 +13,7 @@
   &-legend {
     bottom: 0;
     height: 700px;
+    left: 0;
     p {
       text-align: center;
       color: $white;
@@ -25,13 +24,8 @@
       position: relative;
     }
     h2 {
-      font-size: 64px;
+      @include font-size(64px);
       line-height: 120%;
-      z-index: 999;
-      strong{
-        font-family: MuliBlack;
-        color: $secondary;
-      }
     }
     > div{
       z-index: 999;
@@ -41,8 +35,6 @@
 
   .owl-carousel{
     .owl-nav {
-      button{
-      }
       .owl-prev{
         left: 2rem;
       }

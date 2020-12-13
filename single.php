@@ -15,8 +15,8 @@
             <div class="text-center">
                 <h3 class="sub-title m-0">Subtitle</h3>
                 <h1 class="title"><?php the_title(); ?></h1>
-            </div>  
-            
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <img
@@ -25,10 +25,10 @@
                         class="single-thumbnail my-4"
                         alt="<?php the_title(); ?>"
                     >
-                    <article class="px-md-5 px-2">
-                        <?php 
+                    <article class="p-md-5 p-2">
+                        <?php
                         the_content();
-                        the_excerpt(); 
+                        the_excerpt();
 
                         ?>
 
