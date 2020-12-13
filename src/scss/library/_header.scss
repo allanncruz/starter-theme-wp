@@ -23,8 +23,12 @@ $navbar-toggler-border-radius: 0;
 $navbar-light-toggler-border-color: $dark;
 
 
+.header{
+  z-index: 999;
+  top: 0;
+}
 
-//Navbar
+
 .navbar {
   .nav{
     &-link{
@@ -58,7 +62,7 @@ $navbar-light-toggler-border-color: $dark;
       .navbar-icon{
         position: relative;
         &:nth-child(1){
-          transform: 
+          transform:
           rotate(45deg); top: 10px;
         }
         &:nth-child(2){
