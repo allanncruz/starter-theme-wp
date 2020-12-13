@@ -37,7 +37,7 @@
 
 //Owl Carousel
  .carousel-inner{
-   overflow: initial;
+   overflow: initial !important;
  }
 .owl-stage-outer{
   z-index: 99;
@@ -57,20 +57,20 @@
       outline: none;
       z-index: 99;
       i{
-        color: #c8c8c3;
-        font-size: 1.8rem;
+        color: $primary;
+        @include font-size(24px);
       }
       &:hover, &:active, &:visited{
         i{
-          color: #50504f;
+          opacity: .5;
         }
       }
     }
     .owl-prev{
-      left: -1rem;
+      left: -3rem;
     }
     .owl-next{
-      right: -1rem;
+      right: -3rem;
     }
   }
 }
