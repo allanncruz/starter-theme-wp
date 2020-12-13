@@ -14,11 +14,11 @@
         <div class="container page-area">
             <div class="text-center">
                 <h1 class="title"><?php the_title(); ?></h1>
-            </div>  
-            
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <article class="px-md-5 px-2">
+                    <article class="p-md-5 p-2">
                         <?php the_content(); ?>
                     </article>
 

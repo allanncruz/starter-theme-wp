@@ -15,8 +15,8 @@
             <div class="text-center">
                 <h3 class="sub-title m-0">Subtitle</h3>
                 <h1 class="title"><?php the_title(); ?></h1>
-            </div>  
-            
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <img
@@ -25,7 +25,7 @@
                         class="single-thumbnail my-4"
                         alt="<?php the_title(); ?>"
                     >
-                    <article class="px-md-5 px-2">
+                    <article class="p-md-5 p-2">
                         <?php the_content(); ?>
 
                         <h2 class="my-5">Lista de categorias seguido de postagens </h2>
@@ -54,8 +54,8 @@
 
                                 <div class="categories-carte">
                                     <h3 class="categories-carte__category text-center mb-3"><?php echo $category->name; ?></h3>
-                                    
-                                    
+
+
                                     <?php while ($cartes->have_posts()) : $cartes->the_post(); ?>
                                         <div class="categories-carte__post d-block d-md-flex text-center text-md-left mb-4">
 
@@ -72,7 +72,7 @@
                                                     alt="<?php the_title(); ?>"
                                                 />
                                                 <?php } ?>
-                                                
+
                                             <div class="content">
                                                 <h6 class="my-1"><?php the_title(); ?></h6>
                                                 <p class="m-1"><?php the_field('descricao'); ?></p>
@@ -92,7 +92,7 @@
                             // end the loop
                             endforeach;
                             ?>
-                            
+
                             <h2 class="my-5">Tabs de categorias retornando postagens </h2>
 
                                 <div class="tab-blog">
@@ -114,18 +114,18 @@
                                     <div class="tab-content">
 
                                     <div class="tab-pane active" id="all">
-                                        <?php 	
+                                        <?php
                                         $args = array(
                                         'post_type' => 'blog',
                                         'orderby' => 'title',
                                         'order' => 'ASC'
                                         );
-                                        $all_etapas = new WP_Query( $args );		
+                                        $all_etapas = new WP_Query( $args );
                                         ?>
 
                                         <div class="row">
                                             <?php if ( $all_etapas->have_posts() ) :?>
-                                                <?php while ( $all_etapas->have_posts() ) : $all_etapas->the_post(); ?>	
+                                                <?php while ( $all_etapas->have_posts() ) : $all_etapas->the_post(); ?>
                                                     <div class="col-md-6 mb-4">
                                                         <div class="card">
                                                             <div class="card-tag">
@@ -133,23 +133,23 @@
                                                             </div>
                                                             <a href="<?php the_permalink(); ?>">
                                                             <?php if(get_the_post_thumbnail_url()) { ?>
-                                                                    <img 
+                                                                    <img
                                                                         class="blog-img"
-                                                                        src="<?php the_post_thumbnail_url(); ?>" 
-                                                                        alt="<?php the_title(); ?>" 
+                                                                        src="<?php the_post_thumbnail_url(); ?>"
+                                                                        alt="<?php the_title(); ?>"
                                                                         />
 
                                                                         <?php } else { ?>
 
-                                                                            <img 
-                                                                                class="blog-img blog-img-box" 
-                                                                                src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg" 
-                                                                                alt="<?php the_title(); ?>" 
+                                                                            <img
+                                                                                class="blog-img blog-img-box"
+                                                                                src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg"
+                                                                                alt="<?php the_title(); ?>"
                                                                                 />
 
                                                                 <?php } ?>
                                                             </a>
-                                                            
+
                                                             <div class="card-body">
                                                                 <a href="<?php the_permalink(); ?>">
                                                                     <small class="blog-localization mb-2 d-block"><?php the_field('local'); ?></small>
@@ -168,7 +168,7 @@
                                     <?php foreach($etapas as $etapa) { ?>
 
                                         <div class="tab-pane" id="<?php echo $etapa->slug ?>">
-                                        <?php 	
+                                        <?php
                                         $args = array(
                                             'post_type' => 'blog',
                                             'orderby' => 'title',
@@ -181,12 +181,12 @@
                                             )
                                             )
                                         );
-                                        $films = new WP_Query( $args );		
+                                        $films = new WP_Query( $args );
                                         ?>
 
                                         <div class="row">
                                             <?php if ( $films->have_posts() ) :?>
-                                                <?php while ( $films->have_posts() ) : $films->the_post(); ?>	
+                                                <?php while ( $films->have_posts() ) : $films->the_post(); ?>
                                                     <div class="col-md-6 mb-4">
                                                         <div class="card">
                                                             <div class="card-tag">
@@ -194,23 +194,23 @@
                                                             </div>
                                                             <a href="<?php the_permalink(); ?>">
                                                                 <?php if(get_the_post_thumbnail_url()) { ?>
-                                                                    <img 
+                                                                    <img
                                                                         class="blog-img"
-                                                                        src="<?php the_post_thumbnail_url(); ?>" 
-                                                                        alt="<?php the_title(); ?>" 
+                                                                        src="<?php the_post_thumbnail_url(); ?>"
+                                                                        alt="<?php the_title(); ?>"
                                                                         />
 
                                                                         <?php } else { ?>
 
-                                                                            <img 
-                                                                                class="blog-img blog-img-box" 
-                                                                                src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg" 
-                                                                                alt="<?php the_title(); ?>" 
+                                                                            <img
+                                                                                class="blog-img blog-img-box"
+                                                                                src="<?php bloginfo('template_url'); ?>/dist/img/image/img-none.jpg"
+                                                                                alt="<?php the_title(); ?>"
                                                                                 />
 
                                                                 <?php } ?>
                                                             </a>
-                                                            
+
                                                             <div class="card-body">
                                                                 <a href="<?php the_permalink(); ?>">
                                                                     <small class="blog-localization mb-2 d-block"><?php the_field('local'); ?></small>
@@ -231,7 +231,7 @@
 
                             <h2 class="mt-5">Retornar posts de uma específica categoria</h2>
                             <?php
-                                $team = new WP_Query(array( 
+                                $team = new WP_Query(array(
                                     'post_type' => 'blog','tax_query' => array(
                                         array(
                                         'taxonomy' => 'blog_taxonomy',
@@ -240,10 +240,10 @@
                                         )
                                         ))  );
                                 if ($team->have_posts()):
-                                    while ($team->have_posts()): $team->the_post(); 
+                                    while ($team->have_posts()): $team->the_post();
                                         get_template_part( 'template-parts/section', 'news' );
-                                    endwhile; 
-                                endif; 
+                                    endwhile;
+                                endif;
                                 ?>
                     </article>
                 </div>
