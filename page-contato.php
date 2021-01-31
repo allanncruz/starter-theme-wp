@@ -22,7 +22,7 @@
                         <?php the_content(); ?>
                     </article>
 
-                    <?php get_template_part( 'template-parts/form', 'contact' ); ?>
+                    <?php get_template_part( 'components/form', 'contact' ); ?>
                 </div>
             </div>
         </div>

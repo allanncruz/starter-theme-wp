@@ -29,15 +29,15 @@ Template Name: Search Page
                     </form>
                 </div>
             </div>
-            
+
             <div class="row">
-                <?php  
+                <?php
                     while(have_posts()): the_post(); ?>
                         <div class="col-md-4">
-                            <?php get_template_part( 'template-parts/section', 'news' ); ?>
+                            <?php get_template_part( 'components/section', 'news' ); ?>
                         </div>
-                        <?php 
-                    endwhile; 
+                        <?php
+                    endwhile;
                 ?>
             </div>
         </div>

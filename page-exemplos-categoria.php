@@ -241,7 +241,7 @@
                                         ))  );
                                 if ($team->have_posts()):
                                     while ($team->have_posts()): $team->the_post();
-                                        get_template_part( 'template-parts/section', 'news' );
+                                        get_template_part( 'components/section', 'news' );
                                     endwhile;
                                 endif;
                                 ?>

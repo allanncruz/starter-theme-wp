@@ -23,11 +23,11 @@ get_header();
             <?php
             $anima = new WP_Query(array( 'post_type' => 'animacao' ));
             if ($anima->have_posts()):
-                while ($anima->have_posts()): $anima->the_post(); 
+                while ($anima->have_posts()): $anima->the_post();
 
                 //Section Showcase
-                get_template_part( 'template-parts/section', 'showcase' );
-                    
+                get_template_part( 'components/section', 'showcase' );
+
                 endwhile; else : { ?>
                 <div class="carousel-none">
                     <h2>Nenhuma vitrine Adicionada</h2>
@@ -77,11 +77,11 @@ get_header();
                     $blog = new WP_Query(array( 'post_type' => 'blog' ));
                     if ($blog->have_posts()):
                     while ($blog->have_posts()): $blog->the_post(); ?>
-                        <?php get_template_part( 'template-parts/section', 'news' ); ?>
+                        <?php get_template_part( 'components/section', 'news' ); ?>
                     <?php endwhile; endif; ?>
                 </div>
                 <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary d-table m-auto">Mais notícias</a>
             </div>
         </section>
     </main>
-<?php get_footer(); 
+<?php get_footer();
