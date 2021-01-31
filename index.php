@@ -25,8 +25,7 @@ get_header();
             if ($anima->have_posts()):
                 while ($anima->have_posts()): $anima->the_post();
 
-                //Section Showcase
-                get_template_part( 'components/section', 'showcase' );
+                get_template_part( 'components/showcase/index');
 
                 endwhile; else : { ?>
                 <div class="carousel-none">
@@ -67,7 +66,7 @@ get_header();
             </div>
         </section>
 
-        <section id="cards" class="cards py-5">
+        <section id="cards" class="cards overflow-hidden py-5">
             <div class="container">
                 <h1 class="text-center">Cards</h1>
 
