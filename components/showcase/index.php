@@ -1,7 +1,7 @@
 <div>
     <img class="carousel-thumbnail w-100"
-            alt="<?php the_title();?>"
-            src="<?php the_post_thumbnail_url(); ?>">
+         alt="<?php the_title();?>"
+         src="<?php the_post_thumbnail_url(); ?>">
     <div class="container position-relative">
         <figcaption class="carousel-legend w-100 d-flex flex-column justify-content-center position-absolute text-center">
             <h2 class="position-relative text-white"><?php the_title(); ?></h2>

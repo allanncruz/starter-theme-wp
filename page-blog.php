@@ -24,17 +24,17 @@
                         </div>
                     </form>
                 </div>
-            </div>  
-            
+            </div>
+
             <div class="row">
                 <?php
                     $the_query = new WP_Query( array('posts_per_page'=>2,
                         'post_type'=>'blog',
-                        'paged' => get_query_var('paged') ? get_query_var('paged') : 1) );  
-                        while ($the_query -> have_posts()) : $the_query -> the_post(); 
-                            get_template_part( 'template-parts/section', 'news' ); 
-                            
-                        endwhile;  
+                        'paged' => get_query_var('paged') ? get_query_var('paged') : 1) );
+                        while ($the_query -> have_posts()) : $the_query -> the_post();
+                            get_template_part( 'components/section', 'news' );
+
+                        endwhile;
                 ?>
             </div>
             <div class="text-center mt-5">
