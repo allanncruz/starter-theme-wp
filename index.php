@@ -76,7 +76,7 @@ get_header();
                     $blog = new WP_Query(array( 'post_type' => 'blog' ));
                     if ($blog->have_posts()):
                     while ($blog->have_posts()): $blog->the_post(); ?>
-                        <?php get_template_part( 'components/section', 'news' ); ?>
+                        <?php get_template_part( 'components/Cards/index' ); ?>
                     <?php endwhile; endif; ?>
                 </div>
                 <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary d-table m-auto">Mais notícias</a>
