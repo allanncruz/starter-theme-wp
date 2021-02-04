@@ -25,7 +25,7 @@ get_header();
             if ($anima->have_posts()):
                 while ($anima->have_posts()): $anima->the_post();
 
-                get_template_part( 'components/showcase/index');
+                get_template_part( 'components/Showcase/index');
 
                 endwhile; else : { ?>
                 <div class="carousel-none">
