@@ -25,7 +25,7 @@ $link-hover-decoration:     none;
 
   .title{
     color: $color-title;
-    font-size: 48px;
+    @include font-size(48px);
     line-height: 58px;
     text-transform: uppercase;
     margin-bottom: 30px;
@@ -37,7 +37,7 @@ $link-hover-decoration:     none;
   }
 
   .sub-title{
-    font-size: 32px;
+    @include font-size(32px);
     line-height: 44px;
     color: $primary;
   }

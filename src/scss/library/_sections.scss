@@ -8,7 +8,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    
+
     &.current{
         background: $primary;
         color: $white;
@@ -19,7 +19,7 @@
 .prev.page-numbers,
 .next.page-numbers{
     padding: 10px;
-    font-size: 10px;
+    @include font-size(10px);
     text-transform: uppercase;
     display: unset;
     background: none;
