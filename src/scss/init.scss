@@ -22,9 +22,9 @@
 @import "library/mixins";
 
 // Components
-@import "../../components/Showcase/style";
-@import "../../components/Cards/style";
-@import "../../components/Forms/style";
+@import "library/showcase";
+@import "library/card";
+@import "library/forms";
 @import "library/header";
 @import "library/home";
 @import "library/pages";
