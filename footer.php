@@ -89,8 +89,8 @@
         </div>
     </div>
 
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="#"> starter-woocommerce-wp</a>
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+        <a href="https://github.com/allanncruz/starter-theme-wp" target="_blank"> starter-theme-wp</a>
     </div>
 
 </footer>

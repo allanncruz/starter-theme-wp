@@ -111,4 +111,13 @@ Disallow: /cgi-bin/
 User-agent: *
 Disallow: /wp-admin/
 ``` 
+
+### Adding in .htaccess for force https
+
+``` 
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+``` 
+
 *Developed by Allan Cruz - (https://github.com/allanncruz)*
