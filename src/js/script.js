@@ -56,7 +56,7 @@
         });
 
     //Hide collapsible navbar on click
-    $('.menu-item a').on('click', function(){
+    $('.anchor a, .menu-item-object-page a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
 
