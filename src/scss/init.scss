@@ -22,15 +22,15 @@
 @import "library/mixins";
 
 // Components
-@import "../../components/showcase/style";
+@import "library/showcase";
+@import "library/card";
+@import "library/forms";
 @import "library/header";
 @import "library/home";
 @import "library/pages";
 @import "library/buttons";
 @import "library/general";
 @import "library/fonts";
-@import "library/cards";
-@import "library/forms";
 @import "library/sections";
 @import "library/text";
 @import "library/footer";

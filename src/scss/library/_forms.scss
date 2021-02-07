@@ -1,6 +1,5 @@
-//Contact Form 7 / Form bootstrap
+//Forms / Form bootstrap
 //
-
 
 // Variables
 $input-font-size:           14px;
@@ -9,21 +8,21 @@ $input-focus-bg:            transparent;
 $input-color:               $black;
 $input-border-color:        $gray-400;
 $input-focus-border-color:  $dark;
-$input-focus-box-shadow:    none; 
+$input-focus-box-shadow:    none;
 $input-border-radius:       0;
 $input-placeholder-color:   $black;
 $input-height:              42px;
 $input-padding-x:           15px;
 
 .form{
-    &-group{
-        label{
-            width: 100%;
-            text-transform: uppercase;
-            @include font-size(10px);
-        }
-        br{
-            display: none;
-        }
+  &-group{
+    label{
+      width: 100%;
+      text-transform: uppercase;
+      @include font-size(10px);
     }
+    br{
+      display: none;
+    }
+  }
 }
