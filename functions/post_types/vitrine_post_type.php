@@ -35,7 +35,6 @@ function animacaoType()
         'hierarchical'       => true,
         'menu_position'      => null,
         'rest_base'          => 'animacoes',
-        'rest_controller_class' => 'WP_REST_Posts_Controller',
         'supports'           => array( 'title', 'editor','thumbnail')
     );
 

@@ -39,24 +39,24 @@
     $(".blocks-gallery-item figure a").attr("rel", "galeria");
     $(".blocks-gallery-item figure  a").fancybox();
 
-    //Add mask in input phone 
+    //Add mask in input phone
     jQuery("#telefone")
         .mask("(99) 9999-99999")
-        .focusout(function (event) {  
-            var target, phone, element;  
-            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+        .focusout(function (event) {
+            var target, phone, element;
+            target = (event.currentTarget) ? event.currentTarget : event.srcElement;
             phone = target.value.replace(/\D/g, '');
-            element = $(target);  
-            element.unmask();  
-            if(phone.length > 10) {  
-                element.mask("(99) 99999-9999");  
-            } else {  
-                element.mask("(99) 9999-99999");  
-            }  
+            element = $(target);
+            element.unmask();
+            if(phone.length > 10) {
+                element.mask("(99) 99999-9999");
+            } else {
+                element.mask("(99) 9999-99999");
+            }
         });
 
     //Hide collapsible navbar on click
-    $('.menu-item a').on('click', function(){
+    $('.anchor a, .menu-item-object-page a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
 

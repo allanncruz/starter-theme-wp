@@ -29,18 +29,16 @@ $navbar-light-toggler-border-color: $dark;
 }
 
 
-.navbar {
-  .nav{
-    &-link{
-      font-size: $navbar-light-font-size;
-    }
+.navbar .nav{
+  &-link{
+    font-size: $navbar-light-font-size;
+  }
 
-    &-item{
-      .dropdown-menu{
-        a{
-          text-align: center;
-          text-transform: uppercase;
-        }
+  &-item{
+    .dropdown-menu{
+      a{
+        text-align: center;
+        text-transform: uppercase;
       }
     }
   }
