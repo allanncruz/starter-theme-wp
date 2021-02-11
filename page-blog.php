@@ -32,7 +32,7 @@
                         'post_type'=>'blog',
                         'paged' => get_query_var('paged') ? get_query_var('paged') : 1) );
                         while ($the_query -> have_posts()) : $the_query -> the_post();
-                            get_template_part( 'components/section', 'news' );
+                            get_template_part( 'components/Cards/index' );
 
                         endwhile;
                 ?>
