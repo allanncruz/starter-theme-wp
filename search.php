@@ -34,7 +34,7 @@ Template Name: Search Page
                 <?php
                     while(have_posts()): the_post(); ?>
                         <div class="col-md-4">
-                            <?php get_template_part( 'components/section', 'news' ); ?>
+                            <?php get_template_part( 'components/Cards/index' ); ?>
                         </div>
                         <?php
                     endwhile;

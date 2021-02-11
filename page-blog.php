@@ -37,7 +37,7 @@
                         endwhile;
                 ?>
             </div>
-            <div class="text-center mt-5">
+            <div class="text-center my-5">
                 <?php
                     $big = 999999999; // need an unlikely integer
                     echo paginate_links( array(
