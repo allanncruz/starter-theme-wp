@@ -28,21 +28,7 @@ $navbar-light-toggler-border-color: $dark;
   top: 0;
 }
 
-
-.navbar .nav{
-  &-link{
-    font-size: $navbar-light-font-size;
-  }
-
-  &-item{
-    .dropdown-menu{
-      a{
-        text-align: center;
-        text-transform: uppercase;
-      }
-    }
-  }
-
+.navbar{
   &-toggler{
     @include flex-center;
     flex-direction: column;
@@ -61,7 +47,7 @@ $navbar-light-toggler-border-color: $dark;
         position: relative;
         &:nth-child(1){
           transform:
-          rotate(45deg); top: 10px;
+                  rotate(45deg); top: 10px;
         }
         &:nth-child(2){
           opacity: 0;
@@ -70,6 +56,20 @@ $navbar-light-toggler-border-color: $dark;
           transform: rotate(-45deg);
           top: -10px;
         }
+      }
+    }
+  }
+}
+.navbar .nav{
+  &-link{
+    font-size: $navbar-light-font-size;
+  }
+
+  &-item{
+    .dropdown-menu{
+      a{
+        text-align: center;
+        text-transform: uppercase;
       }
     }
   }
