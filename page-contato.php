@@ -19,10 +19,11 @@
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <article class="p-md-5 p-2">
-                        <?php the_content(); ?>
+                        <?php
+                          the_content();
+                          get_template_part( 'components/Forms/index' );
+                        ?>
                     </article>
-
-                    <?php get_template_part( 'components/Forms/index' ); ?>
                 </div>
             </div>
         </div>

@@ -32,12 +32,12 @@
                         'post_type'=>'blog',
                         'paged' => get_query_var('paged') ? get_query_var('paged') : 1) );
                         while ($the_query -> have_posts()) : $the_query -> the_post();
-                            get_template_part( 'components/section', 'news' );
+                            get_template_part( 'components/Cards/index' );
 
                         endwhile;
                 ?>
             </div>
-            <div class="text-center mt-5">
+            <div class="text-center my-5">
                 <?php
                     $big = 999999999; // need an unlikely integer
                     echo paginate_links( array(
