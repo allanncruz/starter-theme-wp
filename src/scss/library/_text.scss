@@ -39,7 +39,7 @@ $link-hover-decoration:     none;
     }
   }
 
-  .sub-title{
+  .subtitle{
     @include font-size(32px);
     line-height: 44px;
     color: $primary;

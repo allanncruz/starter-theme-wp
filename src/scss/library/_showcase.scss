@@ -80,12 +80,11 @@
       p{line-height: 22px;}
 
       h2{
-        font-size: 26px;
+        @include font-size(26px);
         line-height: initial;
       }
       .btn{
-        margin: 20px auto !important;
-        height: 48px;
+        margin: 20px auto 0  !important;
       }
     }
   }
