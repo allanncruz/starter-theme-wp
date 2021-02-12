@@ -18,3 +18,8 @@
   left: 0;
   top: 0;
 }
+
+@mixin fontSizeParagraphAndList(){
+  @include font-size(17px);
+  line-height: 150%;
+}

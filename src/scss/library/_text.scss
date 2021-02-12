@@ -12,8 +12,7 @@ $link-hover-decoration:     none;
 *{font-family: barlowregular, sans-serif;}
 
   p{
-    @include font-size(17px);
-    line-height: 150%;
+    @include fontSizeParagraphAndList;
     strong, b{
       font-family: barlowbold, sans-serif;
     }
