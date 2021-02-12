@@ -30,7 +30,7 @@ $navbar-light-toggler-border-color: $dark;
 
 .navbar{
   &-toggler{
-    @include flex-center;
+    @include flexCenter;
     flex-direction: column;
     outline: none !important;
 
