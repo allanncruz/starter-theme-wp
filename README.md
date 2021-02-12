@@ -52,7 +52,7 @@ yarn install
 ```
 ##### Compile assets
 ```
-gulp
+yarn start
 ```
 
 ## Configure database
