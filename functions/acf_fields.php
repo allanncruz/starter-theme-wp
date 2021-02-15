@@ -1,4 +1,9 @@
 <?php
+  
+  /*
+   More Informations
+   https://www.advancedcustomfields.com/resources/register-fields-via-php/#field-type%20settings
+*/
 
 if (function_exists('acf_add_local_field_group')) :
 
@@ -54,14 +59,8 @@ if (function_exists('acf_add_local_field_group')) :
                 ),
             ),
         ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
+        'position' => 'normal', //acf_after_title, normal
+        'style' => 'default', //seamless, default
     ));
 
     acf_add_local_field_group(array(
@@ -116,14 +115,8 @@ if (function_exists('acf_add_local_field_group')) :
                 ),
             ),
         ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
+        'position' => 'normal',  //acf_after_title, normal
+        'style' => 'default', //seamless, default
     ));
 
     //Fields for page
@@ -160,14 +153,8 @@ if (function_exists('acf_add_local_field_group')) :
                 ),
             ),
         ),
-        'menu_order' => 0,
-        'position' => 'acf_after_title',
-        'style' => 'seamless',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
+        'position' => 'acf_after_title',  //acf_after_title, normal
+        'style' => 'seamless', //seamless, default
     ));
 
 endif;
