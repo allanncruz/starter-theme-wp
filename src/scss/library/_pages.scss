@@ -242,7 +242,7 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@include media-breakpoint-down(sm) {
   .post-accordion .card-body {
     padding: 15px;
 
