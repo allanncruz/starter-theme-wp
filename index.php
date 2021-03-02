@@ -18,7 +18,7 @@
 
   <div class="carousel overflow-hidden">
     <div class="carousel-inner owl-carousel banner owl-anima">
-      <?php query_posts("post_type=animacao");
+      <?php query_posts("post_type=showcase");
         if(have_posts()):
           while(have_posts()):the_post();
             get_template_part( 'components/Showcase/index');

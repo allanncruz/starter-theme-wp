@@ -29,16 +29,15 @@ function animacaoType()
         'show_in_menu'       => true,
         'menu_icon'          => 'dashicons-format-image',
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'animacoes' ),
+        'rewrite'            => array( 'slug' => 'animacao' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => true,
         'menu_position'      => null,
-        'rest_base'          => 'animacoes',
         'supports'           => array( 'title', 'editor','thumbnail')
     );
 
-    register_post_type( 'animacao', $args );
+    register_post_type( 'showcase', $args );
 
     flush_rewrite_rules();
 }
