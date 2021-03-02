@@ -46,6 +46,8 @@ if (function_exists('acf_add_local_field_group')) :
                 'label' => 'Post Relacionado',
                 'name' => 'showcase-relationship',
                 'type' => 'relationship',
+                'filters' => 'search',
+                'post_type' => 'showcase',
             ),
             array(
                 'key' => 'field_5dd3355607854',
