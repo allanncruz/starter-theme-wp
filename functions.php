@@ -65,7 +65,7 @@
 
 
 // ACF
-  require dirname(__FILE__) .  '/functions/acf_fields.php';
+  require dirname(__FILE__) . '/functions/acfFields/acf_fields.php';
 
 
 // Settings
