@@ -43,7 +43,7 @@
           
           
           if(has_custom_logo()) {
-            echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img">';
+            echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img" alt="'. get_bloginfo('name'). '" title="'. get_bloginfo('name'). '">';
           }else {
             echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
           }
