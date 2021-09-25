@@ -12,7 +12,7 @@
   function started_theme_scripts()
   {
     wp_enqueue_style('styles-theme', get_template_directory_uri() . '/dist/css/style.min.css');
-    wp_enqueue_style('fontawesome',  'https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+    wp_enqueue_style('fontawesome',  'https://use.fontawesome.com/releases/v5.10.2/css/all.css');
     wp_enqueue_script('scripts-theme', get_template_directory_uri() . '/dist/js/all.js', ['jquery'], '3.5.1', true);
   }
   add_action('wp_enqueue_scripts', 'started_theme_scripts');
