@@ -31,7 +31,7 @@
   <?php }
     wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="<?php if (!is_page('home')) echo "singlePage"?>">
 
 <header class="header position-fixed w-100 shadow">
   <nav class="navbar navbar-expand-lg navbar-light bg-dark">

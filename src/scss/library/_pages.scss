@@ -55,6 +55,10 @@
   }
 }
 
+#singlePage{
+  background-color: $light;
+}
+
 @include media-breakpoint-down(sm) {
   &-area{
     margin-top: 60px;
