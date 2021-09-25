@@ -13,7 +13,7 @@
 <section class="page">
   <div class="container page-area">
     <div class="text-center">
-      <h3 class="sub-title m-0">Subtitle</h3>
+      <h3 class="subtitle m-0"><?php the_field('page-subtitle'); ?></h3>
       <h1 class="title"><?php the_title(); ?></h1>
     </div>
 
