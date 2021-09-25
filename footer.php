@@ -10,17 +10,14 @@
    */
 
 ?>
-<footer class="page-footer bg-dark text-white pt-5 pb-4">
+<footer class="footer bg-dark text-white pt-5 pb-4">
   <div class="container text-center text-md-left">
     <div class="row">
-
       <div class="col-md-6 mt-md-0 mt-3">
-
         <a class="footer-brand" href="<?php bloginfo("url") ?>">
           <?php
             $custom_logo_id = get_theme_mod('custom_logo');
             $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-            
             
             if(has_custom_logo()) {
               echo '<img src="'. esc_url($logo[0]). '" class="">';
@@ -29,8 +26,6 @@
             }
           ?>
         </a>
-        
-        
         <?php
           if(get_theme_mod('address')) { ?>
             <address>
@@ -40,10 +35,8 @@
             <?php
           }if(get_theme_mod('phone_number')) { ?>
           <i class="fas fa-phone"></i>
-          <?php echo get_theme_mod('phone_number') ?>
-          <?php
+          <?php echo get_theme_mod('phone_number');
         }if(get_theme_mod('whatsapp_number')) { ?>
-
           <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('whatsapp_number') ?>&text="
              target="_blank"
              class="d-block"
@@ -51,16 +44,10 @@
             <i class="fab fa-whatsapp"></i>
             <?php echo get_theme_mod('whatsapp_number') ?>
           </a>
-        
         <?php } ?>
       </div>
-
-
-      <!-- Grid column -->
       <div class="col-md-3 mb-md-0 mb-3">
-
         <h5 class="text-uppercase">Menu</h5>
-        
         <?php
           wp_nav_menu( array(
             'theme_location'    => 'principal',
@@ -70,13 +57,9 @@
             'walker'            => new WP_Bootstrap_Navwalker(),
           ) );
         ?>
-
       </div>
-
       <div class="col-md-3 mb-md-0 mb-3">
-
         <h5 class="text-uppercase">Social</h5>
-        
         <?php if(get_theme_mod('instagram_username')) {
           echo '<a href="'. get_theme_mod('instagram_username') . '"  target="_blank"> <i class="fab fa-instagram mr-2 fa-2x"></i> </a>';
         }
@@ -88,11 +71,9 @@
       </div>
     </div>
   </div>
-
   <div class="footer-copyright text-center py-3">© 2021 Copyright:
     <a href="https://github.com/allanncruz/starter-theme-wp" target="_blank"> starter-theme-wp</a>
   </div>
-
 </footer>
 <?php wp_footer(); ?>
 
