@@ -3,7 +3,7 @@
        alt="<?php the_title();?>"
        src="<?php the_post_thumbnail_url(); ?>">
   <div class="container position-relative">
-    <figcaption class="showcase-legend w-100 d-flex flex-column justify-content-center position-absolute text-center">
+    <div class="showcase-legend w-100 d-flex flex-column justify-content-center position-absolute text-center">
       <h2 class="position-relative text-white"><?php the_title(); ?></h2>
       <?php the_content();
         
@@ -20,6 +20,6 @@
             <?php echo esc_attr( $link_title ); ?>
           </a>
         <?php endif; ?>
-    </figcaption>
+    </div>
   </div>
 </div>

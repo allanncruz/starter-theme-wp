@@ -61,7 +61,7 @@
               endwhile;
             endif; ?>
         </div>
-        <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-outline-primary d-table m-auto">Mais notícias</a>
+        <a href="<?php bloginfo("url") ?>/index.php/blog/" class="btn btn-primary d-table mx-auto">Mais notícias</a>
       </div>
     </section>
   </main>
