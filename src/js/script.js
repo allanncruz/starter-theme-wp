@@ -20,7 +20,7 @@
         }
     });
 
-    $('.owl-carousel.banner').owlCarousel({
+    $('.owl-carousel.owl-showcase').owlCarousel({
         nav: true,
         dots: true,
         loop: true,
