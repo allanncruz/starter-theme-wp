@@ -1,4 +1,4 @@
-.carousel{
+.showcase{
   &-thumbnail{
     height: 700px;
     object-fit: cover;
@@ -29,7 +29,7 @@
     }
   }
 
-  .owl-carousel{
+  .owl-showcase{
     .owl-nav {
       .owl-prev{
         left: 2rem;
@@ -72,7 +72,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .carousel{
+  .showcase{
     &-legend{
       left: 0;
       height: 100vh;

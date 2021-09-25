@@ -6,14 +6,8 @@
     'fields' => array(
       array(
         'key' => 'field_5dd3355607954',
-        'label' => 'Botão Primário',
-        'name' => 'vitrine-btn-primary',
-        'type' => 'link',
-      ),
-      array(
-        'key' => 'field_5dd3355607854',
-        'label' => 'Botão Secundário',
-        'name' => 'vitrine-btn-secondary',
+        'label' => 'Link',
+        'name' => 'showcase-link',
         'type' => 'link',
       ),
     ),

@@ -16,8 +16,8 @@
   get_header();
 ?>
 
-  <div class="carousel overflow-hidden">
-    <div class="carousel-inner owl-carousel banner owl-anima">
+  <div class="showcase overflow-hidden">
+    <div class="carousel-inner owl-carousel owl-showcase">
       <?php query_posts("post_type=showcase");
         if(have_posts()):
           while(have_posts()):the_post();
