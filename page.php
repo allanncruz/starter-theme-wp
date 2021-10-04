@@ -18,12 +18,12 @@
 
     <div class="row justify-content-center">
       <div class="col-md-10">
-        <img
-                onerror="this.style.display='none'"
-                src="<?php the_post_thumbnail_url(); ?>"
-                class="single-thumbnail my-4"
-                alt="<?php the_title(); ?>"
-        >
+        <?php if (get_the_post_thumbnail()) { ?>
+          <img src="<?php the_post_thumbnail_url(); ?>"
+               class="single-thumbnail my-4"
+               alt="<?php the_title(); ?>"
+          >
+        <?php } ?>
         <article class="p-md-5 p-2">
           <?php the_content(); ?>
         </article>

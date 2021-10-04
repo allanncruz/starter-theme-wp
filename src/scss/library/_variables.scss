@@ -17,9 +17,9 @@ $theme-colors:(
 //
 // Define the maximum width of `.container` for different screen sizes.
 $container-max-widths: (
-        xl: 1200px
+        //xl: 1200px
 );
 
 //Urls Assets
 $fonts-path: "../fonts/" !default;
-$img-path: "../fonts/img/image" !default;
+$img-path: "../img/image/" !default;
