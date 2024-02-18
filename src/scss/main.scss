@@ -1,12 +1,13 @@
 @import "components/hero";
 @import "wp_normalize";
 
-body {
-  background-color: blue;
-  .site-title a {
-    color: yellow;
-  }
-}
-h1 {
-  font-size: 4em;
-}
+// Bootstrap Required
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// General
+@import "wp_normalize";
+
+// General Required
+@import "node_modules/bootstrap/scss/bootstrap";
