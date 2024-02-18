@@ -1,6 +1,6 @@
-.idea/*
-.node_modules
-node_modules
-.sass-cache
-dist
-temp
+/node_modules
+/vendor
+package-lock.json
+composer.lock
+style.css.map
+.DS_Store

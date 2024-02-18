@@ -6,76 +6,54 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Started theme wp
+ * @package _s
  */
-?><!DOCTYPE html>
+
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-
 <head>
-  <!-- Requered meta tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="<?php bloginfo('charset'); ?>" >
-  <meta name="description" content="<?php bloginfo('description '); ?>">
-  
-  
-  <?php if(get_theme_mod('id_analytics')) { ?>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo get_theme_mod('id_analytics') ?>"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-        gtag('config', '<?php echo get_theme_mod('id_analytics') ?>');
-    </script>
-  <?php }
-    wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> id="<?php if (!is_page('home')) echo "singlePage"?>">
 
-<header class="header position-fixed w-100 shadow">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container">
-      <a class="navbar-brand text-white" href="<?php bloginfo("url") ?>">
-        <?php
-          $custom_logo_id = get_theme_mod('custom_logo');
-          $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-          
-          
-          if(has_custom_logo()) {
-            echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img" alt="'. get_bloginfo('name'). '" title="'. get_bloginfo('name'). '">';
-          }else {
-            echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
-          }
-        ?>
-      </a>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
 
-      <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbar-collapse"
-              aria-controls="navbar-collapse"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-      >
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
+			$_s_description = get_bloginfo( 'description', 'display' );
+			if ( $_s_description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo $_s_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php endif; ?>
+		</div><!-- .site-branding -->
 
-        <i class="navbar-icon"></i>
-        <i class="navbar-icon"></i>
-        <i class="navbar-icon"></i>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end py-md-0 py-5" id="navbar-collapse">
-        <?php
-          wp_nav_menu( array(
-            'theme_location'    => 'principal',
-            'depth'             => 2,
-            'menu_class'        => 'nav navbar-nav ml-auto',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new WP_Bootstrap_Navwalker(),
-          ) );
-        ?>
-      </div>
-    </div>
-  </nav>
-</header>
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->

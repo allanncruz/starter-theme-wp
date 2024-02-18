@@ -1,114 +1,182 @@
 <?php
-  /**
-   * Twenty Nineteen functions and definitions
-   *
-   * @link https://developer.wordpress.org/themes/basics/theme-functions/
-   *
-   * @package Started theme wp
-   */
 
+/**
+ * _s functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package _s
+ */
 
-//Import style and scripts
-  function started_theme_scripts()
-  {
-    wp_enqueue_style('styles-theme', get_template_directory_uri() . '/dist/css/style.min.css');
-    wp_enqueue_style('fontawesome',  'https://use.fontawesome.com/releases/v5.10.2/css/all.css');
-    wp_enqueue_script('scripts-theme', get_template_directory_uri() . '/dist/js/all.js', ['jquery'], '3.5.1', true);
-  }
-  add_action('wp_enqueue_scripts', 'started_theme_scripts');
+if (!defined('_S_VERSION')) {
+	// Replace the version number of the theme on each release.
+	define('_S_VERSION', '1.0.0');
+}
 
+/**
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
+ */
+function _s_setup()
+{
+	/*
+		* Make theme available for translation.
+		* Translations can be filed in the /languages/ directory.
+		* If you're building a theme based on _s, use a find and replace
+		* to change '_s' to the name of your theme in all the template files.
+		*/
+	load_theme_textdomain('_s', get_template_directory() . '/languages');
 
-//Remove admin bar
-  add_filter( 'show_admin_bar' , 'started_theme_admin_bar');
-  function started_theme_admin_bar(){
-    return false;
-  }
+	// Add default posts and comments RSS feed links to head.
+	add_theme_support('automatic-feed-links');
 
+	/*
+		* Let WordPress manage the document title.
+		* By adding theme support, we declare that this theme does not use a
+		* hard-coded <title> tag in the document head, and expect WordPress to
+		* provide it for us.
+		*/
+	add_theme_support('title-tag');
 
-//Custom logo
-  if (!function_exists('started_theme_setup')) {
-    function started_theme_setup()
-    {
-      
-      // Adds theme support to logo
-      add_theme_support(
-        'custom-logo',
-        array(
-          'height'      => 80,
-          'width'       => 220,
-          'flex-width'  => true,
-          'flex-height' => true,
-        )
-      );
-    }
-  }
-  add_action('after_setup_theme', 'started_theme_setup');
+	/*
+		* Enable support for Post Thumbnails on posts and pages.
+		*
+		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		*/
+	add_theme_support('post-thumbnails');
 
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menus(
+		array(
+			'menu-1' => esc_html__('Primary', '_s'),
+		)
+	);
 
-//Add suporte post thumbnails and title tag
-  add_theme_support( 'post-thumbnails' );
-  add_theme_support( 'title-tag' );
+	/*
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'style',
+			'script',
+		)
+	);
 
+	// Set up the WordPress core custom background feature.
+	add_theme_support(
+		'custom-background',
+		apply_filters(
+			'_s_custom_background_args',
+			array(
+				'default-color' => 'ffffff',
+				'default-image' => '',
+			)
+		)
+	);
 
-//Register Wp Menu
-  require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-  
-  register_nav_menus( array(
-    'principal' => __('Menu Principal', 'bstwp')
-  ));
+	// Add theme support for selective refresh for widgets.
+	add_theme_support('customize-selective-refresh-widgets');
 
+	/**
+	 * Add support for core custom logo.
+	 *
+	 * @link https://codex.wordpress.org/Theme_Logo
+	 */
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		)
+	);
+}
+add_action('after_setup_theme', '_s_setup');
 
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function _s_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('_s_content_width', 640);
+}
+add_action('after_setup_theme', '_s_content_width', 0);
 
-// Post types
-  require dirname(__FILE__) .  '/functions/post_types/vitrine_post_type.php';
-  require dirname(__FILE__) .  '/functions/post_types/blog_post_type.php';
+/**
+ * Register widget area.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ */
+function _s_widgets_init()
+{
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Sidebar', '_s'),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__('Add widgets here.', '_s'),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action('widgets_init', '_s_widgets_init');
 
+/**
+ * Enqueue scripts and styles.
+ */
+function _s_scripts()
+{
+	wp_enqueue_style('_s-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_style_add_data('_s-style', 'rtl', 'replace');
 
-// ACF
-  require dirname(__FILE__) . '/functions/acfFields/acf_fields.php';
+	wp_enqueue_script('_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
+	}
+}
+// add_action( 'wp_enqueue_scripts', '_s_scripts' );
 
-// Settings
-  require dirname(__FILE__) . '/functions/settings/contact_informations_settings.php';
-  require dirname(__FILE__) . '/functions/settings/contact_emails.php';
-  require dirname(__FILE__) . '/functions/settings/custom_login_logo.php';
-  require dirname(__FILE__) . '/functions/settings/custom_google_analytics.php';
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
 
-//Limited excerpt_length
-  function custom_excerpt_length( $length ) {
-    return 10;
-  }
-  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-functions.php';
 
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
 
-//remove editor gutenberg enable editor classic
-  add_filter('use_block_editor_for_post', '__return_false');
-  
-  /**
-   * Disable the emoji's
-   */
-  function disable_emojis() {
-    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-    remove_action( 'wp_print_styles', 'print_emoji_styles' );
-    remove_action( 'admin_print_styles', 'print_emoji_styles' );
-    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-    
-    // Remove from TinyMCE
-    add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
-  }
-  add_action( 'init', 'disable_emojis' );
-  
-  /**
-   * Filter out the tinymce emoji plugin.
-   */
-  function disable_emojis_tinymce( $plugins ) {
-    if ( is_array( $plugins ) ) {
-      return array_diff( $plugins, array( 'wpemoji' ) );
-    } else {
-      return array();
-    }
-  }
+function my_awesome_scripts()
+{
+	wp_enqueue_style("style", get_template_directory_uri() . "/assets/main.css", [], false);
+	wp_enqueue_script("script", get_template_directory_uri() . "/assets/main.min.js", [], false);
+}
+add_action("wp_enqueue_scripts", "my_awesome_scripts");

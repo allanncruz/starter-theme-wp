@@ -1,65 +1,40 @@
 <?php
-  /**
-   * The template for displaying all single posts
-   *
-   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
-   *
-   * @package Started theme wp
-   */
-  
-  get_header();
-  the_post() ?>
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package _s
+ */
 
-<section class="page">
-  <div class="container page-area">
-    <div class="text-center">
-      <h3 class="subtitle m-0"><?php the_field('page-subtitle'); ?></h3>
-      <h1 class="title"><?php the_title(); ?></h1>
-    </div>
+get_header();
+?>
 
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <?php if (get_the_post_thumbnail()) { ?>
-          <img src="<?php the_post_thumbnail_url(); ?>"
-               class="single-thumbnail my-4"
-               alt="<?php the_title(); ?>"
-          >
-        <?php } ?>
-        <article class="p-md-5 p-2">
-          <?php
-            the_content();
-            the_excerpt();
-          
-          ?>
+	<main id="primary" class="site-main">
 
-          <hr>
-          <?php
-            $relationship = get_field('showcase-relationship');
-            if( $relationship ): ?>
-              <small>Post relacionado</small>
-              <?php foreach( $relationship as $post): ?>
-                <?php get_template_part( 'components/section', 'news' ); ?>
-              <?php endforeach;
-              wp_reset_postdata();
-            endif; ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
 
-          <div class="d-flex flex-column justify-content-center align-items-center mt-5">
-            <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="<?php the_permalink(); ?>" data-a2a-title="<?php the_title(); ?>">
-              <a class="a2a_button_facebook"></a>
-              <a class="a2a_button_twitter"></a>
-              <a class="a2a_button_whatsapp"></a>
-            </div>
+			get_template_part( 'template-parts/content', get_post_type() );
 
-            <script async src="//static.addtoany.com/menu/page.js"></script>
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', '_s' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', '_s' ) . '</span> <span class="nav-title">%title</span>',
+				)
+			);
 
-            <a class="btn btn-primary mt-5" href="javascript:history.back()">
-              <i class="glyphicon glyphicon-chevron-left"></i> « Voltar
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-<?php get_footer(); ?>
+		endwhile; // End of the loop.
+		?>
+
+	</main><!-- #main -->
+
+<?php
+get_sidebar();
+get_footer();
