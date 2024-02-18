@@ -2,12 +2,13 @@
 @import "wp_normalize";
 
 // Bootstrap Required
+@import "node_modules/bootstrap/scss/bootstrap";
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
 
+// Variables
+@import "variables";
+
 // General
 @import "wp_normalize";
-
-// General Required
-@import "node_modules/bootstrap/scss/bootstrap";
