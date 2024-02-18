@@ -22,6 +22,10 @@ function started_theme_admin_bar(){
   return false;
 }
 
+
+//Register Wp Menu
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *

@@ -1,4 +1,5 @@
-@import "components/hero";
+
+
 @import "wp_normalize";
 
 // Bootstrap Required
@@ -9,6 +10,14 @@
 
 // Variables
 @import "variables";
+
+// Mixins
+@import "components/mixins";
+
+// Components
+@import "components/hero";
+@import "components/navbar";
+
 
 // General
 @import "wp_normalize";

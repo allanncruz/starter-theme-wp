@@ -21,26 +21,46 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
     <div id="page" class="site">
-        <header id="masthead" class="site-header">
-            <div class="site-branding">
-                <?php
-                the_custom_logo();
-                if ( is_front_page() && is_home() ) :
-                else :
+        <header id="masthead" class="header position-fixed w-100 shadow">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <?php
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                        
+                        if(has_custom_logo()) {
+                            echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img" alt="'. get_bloginfo('name'). '" title="'. get_bloginfo('name'). '">';
+                        }else {
+                            echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
+                        }
                     ?>
-                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-                <?php endif; ?>
-            </div><!-- .site-branding -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbar-collapse"
+                        aria-controls="navbar-collapse"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
 
-            <nav id="site-navigation" class="main-navigation">
-                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'menu-1',
-                        'menu_id'        => 'primary-menu',
-                    )
-                );
-                ?>
-            </nav><!-- #site-navigation -->
+                    <i class="navbar-icon"></i>
+                    <i class="navbar-icon"></i>
+                    <i class="navbar-icon"></i>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'menu_class'     => 'nav navbar-nav ml-auto',
+                                'theme_location' => 'menu-1',
+                                'menu_id'        => 'primary-menu',
+                                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                'walker'            => new WP_Bootstrap_Navwalker(),
+                            )
+                        );
+                        ?>
+                    </div>
+                </div>
+            </nav>
         </header><!-- #masthead -->
