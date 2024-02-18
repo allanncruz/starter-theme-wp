@@ -16,6 +16,12 @@ if (!defined('_S_VERSION')) {
 //remove editor gutenberg enable editor classic
 add_filter('use_block_editor_for_post', '__return_false');
 
+//Remove admin bar
+add_filter( 'show_admin_bar' , 'started_theme_admin_bar');
+function started_theme_admin_bar(){
+  return false;
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
