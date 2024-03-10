@@ -59,6 +59,12 @@ $navbar-light-toggler-border-color: $dark;
       }
     }
   }
+
+  &-brand{
+    &__img{
+      width: 40px;
+    }
+  }
 }
 .navbar .nav{
   &-link{
