@@ -1,35 +1,38 @@
 <?php
-  /**
-   * The template for displaying all single posts
-   *
-   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
-   *
-   * @package Started theme wp
-   */
-  get_header();
-  the_post() ?>
+/**
+ * The template for displaying all pages
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages
+ * and that other 'pages' on your WordPress site may use a
+ * different template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Started theme wp
+ */
 
-<section class="page">
-  <div class="container page-area">
-    <div class="text-center">
-      <h3 class="subtitle m-0"><?php the_field('page-subtitle'); ?></h3>
-      <h1 class="title"><?php the_title(); ?></h1>
-    </div>
+get_header();
+?>
 
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        <?php if (get_the_post_thumbnail()) { ?>
-          <img src="<?php the_post_thumbnail_url(); ?>"
-               class="single-thumbnail my-4"
-               alt="<?php the_title(); ?>"
-          >
-        <?php } ?>
-        <article class="p-md-5 p-2">
-          <?php the_content(); ?>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+	<main id="primary" class="site-main">
 
-<?php get_footer(); ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
+
+			get_template_part( 'template-parts/content', 'page' );
+
+			// If comments are open or we have at least one comment, load up the comment template.
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
+
+		endwhile; // End of the loop.
+		?>
+
+	</main><!-- #main -->
+
+<?php
+get_sidebar();
+get_footer();

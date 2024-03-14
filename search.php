@@ -1,46 +1,53 @@
 <?php
-  /**
-   * The template for displaying search results pages
-   *
-   * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
-   *
-   * @package Started theme wp
-   */
-  
-  /*
-  Template Name: Search Page
-  */
-  get_header();
-  the_post() ?>
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package Started theme wp
+ */
 
-<section class="page">
-  <div class="container page-area">
-    <div class="text-center">
-      <h3 class="sub-title">Resultado da busca para: <b><?php echo isset($_GET['s']) ? $_GET['s'] : ''; ?></h3>
-      <div class="page-seach w-50 m-auto">
-        <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(); ?>">
-          <div>
-            <label class="screen-reader-text" for="s">Pesquisar por:</label>
-            <input type="text" value="" placeholder="Pesquisar" name="s" id="s">
-            <button type="submit" id="searchsubmit" class="border-0">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+get_header();
+?>
 
-    <div class="row">
-      <?php
-        while(have_posts()): the_post(); ?>
-          <div class="col-md-4">
-            <?php get_template_part( 'components/Cards/index' ); ?>
-          </div>
-        <?php
-        endwhile;
-      ?>
-    </div>
-  </div>
-</section>
+	<main id="primary" class="site-main">
 
-<?php get_footer(); ?>
+		<?php if ( have_posts() ) : ?>
+
+			<header class="page-header">
+				<h1 class="page-title">
+					<?php
+					/* translators: %s: search query. */
+					printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' );
+					?>
+				</h1>
+			</header><!-- .page-header -->
+
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
+
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', 'search' );
+
+			endwhile;
+
+			the_posts_navigation();
+
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif;
+		?>
+
+	</main><!-- #main -->
+
+<?php
+get_sidebar();
+get_footer();

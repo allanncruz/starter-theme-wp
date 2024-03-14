@@ -1,0 +1,25 @@
+//Variables
+//
+
+//Customizar cores
+$primary: #1CCAF4;
+$secondary: #1BDC68;
+$color-green: #1BDC68;
+$color-title: #585A5B;
+
+//Bootstrap colors
+$theme-colors:(
+        "primary-color": $primary,
+        "secondary-color": $secondary,
+);
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+        //xl: 1200px
+);
+
+// //Urls Assets
+// $fonts-path: "../fonts/" !default;
+// $img-path: "../img/image/" !default;

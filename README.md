@@ -8,8 +8,8 @@ The interface has a structured with Bootstrap 4, in order to standardize the ins
 
 ##### Global Dependencies
 
-* NodeJS v12 - (https://nodejs.org/en/)
-* gulp v4 - (https://gulpjs.com/)
+* NodeJS v17 - (https://nodejs.org/en/)
+* webpack - (https://webpack.js.org//)
 * Sass install - (https://sass-lang.com/guide)
 * Yarn - (https://classic.yarnpkg.com/pt-BR/docs/install#debian-stable)
 

@@ -8,74 +8,59 @@
  *
  * @package Started theme wp
  */
-?><!DOCTYPE html>
+
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
-
 <head>
-  <!-- Requered meta tags -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="<?php bloginfo('charset'); ?>" >
-  <meta name="description" content="<?php bloginfo('description '); ?>">
-  
-  
-  <?php if(get_theme_mod('id_analytics')) { ?>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo get_theme_mod('id_analytics') ?>"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', '<?php echo get_theme_mod('id_analytics') ?>');
-    </script>
-  <?php }
-    wp_head(); ?>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> id="<?php if (!is_page('home')) echo "singlePage"?>">
 
-<header class="header position-fixed w-100 shadow">
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-    <div class="container">
-      <a class="navbar-brand text-white" href="<?php bloginfo("url") ?>">
-        <?php
-          $custom_logo_id = get_theme_mod('custom_logo');
-          $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
-          
-          
-          if(has_custom_logo()) {
-            echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img" alt="'. get_bloginfo('name'). '" title="'. get_bloginfo('name'). '">';
-          }else {
-            echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
-          }
-        ?>
-      </a>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+    <div id="page" class="site">
+        <header id="masthead" class="header position-fixed w-100 shadow">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <?php
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+                        
+                        if(has_custom_logo()) {
+                            echo '<img src="'. esc_url($logo[0]). '" class="navbar-brand__img" alt="'. get_bloginfo('name'). '" title="'. get_bloginfo('name'). '">';
+                        }else {
+                            echo '<p class="m-0 text-white">'. get_bloginfo('name'). '</p>';
+                        }
+                    ?>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbar-collapse"
+                        aria-controls="navbar-collapse"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                >
 
-      <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbar-collapse"
-              aria-controls="navbar-collapse"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-      >
-
-        <i class="navbar-icon"></i>
-        <i class="navbar-icon"></i>
-        <i class="navbar-icon"></i>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end py-md-0 py-5" id="navbar-collapse">
-        <?php
-          wp_nav_menu( array(
-            'theme_location'    => 'principal',
-            'depth'             => 2,
-            'menu_class'        => 'nav navbar-nav ml-auto',
-            'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-            'walker'            => new WP_Bootstrap_Navwalker(),
-          ) );
-        ?>
-      </div>
-    </div>
-  </nav>
-</header>
+                    <i class="navbar-icon"></i>
+                    <i class="navbar-icon"></i>
+                    <i class="navbar-icon"></i>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'menu_class'     => 'nav navbar-nav ml-auto',
+                                'theme_location' => 'menu-1',
+                                'menu_id'        => 'primary-menu',
+                                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                                'walker'            => new WP_Bootstrap_Navwalker(),
+                            )
+                        );
+                        ?>
+                    </div>
+                </div>
+            </nav>
+        </header><!-- #masthead -->
